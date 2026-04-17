@@ -1,0 +1,26 @@
+---
+import type { NavigationTypeString } from "astro:transitions/client";
+
+interface NavItem {
+    name: string;
+    href: string;
+}
+const navItems: NavItem[] = [
+    { name: "Welcome", href: "/" },
+    { name: "Desktop systems", href: "/desk-sys" },
+    { name: "Evaluation & redesign works", href: "/eva-and-redes-works" },
+    { name: "Webpage prototypes", href: "/web-proto" },
+];
+---
+
+<div class="bg-indigo-600 pentagon">
+    <nav>
+        {
+            navItems.map((item: NavItem) => (
+                <li>
+                    <a href={item.href}>{item.name}</a>
+                </li>
+            ))
+        }
+    </nav>
+</div>

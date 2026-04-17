@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+.pentagon {
+    -webkit-clip-path: polygon(93% 0, 99% 17%, 99% 99%, 0 99%, 0 0);
+    clip-path: polygon(93% 0, 99% 17%, 99% 99%, 0 99%, 0 0);
+}
