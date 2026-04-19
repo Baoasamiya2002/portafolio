@@ -1,6 +1,26 @@
 @import "tailwindcss";
 
 .pentagon {
-    -webkit-clip-path: polygon(93% 0, 99% 17%, 99% 99%, 0 99%, 0 0);
-    clip-path: polygon(93% 0, 99% 17%, 99% 99%, 0 99%, 0 0);
+    -webkit-clip-path: polygon(99% 0, 99% 92%, 92% 99%, 0 99%, 0 0);
+    clip-path: polygon(99% 0, 99% 92%, 92% 99%, 0 99%, 0 0);
+}
+
+.pentagon_item {
+    -webkit-clip-path: polygon(99% 2%, 99% 75%, 96% 99%, 0 99%, 0 0);
+    clip-path: polygon(99% 2%, 99% 75%, 96% 99%, 0 99%, 0 0);
+}
+
+.hexagon_menu {
+    -webkit-clip-path: polygon(72% 15%, 99% 0, 99% 85%, 75% 99%, 0 99%, 0 15%);
+    clip-path: polygon(72% 15%, 99% 0, 99% 85%, 75% 99%, 0 99%, 0 15%);
+}
+
+.pentagon_menu {
+    -webkit-clip-path: polygon(99% 0, 99% 93%, 65% 99%, 0 99%, 0 0);
+    clip-path: polygon(99% 0, 99% 93%, 65% 99%, 0 99%, 0 0);
+}
+
+.hexagon {
+    -webkit-clip-path: polygon(90% 0, 99% 10%, 99% 99%, 10% 99%, 0 90%, 0 0);
+    clip-path: polygon(90% 0, 99% 10%, 99% 99%, 10% 99%, 0 90%, 0 0);
 }
