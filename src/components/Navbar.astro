@@ -1,6 +1,7 @@
 ---
 import type { NavigationTypeString } from "astro:transitions/client";
 import { ThemeSwitch } from "free-astro-components";
+import { Icon } from "free-astro-components";
 
 interface NavItem {
     name: string;
@@ -17,7 +18,7 @@ const navItems: NavItem[] = [
 <div>
     <div class="bg-indigo-800 pentagon_menu w-10 p-2 absolute">
         <div class="bg-indigo-800 h-13 flex">
-            <a class="flex" id="menu-btn" href="#">X</a>
+            <a class="flex" id="menu-btn" href="#"><Icon icon="menu" class="icon-class" /></a>
             <!-- Change for an the image as an element witch class cursos-pointer -->
         </div>
         <div class="bg-white hexagon_menu">
@@ -28,7 +29,7 @@ const navItems: NavItem[] = [
         </div>
     </div>
     <div id="menu-modal" class="bg-white fixed inset-0 hidden z-10">
-        <div id="menu" class="w-[28rem] bg-indigo-800 pentagon p-2 absolute">
+        <div id="menu" class="w-md bg-indigo-800 pentagon p-2 absolute">
             <div
                 class="bg-white pentagon left-0 h-100 flex justify-center pt-10"
             >
