@@ -1,10 +1,14 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { Icon } from "free-astro-components";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer>
     <div class="w-screen bg-indigo-700 inset-be-0 columns-2 fixed">
-        <div><p>Portafolio de Puxka Acosta Domínguez</p></div>
+        <div><p>{t("webpage.title")}</p></div>
         <div class="flex justify-end">
             <a href="#" class="inline-flex"
                 ><Icon icon="linkedin" class="icon-class" /><p>

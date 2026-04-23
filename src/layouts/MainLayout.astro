@@ -1,17 +1,21 @@
 ---
 import "../styles/global.css";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Portafolio</title>
+		<title>{t('title')}</title>
 	</head>
 	<body>
         <Navbar></Navbar>

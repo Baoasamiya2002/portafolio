@@ -1,32 +1,49 @@
 ---
+import {
+    getLangFromUrl,
+    useTranslations,
+    useTranslatedPath,
+} from "../i18n/utils";
 import type { NavigationTypeString } from "astro:transitions/client";
 import { ThemeSwitch } from "free-astro-components";
 import { Icon } from "free-astro-components";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 interface NavItem {
     name: string;
     href: string;
 }
 const navItems: NavItem[] = [
-    { name: "Welcome", href: "/" },
-    { name: "Desktop systems", href: "/desk-sys" },
-    { name: "Evaluation & redesign works", href: "/eva-and-redes-works" },
-    { name: "Webpage prototypes", href: "/web-proto" },
+    { name: t("nav.welcome"), href: translatePath("/") },
+    { name: t("nav.evaluation"), href: translatePath("/eva-and-redes-works") },
+    { name: t("nav.system"), href: translatePath("/desk-sys/") },
+    { name: t("nav.prototype"), href: translatePath("/web-proto") },
 ];
 ---
 
 <div>
     <div class="bg-indigo-800 pentagon_menu w-10 p-2 absolute">
-        <div class="bg-indigo-800 h-13 flex">
-            <a class="flex" id="menu-btn" href="#"><Icon icon="menu" class="icon-class" /></a>
-            <!-- Change for an the image as an element witch class cursos-pointer -->
-        </div>
-        <div class="bg-white hexagon_menu">
-		    <ThemeSwitch />
-        </div>
-        <div class="bg-white hexagon_menu">
-            <a class="flex" href="#">ES</a>
-        </div>
+        <ul>
+            <li class="bg-indigo-800 h-13 flex">
+                <a class="flex" id="menu-btn" href="#"
+                    ><Icon icon="menu" class="icon-class" /></a
+                >
+            </li>
+            <li class="bg-white hexagon_menu">
+                <ThemeSwitch />
+            </li>
+            <li class="bg-white hexagon_menu">
+                <a
+                    id="lang_es_btn"
+                    class="flex"
+                    href={translatePath("/", t("btn.nextLang"))}
+                    >{t("btn.nextLang").toUpperCase()}</a
+                >
+            </li>
+        </ul>
     </div>
     <div id="menu-modal" class="bg-white fixed inset-0 hidden z-10">
         <div id="menu" class="w-md bg-indigo-800 pentagon p-2 absolute">

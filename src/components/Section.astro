@@ -1,6 +1,10 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { Accordion, AccordionItem } from "free-astro-components";
 import { Icon } from "free-astro-components";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="flex justify-center max-h-220 overflow-y-auto md:max-h-223">
@@ -12,7 +16,7 @@ import { Icon } from "free-astro-components";
                     <button
                         id="expand-all-btn"
                         class="inline-flex cursor-pointer"
-                        >Expandir todo <Icon
+                        >{t("section.expandAll")} <Icon
                             icon="chevron-down"
                             class="icon-class"
                         /></button
@@ -20,7 +24,7 @@ import { Icon } from "free-astro-components";
                     <button
                         id="collapse-all-btn"
                         class="inline-flex cursor-pointer"
-                        >Colapsar todo <Icon
+                        >{t("section.collapseAll")} <Icon
                             icon="chevron-up"
                             class="icon-class"
                         /></button
