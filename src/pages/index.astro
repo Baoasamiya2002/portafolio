@@ -1,10 +1,31 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { getImage } from "astro:assets";
+import welcomeImg from "../assets/images/welcome_dialogue.svg";
+
+const bgImage = await getImage({ src: welcomeImg });
 ---
 
 <MainLayout>
-	<div class="pt-144">
-		<h1 class="text-3xl font-bold underline">Hello world!</h1>
-		<h1>Astro</h1>
-	</div>
+	<main>
+		<div class="w-screen h-screen flex items-center justify-center">
+			<div
+				style={`background-image: url(${bgImage.src});`}
+				class="w-224 h-115 bg-contain pl-86 justify-center flex flex-col gap-4"
+			>
+				<h1 class="text-3xl font-bold">Hello!</h1>
+				<p>
+					My name is Puxka, I'm a developer and this is my portfolio
+					:)
+				</p>
+				<p>
+					In the top corner is the menu to view my projects (I also
+					included some options to customize your experience on the
+					page)
+				</p>
+				<p>My LinkedIn is at the bottom, feel free to contact me</p>
+				<p>Thank you for visiting my portfolio!</p>
+			</div>
+		</div>
+	</main>
 </MainLayout>

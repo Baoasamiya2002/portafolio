@@ -28,9 +28,7 @@ const navItems: NavItem[] = [
     <div class="bg-indigo-800 pentagon_menu w-10 p-2 absolute">
         <ul>
             <li class="bg-indigo-800 h-13 flex">
-                <a class="flex" id="menu-btn" href="#"
-                    ><Icon icon="menu" class="icon-class" /></a
-                >
+                <Icon id="menu-btn" icon="menu" class="flex icon-class cursor-pointer" />
             </li>
             <li class="bg-white hexagon_menu">
                 <ThemeSwitch />
@@ -80,7 +78,10 @@ const navItems: NavItem[] = [
         menu_modal?.classList.add("hidden");
     });
 
-    menu_btn?.addEventListener("click", () => {
+    function openMenu() {
         menu_modal?.classList.remove("hidden");
-    });
+    }
+
+    menu_btn?.addEventListener("click", openMenu);
+    menu_btn?.addEventListener("mouseover", openMenu);
 </script>
