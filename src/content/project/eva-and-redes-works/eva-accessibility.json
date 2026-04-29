@@ -1,0 +1,31 @@
+{
+  "name": "Accessibility evaluation",
+  "brief": "During my internship I evaluated my university's learning platforms",
+  "soft-skill": "With this project I learned to design with varied user needs in mind",
+  "dialogues": [
+    "Used automatic and manual tools to check accessibility",
+    "And with the results I redacted a report and gave recommentations"
+  ],
+  "images": [
+    {
+      "indexDialogue": "0",
+      "url": "../../../assets/images/eva-accessibility-1.png",
+      "caption": "Add-on de evaluación automática"
+    },
+    {
+      "indexDialogue": "0",
+      "url": "../../../assets/images/eva-accessibility-2.png",
+      "caption": "Hoja de evaluación manual"
+    },
+    {
+      "indexDialogue": "1",
+      "url": "../../../assets/images/eva-accessibility-3.png",
+      "caption": "Informe de evaluación con recomendaciones"
+    },
+    {
+      "indexDialogue": "1",
+      "url": "../../../assets/images/eva-accessibility-4.png",
+      "caption": ""
+    }
+  ]
+}

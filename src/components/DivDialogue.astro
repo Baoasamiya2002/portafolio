@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+
+import dialogueImg from "../assets/images/dialogue.png";
+
+const { softSkill } = Astro.props;
+---
+
+<div class="inline-flex items-stretch sm:h-20 h-23 gap-0">
+  <Image
+    src={dialogueImg}
+    alt="Avatar de Puxka"
+    class:list={[
+      "h-full w-auto object-contain",
+      softSkill && "-translate-x-px order-1 scale-x-[-1]",
+    ]}
+  />
+  <p
+    class:list={[
+      "bg-[#7030a0] px-4 w-full content-center",
+      !softSkill && "-translate-x-px",
+    ]}
+  >
+    <slot />
+  </p>
+</div>
+
+<!--div class="inline-flex items-stretch sm:h-20 h-25 gap-0">
+  <p class="bg-[#7030a0] px-4 w-full content-center">
+    <slot />
+  </p>
+  <Image
+    src={softSkillImg}
+    alt="Avatar de Puxka"
+    class="h-full w-auto object-contain -translate-x-px"
+  />
+</div!-->

@@ -1,0 +1,42 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { Icon } from "free-astro-components";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="flex justify-center max-h-211 overflow-y-auto sm:max-h-217">
+  <div class="sm:w-3/4 w-11/12">
+    <div>
+      <h1>Title</h1>
+      <div class="flex justify-end">
+        <div class="inline-flex">
+          <button id="expand-all-btn" class="inline-flex cursor-pointer"
+            >{t("section.expandAll")}
+            <Icon icon="chevron-down" class="icon-class" /></button
+          >
+          <button id="collapse-all-btn" class="inline-flex cursor-pointer"
+            >{t("section.collapseAll")}
+            <Icon icon="chevron-up" class="icon-class" /></button
+          >
+        </div>
+      </div>
+      <slot />
+    </div>
+  </div>
+</div>
+
+<script>
+  const expandAllBtn = document.getElementById("expand-all-btn");
+  const collapseAllBtn = document.getElementById("collapse-all-btn");
+  const accordionItems = document.getElementsByTagName("details");
+
+  expandAllBtn?.addEventListener("click", () => {
+    Array.from(accordionItems).forEach((item) => item.setAttribute("open", ""));
+  });
+
+  collapseAllBtn?.addEventListener("click", () => {
+    Array.from(accordionItems).forEach((item) => item.removeAttribute("open"));
+  });
+</script>

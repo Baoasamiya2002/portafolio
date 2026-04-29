@@ -10,7 +10,7 @@ export default defineConfig({
     defaultLocale: "en",
     locales: ["en", "es"],
   },
-  
+
   vite: {
     plugins: [tailwindcss()],
   },
