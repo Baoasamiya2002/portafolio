@@ -2,9 +2,9 @@ import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
-const projectWebProto = defineCollection({
+const projects = defineCollection({
   loader: glob({
-    base: "./src/content/project/eva-and-redes-works",
+    base: "./src/content/project",
     pattern: "**/*.json",
   }),
   schema: ({ image }) =>
@@ -20,7 +20,8 @@ const projectWebProto = defineCollection({
           caption: z.string(),
         }),
       ),
+      link: z.string().optional(),
     }),
 });
 
-export const collections = { projectWebProto };
+export const collections = { projects };

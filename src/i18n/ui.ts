@@ -18,7 +18,7 @@ export const ui = {
     name: "Español",
     "webpage.title": "Portafolio de Puxka Acosta Domínguez",
     "btn.nextLang": "en",
-    nextLangTooltip: "Change to English",
+    "btn.nextLangTooltip": "Change to English",
     "nav.welcome": "Bienvenida",
     "nav.evaluation": "Trabajos de evaluación y rediseño",
     "nav.system": "Sistemas locales",
