@@ -1,0 +1,21 @@
+{
+  "name": "Mapa sonoro interactivo de reserva SRX",
+  "brief": "Participé en un proyecto junto a los brigadistas de la reserva de Santa Rosa Xochiac (SRX)",
+  "soft-skill": "Aprendí a trabajar con un equipo interdisciplinario y a tomar consensos",
+  "dialogues": [
+    "Se accede a la información de distintas especies y sus sonidos a través de ventanas emergentes"
+  ],
+  "images": [
+    {
+      "indexDialogue": "0",
+      "url": "../../../../assets/images/map-srx-1.png",
+      "caption": "Mapa del prototipo, mostrando avistamientos de la flora y fauna"
+    },
+    {
+      "indexDialogue": "0",
+      "url": "../../../../assets/images/map-srx-2.png",
+      "caption": "Ventana emergente de un ave"
+    }
+  ],
+  "link": "https://www.figma.com/proto/QJOI3MXhCkh68hHulD0dm0/Mapa-interactivo-SRX?node-id=56-2&p=f&t=xU9mvoyvJYxkvGWy-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=56%3A2"
+}

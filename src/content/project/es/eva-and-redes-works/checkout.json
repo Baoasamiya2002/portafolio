@@ -1,0 +1,20 @@
+{
+  "name": "Rediseño de caja de cobro",
+  "brief": "Pude trabajar con una farmacia y rediseñar el módulo de cobro para facilitar su uso",
+  "soft-skill": "Aquí aprendí a priorizar la experiencia de usuario y contemplar distintas formas de interacción",
+  "dialogues": [
+    "Rediseñé el orden de los pasos de cobro de forma secuencial (izquierda a derecha) y en columnas, haciéndolo más intuitivo"
+  ],
+  "images": [
+    {
+      "indexDialogue": "0",
+      "url": "../../../../assets/images/checkout-1.png",
+      "caption": "Antes del rediseño"
+    },
+    {
+      "indexDialogue": "0",
+      "url": "../../../../assets/images/checkout-2.png",
+      "caption": "Después del rediseño"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Videojuego 'Latencia. Toma el control...  o la mejor decisión'",
+  "brief": "Coolaboré junto a un equipo interdisciplinario el desarrollo de un videojuego para prevenir la violencia en el noviazgo",
+  "soft-skill": "Con este proyecto aprendí a coordinar a los integrantes de un equipo con distintas especialidades",
+  "dialogues": [
+    "Se realizaron actividades de co-diseño con potenciales usuarios en distintas etapas del desarrollo",
+    "Se desarrollaron todos los niveles según el diseño y planeación hecha"
+  ],
+  "images": [
+    {
+      "indexDialogue": "0",
+      "url": "../../../../assets/images/videogame-1.png",
+      "caption": "Collage de ideación"
+    },
+    {
+      "indexDialogue": "0",
+      "url": "../../../../assets/images/videogame-2.png",
+      "caption": "Card-sorting"
+    },
+    {
+      "indexDialogue": "1",
+      "url": "../../../../assets/images/videogame-3.png",
+      "caption": "Wireframing"
+    },
+    {
+      "indexDialogue": "1",
+      "url": "../../../../assets/images/videogame-4.png",
+      "caption": "Nivel del juego"
+    }
+  ],
+  "link": "https://noviolencia.itch.io/latencia"
+}

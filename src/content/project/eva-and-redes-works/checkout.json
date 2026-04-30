@@ -1,0 +1,18 @@
+{
+  "name": "Redesign of checkout",
+  "brief": "I worked with a pharmacy and redesigned their checkout process to make it easier to use",
+  "soft-skill": "Here I learned to prioritize the user experience and have in mind different ways to interact with the system",
+  "dialogues": ["Redesigned the order of the checkout steps (from right to left) and in columns, making it more intuitive"],
+  "images": [
+    {
+      "indexDialogue": "0",
+      "url": "../../../assets/images/checkout-1.png",
+      "caption": "Before redesign"
+    },
+    {
+      "indexDialogue": "0",
+      "url": "../../../assets/images/checkout-2.png",
+      "caption": "After redesign"
+    }
+  ]
+}

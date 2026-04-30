@@ -1,0 +1,27 @@
+{
+  "name": "Página de Guía *765",
+  "brief": "Tuve la oportunidad de transformar la Guía *765 contra la violencia a la mujer, de tríptico a una página web",
+  "soft-skill": "Gracias a este proyecto, adquirí habilidades para el diseño instruccional y eficientar la información para el usuario",
+  "dialogues": [
+    "Se analizó y sintetizó información del tríptico original",
+    "También se rediseño o crearon sus pictogramas, basándose en la fuente elegida para la página"
+  ],
+  "images": [
+    {
+      "indexDialogue": "0",
+      "url": "../../../../assets/images/guide-765-1.png",
+      "caption": "Antes, el tríptico en papel"
+    },
+    {
+      "indexDialogue": "0",
+      "url": "../../../../assets/images/guide-765-2.png",
+      "caption": "Después, el prototipo de la página web"
+    },
+    {
+      "indexDialogue": "1",
+      "url": "../../../../assets/images/guide-765-3.png",
+      "caption": "Proceso de creación de los pictogramas"
+    }
+  ],
+  "link": "https://www.figma.com/proto/L7q0lDA4Nu3xrWhOFj49LM/Wireframe?node-id=1-3&t=r1jV6mBr4FYQtygb-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3"
+}

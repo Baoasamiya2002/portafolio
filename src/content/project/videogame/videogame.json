@@ -1,0 +1,32 @@
+{
+  "name": "Videogame 'Latencia. Toma el control...  o la mejor decisión'",
+  "brief": "Worked with an interdisciplinary team on the development of a videogame to prevent teen dating violence",
+  "soft-skill": "With this project I learned to coordinate teammates with different field of expertise",
+  "dialogues": [
+    "We made co-design activities with potential users on different development phases",
+    "All the levels were developed according the design and planning"
+  ],
+  "images": [
+    {
+      "indexDialogue": "0",
+      "url": "../../../assets/images/videogame-1.png",
+      "caption": "Collage ideation"
+    },
+    {
+      "indexDialogue": "0",
+      "url": "../../../assets/images/videogame-2.png",
+      "caption": "Card-sorting"
+    },
+    {
+      "indexDialogue": "1",
+      "url": "../../../assets/images/videogame-3.png",
+      "caption": "Wireframing"
+    },
+    {
+      "indexDialogue": "1",
+      "url": "../../../assets/images/videogame-4.png",
+      "caption": "Game level"
+    }
+  ],
+  "link": "https://noviolencia.itch.io/latencia"
+}
