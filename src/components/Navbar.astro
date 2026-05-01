@@ -6,8 +6,8 @@ import {
 } from "../i18n/utils";
 import type { NavigationTypeString } from "astro:transitions/client";
 import { ThemeSwitch } from "free-astro-components";
-import { Icon } from 'astro-icon/components';
-import { DarkMode } from 'accessible-astro-components'
+import { Icon } from "astro-icon/components";
+import { DarkMode } from "accessible-astro-components";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -18,7 +18,7 @@ interface NavItem {
   href: string;
 }
 const navItems: NavItem[] = [
-  { name: t("nav.welcome"), href: translatePath("/") },  
+  { name: t("nav.welcome"), href: translatePath("/") },
   { name: t("nav.prototype"), href: translatePath("/web-proto") },
   { name: t("nav.evaluation"), href: translatePath("/eva-and-redes-works") },
   { name: t("nav.videogame"), href: translatePath("/videogame/") },
@@ -26,22 +26,27 @@ const navItems: NavItem[] = [
 ---
 
 <div>
-  <div class="bg-indigo-800 pentagon_menu w-11 p-1.5 absolute">
+  <div class="bg-figure pentagon_menu w-11 p-1.5 absolute">
     <ul>
-      <li class="bg-indigo-800 h-13 flex">
+      <li class="h-13 flex">
         <!--Icon
           id="menu-btn"
           icon="menu"
           class="flex icon-class cursor-pointer"
         /!-->
       </li>
-      <li class="bg-white hexagon_menu transition duration-200 hover:bg-black">
-        <DarkMode initialMode="auto" class="border-0! px-1! py-1! pbs-3! shadow-none! hover:text-white">
+      <li
+        class="bg-bg hover:bg-black darkmode:hover:bg-white hexagon_menu transition duration-200"
+      >
+        <DarkMode
+          initialMode="auto"
+          class="border-0! px-1! py-1! pbs-3! shadow-none! hover:text-white darkmode:hover:text-black"
+        >
           <Icon name="moon-stars" slot="dark" />
           <Icon name="sun" slot="light" />
         </DarkMode>
       </li>
-      <li class="bg-white hexagon_menu">
+      <li class="bg-bg hover:bg-black darkmode:hover:bg-white hexagon_menu">
         <a
           id="lang_es_btn"
           class="flex"

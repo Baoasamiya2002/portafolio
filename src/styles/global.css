@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+@theme {
+  --color-figure: #7030A0;
+  --color-bg: #fcf9ee;
+  --color-text: #000000;
+}
+
+html.darkmode {
+  --color-bg: #030611;
+  --color-text: #ffffff;
+}
+
+@custom-variant darkmode (&:where(html.darkmode, html.darkmode *));
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
 .pentagon {
   -webkit-clip-path: polygon(99% 0, 99% 92%, 92% 99%, 0 99%, 0 0);
   clip-path: polygon(99% 0, 99% 92%, 92% 99%, 0 99%, 0 0);
