@@ -6,7 +6,8 @@ import {
 } from "../i18n/utils";
 import type { NavigationTypeString } from "astro:transitions/client";
 import { ThemeSwitch } from "free-astro-components";
-import { Icon } from "free-astro-components";
+import { Icon } from 'astro-icon/components';
+import { DarkMode } from 'accessible-astro-components'
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -25,17 +26,20 @@ const navItems: NavItem[] = [
 ---
 
 <div>
-  <div class="bg-indigo-800 pentagon_menu w-10 p-2 absolute">
+  <div class="bg-indigo-800 pentagon_menu w-11 p-1.5 absolute">
     <ul>
       <li class="bg-indigo-800 h-13 flex">
-        <Icon
+        <!--Icon
           id="menu-btn"
           icon="menu"
           class="flex icon-class cursor-pointer"
-        />
+        /!-->
       </li>
-      <li class="bg-white hexagon_menu">
-        <ThemeSwitch />
+      <li class="bg-white hexagon_menu transition duration-200 hover:bg-black">
+        <DarkMode initialMode="auto" class="border-0! px-1! py-1! pbs-3! shadow-none! hover:text-white">
+          <Icon name="moon-stars" slot="dark" />
+          <Icon name="sun" slot="light" />
+        </DarkMode>
       </li>
       <li class="bg-white hexagon_menu">
         <a

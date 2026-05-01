@@ -1,15 +1,18 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { Icon } from "free-astro-components";
+import { Heading, Button } from 'accessible-astro-components';
+
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const { title } = Astro.props;
 ---
 
 <div class="flex justify-center max-h-211 overflow-y-auto sm:max-h-217">
   <div class="sm:w-3/4 w-11/12">
     <div>
-      <h1>Title</h1>
+      <Heading level="h1">{title}</Heading>
       <div class="flex justify-end">
         <div class="inline-flex">
           <button id="expand-all-btn" class="inline-flex cursor-pointer"
