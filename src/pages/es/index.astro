@@ -2,6 +2,8 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getImage } from "astro:assets";
 import welcomeImg from "../../assets/images/welcome_dialogue.svg";
+import { Heading } from "accessible-astro-components";
+import { Icon } from "astro-icon/components";
 
 const bgImage = await getImage({ src: welcomeImg });
 ---
@@ -11,16 +13,25 @@ const bgImage = await getImage({ src: welcomeImg });
     <div class="w-screen h-screen flex items-center justify-center">
       <div
         style={`background-image: url(${bgImage.src});`}
-        class="w-4xl h-115 bg-contain pl-86 justify-center flex flex-col gap-4"
+        class="w-4xl h-115 bg-contain pl-86 pr-3 justify-center flex flex-col gap-4 text-white"
       >
-        <h1 class="text-3xl font-bold">¡Hola!</h1>
-        <p>Mi nombre es Puxka, soy desarrollador y este es mi portafolio :)</p>
-        <p>
-          En la esquina superior está el menú para ver mis proyectos (también
-          incluí algunas opciones para personalizar tu experiencia en la página)
+        <Heading level="h1" size="h3" class="font-bold">¡Hola!</Heading>
+        <p>¡Bienvenido a mi portafolio!</p>
+        <p style="display: ruby;">
+          Para ver mis proyectos, haz clic en el menú <Icon
+            name="menu"
+            size="1.5rem"
+          /> de la esquina superior
+        </p>
+        <p style="display: ruby;">
+          También puedes alternar entre un tema obscuro <Icon
+            name="moon-stars"
+            size="1.5rem"
+          /> o claro <Icon name="sun" size="1.5rem" /> y cambiar el idioma de la página
+          (English/Español)
         </p>
         <p>Mi LinkedIn está en la parte inferior, no dudes en contactarme</p>
-        <p>¡Gracias por visitar mi portafolio!</p>
+        <p>¡Gracias por tu visita!</p>
       </div>
     </div>
   </main>
