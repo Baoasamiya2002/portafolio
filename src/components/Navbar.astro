@@ -5,9 +5,8 @@ import {
   useTranslatedPath,
 } from "../i18n/utils";
 import type { NavigationTypeString } from "astro:transitions/client";
-import { ThemeSwitch } from "free-astro-components";
 import { Icon } from "astro-icon/components";
-import { DarkMode } from "accessible-astro-components";
+import { DarkMode, Link, Button } from "accessible-astro-components";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -29,11 +28,11 @@ const navItems: NavItem[] = [
   <div class="bg-figure pentagon_menu w-11 p-1.5 absolute">
     <ul>
       <li class="h-13 flex">
-        <!--Icon
+        <Button
           id="menu-btn"
-          icon="menu"
-          class="flex icon-class cursor-pointer"
-        /!-->
+          class="border-0! px-0! py-0! bg-transparent! text-white!"
+          size="sm"><Icon name="menu" size="2rem" /></Button
+        >
       </li>
       <li
         class="bg-bg hover:bg-black darkmode:hover:bg-white hexagon_menu transition duration-200"
@@ -47,29 +46,30 @@ const navItems: NavItem[] = [
         </DarkMode>
       </li>
       <li class="bg-bg hover:bg-black darkmode:hover:bg-white hexagon_menu">
-        <a
+        <Link
           id="lang_es_btn"
-          class="flex"
+          class="border-0! px-1.5! py-1! pbs-3! bg-transparent! text-black! darkmode:text-white! hover:text-white! darkmode:hover:text-black! flex"
           href={translatePath("/", t("btn.nextLang"))}
-          >{t("btn.nextLang").toUpperCase()}</a
+          isButton
+          size="sm">{t("btn.nextLang").toUpperCase()}</Link
         >
       </li>
     </ul>
   </div>
-  <div id="menu-modal" class="bg-white/50 fixed inset-0 hidden z-10">
-    <div id="menu" class="w-md bg-indigo-800 pentagon p-2 absolute">
-      <div class="bg-white pentagon left-0 h-100 flex justify-center pt-10">
+  <div id="menu-modal" class="bg-white/50 fixed inset-0 z-10 hidden">
+    <div id="menu" class="w-md bg-figure pentagon p-2 absolute">
+      <div class="bg-bg pentagon left-0 h-100 flex justify-center pt-10">
         <nav class="inline-flex">
           <ul class="flex flex-col gap-6">
             {
               navItems.map((item: NavItem) => (
                 <li>
-                  <a
-                    class="hover:bg-indigo-800 hover:text-white pentagon_item text-2xl text-center flex items-center p-2 w-[24.3rem]"
+                  <Link
+                    class="hover:bg-figure hover:text-white! pentagon_item text-2xl flex items-center p-2 w-[24.3rem]"
                     href={item.href}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))
             }
@@ -94,5 +94,4 @@ const navItems: NavItem[] = [
   }
 
   menu_btn?.addEventListener("click", openMenu);
-  menu_btn?.addEventListener("mouseover", openMenu);
 </script>

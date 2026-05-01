@@ -31,8 +31,8 @@ body {
 }
 
 .hexagon_menu {
-  -webkit-clip-path: polygon(72% 15%, 99% 0, 99% 85%, 75% 99%, 0 99%, 0 15%);
-  clip-path: polygon(72% 15%, 99% 0, 99% 85%, 75% 99%, 0 99%, 0 15%);
+  -webkit-clip-path: polygon(72% 15%, 99% 0, 99% 80%, 65% 99%, 0 99%, 0 15%);
+  clip-path: polygon(72% 15%, 99% 0, 99% 80%, 65% 99%, 0 99%, 0 15%);
 }
 
 .pentagon_menu {
