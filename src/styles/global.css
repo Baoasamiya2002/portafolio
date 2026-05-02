@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-figure: #7030A0;
+  --color-figure: #7030a0;
   --color-bg: #fcf9ee;
   --color-text: #000000;
   --default-font-family: "Lexend", sans-serif;
@@ -21,8 +21,8 @@ body {
 }
 
 .pentagon {
-  -webkit-clip-path: polygon(99% 0, 99% 92%, 92% 99%, 0 99%, 0 0);
-  clip-path: polygon(99% 0, 99% 92%, 92% 99%, 0 99%, 0 0);
+  -webkit-clip-path: polygon(100% 0, 100% 92%, 92% 99%, 0 99%, 0 0);
+  clip-path: polygon(100% 0, 100% 92%, 92% 99%, 0 99%, 0 0);
 }
 
 .pentagon_item {
@@ -43,4 +43,16 @@ body {
 .hexagon {
   -webkit-clip-path: polygon(90% 0, 99% 10%, 99% 99%, 10% 99%, 0 90%, 0 0);
   clip-path: polygon(90% 0, 99% 10%, 99% 99%, 10% 99%, 0 90%, 0 0);
+}
+
+@media (max-width: 640px) {
+  .hexagon_menu {
+    -webkit-clip-path: polygon(17% 0, 99% 0, 99% 80%, 80% 99%, 0 99%, 17% 80%);
+    clip-path: polygon(17% 0, 99% 0, 99% 80%, 80% 99%, 0 99%, 17% 80%);
+  }
+
+  .pentagon_menu {
+    -webkit-clip-path: polygon(99% 0, 99% 80%, 90% 99%, 0 99%, 0 0);
+    clip-path: polygon(99% 0, 99% 80%, 90% 99%, 0 99%, 0 0);
+  }
 }
