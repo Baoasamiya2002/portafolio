@@ -9,19 +9,19 @@ const t = useTranslations(lang);
 const { title } = Astro.props;
 ---
 
-<div class="flex justify-center">
+<div class="flex justify-center pt-15 py-2">
   <div class="sm:w-3/4 w-11/12">
     <div>
       <Heading level="h1">{title}</Heading>
       <div class="flex justify-end">
         <div class="inline-flex">
-          <button id="expand-all-btn" class="inline-flex cursor-pointer"
+          <Button id="expand-all-btn" class="inline-flex border-0! bg-transparent!"
             >{t("section.expandAll")}
-            <Icon icon="chevron-down" class="icon-class" /></button
+            <Icon icon="chevron-down" class="icon-class" /></Button
           >
-          <button id="collapse-all-btn" class="inline-flex cursor-pointer"
+          <Button id="collapse-all-btn" class="inline-flex border-0! bg-transparent!"
             >{t("section.collapseAll")}
-            <Icon icon="chevron-up" class="icon-class" /></button
+            <Icon icon="chevron-up" class="icon-class" /></Button
           >
         </div>
       </div>
