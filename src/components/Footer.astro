@@ -1,19 +1,30 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import { Icon } from "free-astro-components";
+import { Icon } from "astro-icon/components";
+import { Link } from "accessible-astro-components";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <footer>
-  <div class="w-screen bg-indigo-700 inset-be-0 columns-2 fixed">
-    <div><p>{t("webpage.title")}</p></div>
+  <div
+    class="w-full bg-figure inset-be-0 flex items-center justify-between fixed px-1.5"
+  >
+    <div>
+      <p class="hidden md:block">{t("webpage.title")}</p><p
+        class="block md:hidden"
+      >
+        {t("webpage.title.short")}
+      </p>
+    </div>
     <div class="flex justify-end">
-      <a href="https://linkedin.com/in/puxka-acodom" class="inline-flex"
-        ><Icon icon="linkedin" class="icon-class" /><p>
+      <Link
+        href="https://linkedin.com/in/puxka-acodom"
+        class="inline-flex items-center"
+        ><Icon name="linkedin" size="2rem" /><p class="hidden md:block">
           linkedin.com/in/puxka-acodom
-        </p></a
+        </p></Link
       >
     </div>
   </div>

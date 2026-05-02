@@ -5,6 +5,7 @@ export const ui = {
   en: {
     name: "English",
     "webpage.title": "Portfolio of Puxka Acosta Domínguez",
+    "webpage.title.short": "Portafolio of Puxka",
     "btn.nextLang": "es",
     "btn.nextLangTooltip": "Cambiar a Español",
     "nav.welcome": "Welcome",
@@ -17,6 +18,7 @@ export const ui = {
   es: {
     name: "Español",
     "webpage.title": "Portafolio de Puxka Acosta Domínguez",
+    "webpage.title.short": "Portafolio de Puxka",
     "btn.nextLang": "en",
     "btn.nextLangTooltip": "Change to English",
     "nav.welcome": "Bienvenida",
