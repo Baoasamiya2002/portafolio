@@ -15,6 +15,8 @@ export const ui = {
     "nav.prototype": "Webpage prototypes",
     "section.expandAll": "Expand all",
     "section.collapseAll": "Collapse all",
+    "project.prototype.linkLabel": "View prototype",
+    "project.videogame.linkLabel": "Check videogame",
   },
   es: {
     name: "Español",
@@ -29,5 +31,7 @@ export const ui = {
     "nav.prototype": "Prototipos de páginas web",
     "section.expandAll": "Expandir todo",
     "section.collapseAll": "Colapsar todo",
+    "project.prototype.linkLabel": "Ver prototipo",
+    "project.videogame.linkLabel": "Checa el videojuego",
   },
 } as const;

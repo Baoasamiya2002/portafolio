@@ -1,7 +1,7 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import ProjectSection from "../layouts/ProjectSection.astro";
-import DivDialogue from "../components/DivDialogue.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import ProjectSection from "../../layouts/ProjectSection.astro";
+import DivDialogue from "../../components/DivDialogue.astro";
 import { Accordion, AccordionItem, Link } from "accessible-astro-components";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
@@ -10,7 +10,7 @@ import {
   getLangFromUrl,
   useTranslatedPath,
   useTranslations,
-} from "../i18n/utils";
+} from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
