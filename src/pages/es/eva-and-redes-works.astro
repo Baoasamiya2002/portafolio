@@ -24,7 +24,7 @@ const projects = (await getCollection("projects")).filter((project) =>
       {
         projects.map((project) => (
           <AccordionItem title={project.data.name} variant="chevron">
-            <div class="flex flex-col gap-1">
+            <div class="flex flex-col gap-6">
               <DivDialogue softSkill={false}>{project.data.brief}</DivDialogue>
               <DivDialogue softSkill={true}>
                 {project.data["soft-skill"]}
@@ -32,13 +32,13 @@ const projects = (await getCollection("projects")).filter((project) =>
               {project.data.dialogues.map((dialogue, index) => (
                 <>
                   <DivDialogue softSkill={false}>{dialogue}</DivDialogue>
-                  <div class="md:inline-flex items-end bg-[linear-gradient(to_bottom,transparent_22%,#7030a0_22%)]">
+                  <div class="md:inline-flex items-end text-white bg-[linear-gradient(to_bottom,transparent_22%,#7030a0_22%)]">
                     {project.data.images
                       .filter((image) => image.indexDialogue === `${index}`)
                       .map((image) => (
                         <figure>
                           <Image src={image.url} alt="" class="h-auto w-full" />
-                          <figcaption>{image.caption}</figcaption>
+                          <figcaption class="p-1 pl-2">{image.caption}</figcaption>
                         </figure>
                       ))}
                   </div>

@@ -6,7 +6,7 @@ import dialogueImg from "../assets/images/dialogue.png";
 const { softSkill } = Astro.props;
 ---
 
-<div class="inline-flex items-stretch sm:h-20 h-23 gap-0">
+<div class="inline-flex items-stretch sm:h-20 h-32 gap-0">
   <Image
     src={dialogueImg}
     alt="Avatar de Puxka"
@@ -17,7 +17,7 @@ const { softSkill } = Astro.props;
   />
   <p
     class:list={[
-      "bg-[#7030a0] px-4 w-full content-center",
+      "bg-figure px-4 w-full content-center text-white",
       !softSkill && "-translate-x-px",
     ]}
   >
