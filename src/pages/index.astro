@@ -13,7 +13,7 @@ const bgImage = await getImage({ src: welcomeImg });
     <div class="w-screen h-screen flex items-center justify-center">
       <div
         style={`background-image: url(${bgImage.src});`}
-        class="w-4xl h-115 bg-contain pl-86 justify-center flex flex-col gap-4 text-white"
+        class="w-4xl h-115 m-3 md:bg-cover md:pl-86 pl-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] pr-3 justify-center flex flex-col gap-4 text-white"
       >
         <Heading level="h1" size="h3" class="font-bold">Hello!</Heading>
         <p>Welcome to my portfolio!</p>
@@ -30,7 +30,9 @@ const bgImage = await getImage({ src: welcomeImg });
           /> or light theme <Icon name="sun" size="1.5rem" /> and change the language
           of the page (English/Español)
         </p>
-        <p>My LinkedIn is at the bottom, feel free to contact me</p>
+        <p style="display: ruby;">
+          My LinkedIn <Icon name="linkedin" size="1.5rem" /> is at the bottom, feel free to contact me
+        </p>
         <p>Thank you for visiting!</p>
       </div>
     </div>

@@ -13,7 +13,7 @@ const bgImage = await getImage({ src: welcomeImg });
     <div class="w-screen h-screen flex items-center justify-center">
       <div
         style={`background-image: url(${bgImage.src});`}
-        class="w-4xl h-115 bg-contain pl-86 pr-3 justify-center flex flex-col gap-4 text-white"
+        class="w-4xl h-115 m-3 md:bg-cover md:pl-86 pl-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] pr-3 justify-center flex flex-col gap-4 text-white"
       >
         <Heading level="h1" size="h3" class="font-bold">¡Hola!</Heading>
         <p>¡Bienvenido a mi portafolio!</p>
@@ -30,7 +30,10 @@ const bgImage = await getImage({ src: welcomeImg });
           /> o claro <Icon name="sun" size="1.5rem" /> y cambiar el idioma de la página
           (English/Español)
         </p>
-        <p>Mi LinkedIn está en la parte inferior, no dudes en contactarme</p>
+        <p style="display: ruby;">
+          Mi LinkedIn <Icon name="linkedin" size="1.5rem" /> está en la parte inferior,
+          no dudes en contactarme
+        </p>
         <p>¡Gracias por tu visita!</p>
       </div>
     </div>
