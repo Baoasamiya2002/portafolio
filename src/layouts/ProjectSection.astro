@@ -1,31 +1,86 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { Icon } from "free-astro-components";
-import { Heading, Button } from 'accessible-astro-components';
-
+import { Heading, Button } from "accessible-astro-components";
+import DivDialogue from "../components/DivDialogue.astro";
+import { Accordion, AccordionItem, Link } from "accessible-astro-components";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const { title } = Astro.props;
+const { title, path } = Astro.props;
+
+const projects = (await getCollection("projects")).filter((project) =>
+  project.id.startsWith(path),
+);
 ---
 
-<div class="flex justify-center pt-15 py-2">
+<div class="flex justify-center pt-15 py-8">
   <div class="sm:w-3/4 w-11/12">
     <div>
       <Heading level="h1">{title}</Heading>
-      <div class:list={["flex justify-end", title === t("nav.videogame") ? "hidden" : ""]}>
+      <div
+        class:list={[
+          "flex justify-end",
+          title === t("nav.videogame") ? "hidden" : "",
+        ]}
+      >
         <div class="inline-flex">
-          <Button id="expand-all-btn" class="inline-flex border-0! bg-transparent!"
+          <Button
+            id="expand-all-btn"
+            class="inline-flex border-0! bg-transparent!"
             >{t("section.expandAll")}
             <Icon icon="chevron-down" class="icon-class" /></Button
           >
-          <Button id="collapse-all-btn" class="inline-flex border-0! bg-transparent!"
+          <Button
+            id="collapse-all-btn"
+            class="inline-flex border-0! bg-transparent!"
             >{t("section.collapseAll")}
             <Icon icon="chevron-up" class="icon-class" /></Button
           >
         </div>
       </div>
-      <slot />
+      <Accordion>
+        {
+          projects.map((project) => (
+            <AccordionItem title={project.data.name} variant="chevron">
+              <div class="flex flex-col gap-6">
+                <Link href={project.data.link} isExternal>
+                  {t("project.prototype.linkLabel")}
+                </Link>
+                <DivDialogue softSkill={false}>
+                  {project.data.brief}
+                </DivDialogue>
+                <DivDialogue softSkill={true}>
+                  {project.data["soft-skill"]}
+                </DivDialogue>
+                {project.data.dialogues.map((dialogue, index) => (
+                  <>
+                    <DivDialogue softSkill={false}>{dialogue}</DivDialogue>
+                    <div class="md:inline-flex items-end text-white bg-[linear-gradient(to_bottom,transparent_22%,#7030a0_22%)]">
+                      {project.data.images
+                        .filter((image) => image.indexDialogue === `${index}`)
+                        .map((image) => (
+                          <figure>
+                            <Image
+                              src={image.url}
+                              alt=""
+                              class="h-auto w-full"
+                            />
+                            <figcaption class="p-1 pl-2">
+                              {image.caption}
+                            </figcaption>
+                          </figure>
+                        ))}
+                    </div>
+                  </>
+                ))}
+              </div>
+            </AccordionItem>
+          ))
+        }
+      </Accordion>
     </div>
   </div>
 </div>

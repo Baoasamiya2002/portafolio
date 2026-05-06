@@ -1,40 +1,69 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import ProjectSection from "../layouts/ProjectSection.astro";
 import { getImage } from "astro:assets";
 import welcomeImg from "../assets/images/welcome_dialogue.svg";
 import { Heading } from "accessible-astro-components";
 import { Icon } from "astro-icon/components";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const bgImage = await getImage({ src: welcomeImg });
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <MainLayout>
-  <main>
-    <div class="w-screen h-screen flex items-center justify-center">
-      <div
-        style={`background-image: url(${bgImage.src});`}
-        class="w-4xl h-115 m-3 md:bg-cover md:pl-86 pl-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] pr-3 justify-center flex flex-col gap-4 text-white"
-      >
-        <Heading level="h1" size="h3" class="font-bold">Hello!</Heading>
-        <p>Welcome to my portfolio!</p>
-        <p style="display: ruby;">
-          To view my projects, click on the menu <Icon
-            name="menu"
-            size="1.5rem"
-          /> in the top corner
-        </p>
-        <p style="display: ruby;">
-          You can also toggle between a dark theme <Icon
-            name="moon-stars"
-            size="1.5rem"
-          /> or light theme <Icon name="sun" size="1.5rem" /> and change the language
-          of the page (English/Español)
-        </p>
-        <p style="display: ruby;">
-          My LinkedIn <Icon name="linkedin" size="1.5rem" /> is at the bottom, feel free to contact me
-        </p>
-        <p>Thank you for visiting!</p>
-      </div>
+  <div class="w-screen h-screen flex items-center justify-center sticky top-0">
+    <div
+      style={`background-image: url(${bgImage.src});`}
+      class="w-4xl h-115 m-3 md:bg-cover md:pl-86 pl-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] pr-3 justify-center flex flex-col gap-4 text-white"
+    >
+      <Heading level="h1" size="h3" class="font-bold">Hello!</Heading>
+      <p>Welcome to my portfolio!</p>
+      <p style="display: ruby;">
+        To view my projects, click on the menu <Icon
+          name="menu"
+          size="1.5rem"
+        /> in the top corner
+      </p>
+      <p style="display: ruby;">
+        You can also toggle between a dark theme <Icon
+          name="moon-stars"
+          size="1.5rem"
+        /> or light theme <Icon name="sun" size="1.5rem" /> and change the language
+        of the page (English/Español)
+      </p>
+      <p style="display: ruby;">
+        My LinkedIn <Icon name="linkedin" size="1.5rem" /> is at the bottom, feel
+        free to contact me
+      </p>
+      <p>Thank you for visiting!</p>
     </div>
+  </div>
+  <main>
+    <section
+      id="web-proto"
+      class="min-h-screen overflow-y-hidden sticky top-0 bg-bg"
+    >
+      <div class="bg-figure w-full h-1"></div>
+      <ProjectSection title={t("nav.prototype")} path={"web-proto/"} />
+    </section>
+    <section
+      id="eva-and-redes-works"
+      class="min-h-screen overflow-y-hidden sticky top-0 bg-bg"
+    >
+      <div class="bg-figure w-full h-1"></div>
+      <ProjectSection
+        title={t("nav.evaluation")}
+        path={"eva-and-redes-works/"}
+      />
+    </section>
+    <section
+      id="videogame"
+      class="min-h-screen overflow-y-hidden sticky top-0 bg-bg"
+    >
+      <div class="bg-figure w-full h-1"></div>
+      <ProjectSection title={t("nav.videogame")} path={"videogame/"} />
+    </section>
   </main>
 </MainLayout>

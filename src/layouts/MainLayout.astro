@@ -19,7 +19,9 @@ const t = useTranslations(lang);
   </head>
   <body>
     <Navbar />
-    <slot />
+    <div class="overflow-x-hidden h-screen overflow-y-scroll">
+      <slot />
+    </div>    
     <Footer />
   </body>
 </html>
