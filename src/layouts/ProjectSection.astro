@@ -16,85 +16,101 @@ const projects = (await getCollection("projects")).filter((project) =>
 );
 ---
 
-<div class="flex justify-center pt-15 py-8">
-  <div class="sm:w-3/4 w-11/12">
-    <div>
-      <Heading level="h1">{title}</Heading>
-      <div
-        class:list={[
-          "flex justify-end",
-          title === t("nav.videogame") ? "hidden" : "",
-        ]}
-      >
-        <div class="inline-flex">
-          <Button
-            id="expand-all-btn"
-            class="inline-flex border-0! bg-transparent!"
-            >{t("section.expandAll")}
-            <Icon icon="chevron-down" class="icon-class" /></Button
-          >
-          <Button
-            id="collapse-all-btn"
-            class="inline-flex border-0! bg-transparent!"
-            >{t("section.collapseAll")}
-            <Icon icon="chevron-up" class="icon-class" /></Button
-          >
+<project-section>
+  <div class="flex justify-center pt-15 py-8">
+    <div class="sm:w-3/4 w-11/12">
+      <div>
+        <Heading level="h1">{title}</Heading>
+        <div
+          class:list={[
+            "flex justify-end",
+            title === t("nav.videogame") ? "hidden" : "",
+          ]}
+        >
+          <div class="inline-flex">
+            <Button
+              id="expand-all-btn"
+              class="inline-flex border-0! bg-transparent!"
+              >{t("section.expandAll")}
+              <Icon icon="chevron-down" class="icon-class" /></Button
+            >
+            <Button
+              id="collapse-all-btn"
+              class="inline-flex border-0! bg-transparent!"
+              >{t("section.collapseAll")}
+              <Icon icon="chevron-up" class="icon-class" /></Button
+            >
+          </div>
         </div>
+        <Accordion>
+          {
+            projects.map((project) => (
+              <AccordionItem
+                title={project.data.name}
+                name={title}
+                variant="chevron"
+              >
+                <div class="flex flex-col gap-6">
+                  <Link href={project.data.link} isExternal>
+                    {t("project.prototype.linkLabel")}
+                  </Link>
+                  <DivDialogue softSkill={false}>
+                    {project.data.brief}
+                  </DivDialogue>
+                  <DivDialogue softSkill={true}>
+                    {project.data["soft-skill"]}
+                  </DivDialogue>
+                  {project.data.dialogues.map((dialogue, index) => (
+                    <>
+                      <DivDialogue softSkill={false}>{dialogue}</DivDialogue>
+                      <div class="md:inline-flex items-end text-white bg-[linear-gradient(to_bottom,transparent_22%,#7030a0_22%)]">
+                        {project.data.images
+                          .filter((image) => image.indexDialogue === `${index}`)
+                          .map((image) => (
+                            <figure>
+                              <Image
+                                src={image.url}
+                                alt=""
+                                class="h-auto w-full"
+                              />
+                              <figcaption class="p-1 pl-2">
+                                {image.caption}
+                              </figcaption>
+                            </figure>
+                          ))}
+                      </div>
+                    </>
+                  ))}
+                </div>
+              </AccordionItem>
+            ))
+          }
+        </Accordion>
       </div>
-      <Accordion>
-        {
-          projects.map((project) => (
-            <AccordionItem title={project.data.name} variant="chevron">
-              <div class="flex flex-col gap-6">
-                <Link href={project.data.link} isExternal>
-                  {t("project.prototype.linkLabel")}
-                </Link>
-                <DivDialogue softSkill={false}>
-                  {project.data.brief}
-                </DivDialogue>
-                <DivDialogue softSkill={true}>
-                  {project.data["soft-skill"]}
-                </DivDialogue>
-                {project.data.dialogues.map((dialogue, index) => (
-                  <>
-                    <DivDialogue softSkill={false}>{dialogue}</DivDialogue>
-                    <div class="md:inline-flex items-end text-white bg-[linear-gradient(to_bottom,transparent_22%,#7030a0_22%)]">
-                      {project.data.images
-                        .filter((image) => image.indexDialogue === `${index}`)
-                        .map((image) => (
-                          <figure>
-                            <Image
-                              src={image.url}
-                              alt=""
-                              class="h-auto w-full"
-                            />
-                            <figcaption class="p-1 pl-2">
-                              {image.caption}
-                            </figcaption>
-                          </figure>
-                        ))}
-                    </div>
-                  </>
-                ))}
-              </div>
-            </AccordionItem>
-          ))
-        }
-      </Accordion>
     </div>
   </div>
-</div>
+</project-section>
 
 <script>
-  const expandAllBtn = document.getElementById("expand-all-btn");
-  const collapseAllBtn = document.getElementById("collapse-all-btn");
-  const accordionItems = document.getElementsByTagName("details");
+  class ProjectSection extends HTMLElement {
+    connectedCallback() {
+      const expandAllBtn = this.querySelector("#expand-all-btn");
+      const collapseAllBtn = this.querySelector("#collapse-all-btn");
+      const accordionItems = this.querySelectorAll("details");
 
-  expandAllBtn?.addEventListener("click", () => {
-    Array.from(accordionItems).forEach((item) => item.setAttribute("open", ""));
-  });
+      expandAllBtn?.addEventListener("click", () => {
+        Array.from(accordionItems).forEach((item) =>
+          item.setAttribute("open", ""),
+        );
+      });
 
-  collapseAllBtn?.addEventListener("click", () => {
-    Array.from(accordionItems).forEach((item) => item.removeAttribute("open"));
-  });
+      collapseAllBtn?.addEventListener("click", () => {
+        Array.from(accordionItems).forEach((item) =>
+          item.removeAttribute("open"),
+        );
+      });
+    }
+  }
+
+  customElements.define("project-section", ProjectSection);
 </script>
