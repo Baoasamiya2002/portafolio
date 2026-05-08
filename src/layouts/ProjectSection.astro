@@ -47,8 +47,8 @@ const projects = (await getCollection("projects")).filter((project) =>
             projects.map((project) => (
               <AccordionItem
                 title={project.data.name}
-                name={title}
                 variant="chevron"
+                open={(title === t("nav.videogame"))}
               >
                 <div class="flex flex-col gap-6">
                   <Link href={project.data.link} isExternal>
