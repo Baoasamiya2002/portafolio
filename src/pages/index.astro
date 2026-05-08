@@ -13,7 +13,7 @@ const t = useTranslations(lang);
 ---
 
 <MainLayout>
-  <div class="w-screen h-screen flex items-center justify-center sticky top-0">
+  <div class="w-screen h-screen flex items-center justify-center sticky top-0 -z-1">
     <div
       style={`background-image: url(${bgImage.src});`}
       class="w-4xl h-115 m-3 md:bg-cover md:pl-86 pl-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] pr-3 justify-center flex flex-col gap-4 text-white"
@@ -43,16 +43,16 @@ const t = useTranslations(lang);
   <main>
     <section
       id="web-proto"
-      class="min-h-screen overflow-y-hidden sticky top-0 bg-bg"
+      class="min-h-[calc(100vh+5rem)] bg-bg"
     >
-      <div class="bg-figure w-full h-1"></div>
-      <ProjectSection title={t("nav.prototype")} path={"web-proto/"} />
+      <div class="bg-figure w-full h-1 sticky top-0"></div>
+      <ProjectSection title={t("nav.prototype")} path={"web-proto/"}/>
     </section>
     <section
       id="eva-and-redes-works"
-      class="min-h-screen overflow-y-hidden sticky top-0 bg-bg"
+      class="min-h-[calc(100vh+5rem)] bg-bg"
     >
-      <div class="bg-figure w-full h-1"></div>
+      <div class="bg-figure w-full h-1 sticky top-0"></div>
       <ProjectSection
         title={t("nav.evaluation")}
         path={"eva-and-redes-works/"}
