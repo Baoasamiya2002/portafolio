@@ -13,19 +13,19 @@ const t = useTranslations(lang);
 ---
 
 <MainLayout>
-  <div class="w-screen h-screen flex items-center justify-center sticky top-0 -z-1">
+  <div 
+      class="w-screen h-screen flex items-center justify-center sticky top-0 -z-1">
     <div
-      id="welcome"
       style={`background-image: url(${bgImage.src});`}
       class="w-4xl h-115 m-3 md:bg-cover md:pl-86 pl-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] pr-3 justify-center flex flex-col gap-4 text-white"
     >
       <Heading level="h1" size="h3" class="font-bold">Hello!</Heading>
       <p>Welcome to my portfolio!</p>
       <p style="display: ruby;">
-        To view my projects, click on the menu <Icon
+        To view my projects, scroll down or click on the menu <Icon
           name="menu"
           size="1.5rem"
-        /> in the top corner
+        /> in the top corner of the page
       </p>
       <p style="display: ruby;">
         You can also toggle between a dark theme <Icon
@@ -35,7 +35,7 @@ const t = useTranslations(lang);
         of the page (English/Español)
       </p>
       <p style="display: ruby;">
-        My LinkedIn <Icon name="linkedin" size="1.5rem" /> is at the bottom, feel
+        My LinkedIn <Icon name="linkedin" size="1.5rem" /> is at the bottom of the page, feel
         free to contact me
       </p>
       <p>Thank you for visiting!</p>
