@@ -1,12 +1,24 @@
 {
   "name": "Redesign of *765 Guide",
-  "brief": "Had the opportunity to transform the *765 Guide against women's violence, from a brochure to a webpage",
-  "soft-skill": "With this project I developed instructional language habilities and make easier the information to the user",
+  "brief": "Transformed the *765 Guide against women's violence, from a brochure to a webpage",
+  "soft-skill": "Used my instructional language skills and made the information easier to the user",
   "dialogues": [
-    "We analyzed and condensed the information of the original brochure",
-    "There was also a redesign or creation of pictograms, based on the new font of the webpage"
+    "Analyzed and condensed the information of the original brochure following Rob Waller's evaluation criteria",
+    "Synthesized the information and reorganized the content with sections and subsections to make it easier to understand",
+    "Showed information with a bigger font to make it easier to see and preferring an F-Shape pattern of reading",
+    "Redesigned or created new pictograms, based on the new font of the webpage"
   ],
   "images": [
+    {
+      "indexDialogue": "0",
+      "url": "../../../assets/images/guide-765-0.png",
+      "caption": "Rob Waller's evaluation criteria"
+    },
+    {
+      "indexDialogue": "1",
+      "url": "../../../assets/images/guide-765-01.png",
+      "caption": "Transformed from long paragraphs to concise sentences with essential information"
+    },
     {
       "indexDialogue": "0",
       "url": "../../../assets/images/guide-765-1.png",

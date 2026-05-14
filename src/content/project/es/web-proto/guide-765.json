@@ -1,24 +1,36 @@
 {
   "name": "Página de Guía *765",
-  "brief": "Tuve la oportunidad de transformar la Guía *765 contra la violencia a la mujer, de tríptico a una página web",
-  "soft-skill": "Gracias a este proyecto, adquirí habilidades para el diseño instruccional y eficientar la información para el usuario",
+  "brief": "Transformé la Guía *765 contra la violencia a la mujer, de tríptico a una página web",
+  "soft-skill": "Utilicé mis habilidades para el diseño instruccional y eficientar la información para el usuario",
   "dialogues": [
-    "Se analizó y sintetizó información del tríptico original",
-    "También se rediseño o crearon sus pictogramas, basándose en la fuente elegida para la página"
+    "Analicé y sintetizé información del tríptico original siguiendo criterios de evaluación según Rob Waller",
+    "Sintetizé la información y reorganicé el contenido con secciones e incisos para facilitar su comprensión",
+    "Mostré información con una fuente más grande para facilitar su visualización y prefiriendo un patrón de lectura en F",
+    "Rediseñé o creé, según el caso, nuevos pictogramas, basándome en la fuente elegida para la página"
   ],
   "images": [
     {
       "indexDialogue": "0",
+      "url": "../../../../assets/images/guide-765-0.png",
+      "caption": "Criterios de evaluación según Rob Waller"
+    },
+    {
+      "indexDialogue": "1",
+      "url": "../../../../assets/images/guide-765-01.png",
+      "caption": "Pasó de párrafos largos a oraciones cortas con información escencial"
+    },
+    {
+      "indexDialogue": "2",
       "url": "../../../../assets/images/guide-765-1.png",
       "caption": "Antes, el tríptico en papel"
     },
     {
-      "indexDialogue": "0",
+      "indexDialogue": "2",
       "url": "../../../../assets/images/guide-765-2.png",
       "caption": "Después, el prototipo de la página web"
     },
     {
-      "indexDialogue": "1",
+      "indexDialogue": "3",
       "url": "../../../../assets/images/guide-765-3.png",
       "caption": "Proceso de creación de los pictogramas"
     }
