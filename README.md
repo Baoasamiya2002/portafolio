@@ -1,43 +1,22 @@
-# Astro Starter Kit: Minimal
+# Portafolio de Puxka Acosta Domínguez
 
-```sh
-npm create astro@latest -- --template minimal
-```
+<img width="1167" height="725" alt="Página de portafolio en distintos dispositivos" src="https://github.com/user-attachments/assets/4e454463-20a5-4b88-aad2-6937dddefec1" />
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🚀 Project Structure
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
 
-Inside of your Astro project, you'll see the following folders and files:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Este repositorio contiene el código fuente de mi portafolio personal, mostrando algunos de mis proyectos destacados.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Principales características
+- **Distintos temas**: Obscuro y claro
+- **Distintos idiomas**: Inglés y Español
+- **Responsivo**: Se ajusta a distintos dispositivos como computadoras de escritorio y celulares.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Principales librerías utilizadas
+- <a href="https://tailwindcss.com/">TailwindCSS</a>
+- <a href="https://accessible-astro.incluud.dev/">Accessible Astro Components</a>
+- <a href="https://www.astroicon.dev/">Astro Icon</a>
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Link
+Lo pueden visitar dando <a href="https://portafolio-puxka-acodom.vercel.app/es">clic aquí</a>
