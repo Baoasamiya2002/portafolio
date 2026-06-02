@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import { Icon } from "free-astro-components";
+import { Icon } from "astro-icon/components";
 import { Heading, Button } from "accessible-astro-components";
 import DivDialogue from "../components/DivDialogue.astro";
 import { Accordion, AccordionItem, Link } from "accessible-astro-components";
@@ -32,13 +32,13 @@ const projects = (await getCollection("projects")).filter((project) =>
               id="expand-all-btn"
               class="inline-flex border-0! bg-transparent!"
               >{t("section.expandAll")}
-              <Icon icon="chevron-down" class="icon-class" /></Button
+              <Icon name="chevron-down"/></Button
             >
             <Button
               id="collapse-all-btn"
               class="inline-flex border-0! bg-transparent!"
               >{t("section.collapseAll")}
-              <Icon icon="chevron-up" class="icon-class" /></Button
+              <Icon name="chevron-up"/></Button
             >
           </div>
         </div>
