@@ -14,10 +14,10 @@ const t = useTranslations(lang);
 
 <MainLayout>
   <div 
-      class="w-screen h-screen flex items-center justify-center sticky top-0 -z-1">
+      class="w-screen h-screen flex flex-col items-center justify-center sticky top-0 -z-1">
     <div
       style={`background-image: url(${bgImage.src});`}
-      class="w-4xl h-115 m-3 md:bg-cover md:pl-86 pl-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] pr-3 justify-center flex flex-col gap-4 text-white"
+      class="lg:w-4xl h-115 m-3 md:bg-cover md:pl-86 px-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] justify-center flex flex-col gap-4 text-white"
     >
       <Heading level="h1" size="h3" class="font-bold">Hello!</Heading>
       <p>Welcome to my portfolio!</p>
@@ -40,6 +40,7 @@ const t = useTranslations(lang);
       </p>
       <p>Thank you for visiting!</p>
     </div>
+    <div class="px-3">Page made by me. Design: Figma + PowerPoint. Build: Astro + TailwindCSS. Deploy: Vercel</div>
   </div>
   <main>
     <section
