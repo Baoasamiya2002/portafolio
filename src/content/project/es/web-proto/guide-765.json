@@ -2,35 +2,45 @@
   "name": "Página de Guía *765",
   "brief": "Transformé la Guía *765 contra la violencia a la mujer, de tríptico a una página web",
   "soft-skill": "Utilicé mis habilidades para el diseño instruccional y eficientar la información para el usuario",
+  "time": "1 mes",
   "dialogues": [
-    "Analicé y sintetizé información del tríptico original siguiendo criterios de evaluación según Rob Waller",
-    "Sintetizé la información y reorganicé el contenido con secciones e incisos para facilitar su comprensión",
+    "La Guía *765 fue creada por la Secretaría de las Mujeres de la Ciudad de México para ayudar a un observante o a la propia víctima en una situación de violencia a la mujer",
+    "Buscaban hacerla más efectiva en su entendimiento y facilitar su uso en dispositivos electrónicos",
+    "Propuse convertir la Guía *765 de tríptico a una página web",
+    "Acepté el reto de mejorar el contenido de la guía, poniéndome en el lugar de quienes necesitan recordar rápidamente la guía en situaciones de violencia",
+    "Analicé la información original siguiendo criterios de evaluación según Rob Waller",
+    "Sinteticé y reorganicé la información para que fuera menos redundante y facilitar comprensión",
     "Mostré información con una fuente más grande para facilitar su visualización y prefiriendo un patrón de lectura en F",
-    "Rediseñé o creé, según el caso, nuevos pictogramas, basándome en la fuente elegida para la página"
+    "Rediseñé y elaboré pictogramas que garantizan coherencia visual y transmiten fielmente la información"
   ],
   "images": [
     {
-      "indexDialogue": "0",
+      "indexDialogue": "1",
+      "url": "../../../../assets/images/guide-765-00.png",
+      "caption": "Tríptico original de la guía *765"
+    },
+    {
+      "indexDialogue": "4",
       "url": "../../../../assets/images/guide-765-0.png",
       "caption": "Criterios de evaluación según Rob Waller"
     },
     {
-      "indexDialogue": "1",
+      "indexDialogue": "5",
       "url": "../../../../assets/images/guide-765-01.png",
-      "caption": "Pasó de párrafos largos a oraciones cortas con información escencial"
+      "caption": "Pasó de titulares y parrafos largos a información escencial y sin redundancia"
     },
     {
-      "indexDialogue": "2",
+      "indexDialogue": "6",
       "url": "../../../../assets/images/guide-765-1.png",
       "caption": "Antes, el tríptico en papel"
     },
     {
-      "indexDialogue": "2",
+      "indexDialogue": "6",
       "url": "../../../../assets/images/guide-765-2.png",
       "caption": "Después, el prototipo de la página web"
     },
     {
-      "indexDialogue": "3",
+      "indexDialogue": "7",
       "url": "../../../../assets/images/guide-765-3.png",
       "caption": "Proceso de creación de los pictogramas"
     }

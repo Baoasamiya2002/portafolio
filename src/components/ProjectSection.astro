@@ -1,9 +1,15 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { Icon } from "astro-icon/components";
-import { Heading, Button } from "accessible-astro-components";
 import DivDialogue from "../components/DivDialogue.astro";
-import { Accordion, AccordionItem, Link } from "accessible-astro-components";
+import {
+  Accordion,
+  AccordionItem,
+  Link,
+  Badge,
+  Heading,
+  Button,
+} from "accessible-astro-components";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
@@ -32,13 +38,13 @@ const projects = (await getCollection("projects")).filter((project) =>
               id="expand-all-btn"
               class="inline-flex border-0! bg-transparent!"
               >{t("section.expandAll")}
-              <Icon name="chevron-down"/></Button
+              <Icon name="chevron-down" /></Button
             >
             <Button
               id="collapse-all-btn"
               class="inline-flex border-0! bg-transparent!"
               >{t("section.collapseAll")}
-              <Icon name="chevron-up"/></Button
+              <Icon name="chevron-up" /></Button
             >
           </div>
         </div>
@@ -48,23 +54,35 @@ const projects = (await getCollection("projects")).filter((project) =>
               <AccordionItem
                 title={project.data.name}
                 variant="chevron"
-                open={(title === t("nav.videogame"))}
+                open={title === t("nav.videogame")}
               >
                 <div class="flex flex-col gap-6">
-                  {project.data.link && (
-                    <Link href={project.data.link} isExternal>
-                      {t("project.prototype.linkLabel")}
-                    </Link>
-                  )}
-                  <DivDialogue softSkill={false}>
-                    {project.data.brief}
-                  </DivDialogue>
-                  <DivDialogue softSkill={true}>
-                    {project.data["soft-skill"]}
-                  </DivDialogue>
+                  <div class="inline-flex gap-1.5">
+                    <Badge>
+                      <Icon name="time" />
+                      {project.data.time}
+                    </Badge>
+                    {project.data.link && (
+                      <Badge>
+                        <Link href={project.data.link} isExternal>
+                          {t("project.prototype.linkLabel")}
+                        </Link>
+                      </Badge>
+                    )}
+                  </div>
                   {project.data.dialogues.map((dialogue, index) => (
                     <>
-                      <DivDialogue softSkill={false}>{dialogue}</DivDialogue>
+                      <DivDialogue
+                        rightSide={
+                          !project.data.images.some(
+                            (image) =>
+                              index % 2 === 0 ||
+                              image.indexDialogue === `${index - 1}`,
+                          )
+                        }
+                      >
+                        {dialogue}
+                      </DivDialogue>
                       <div class="md:inline-flex items-end text-white bg-[linear-gradient(to_bottom,transparent_22%,#7030a0_22%)]">
                         {project.data.images
                           .filter((image) => image.indexDialogue === `${index}`)
