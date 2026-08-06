@@ -1,36 +1,46 @@
 {
   "name": "Redesign of *765 Guide",
-  "brief": "Transformed the *765 Guide against women's violence, from a brochure to a webpage",
-  "soft-skill": "Used my instructional language skills and made the information easier to the user",
+  "brief": "-",
+  "soft-skill": "-",
+  "time": "1 month",
   "dialogues": [
-    "Analyzed and condensed the information of the original brochure following Rob Waller's evaluation criteria",
-    "Synthesized the information and reorganized the content with sections and subsections to make it easier to understand",
-    "Showed information with a bigger font to make it easier to see and preferring an F-Shape pattern of reading",
-    "Redesigned or created new pictograms, based on the new font of the webpage"
+    "The *765 Guide was created by the Women's Secretariat of Mexico City to help an observant or the victim in a case of violence against women",
+    "They were looking to make it easier to understand and to use on electronic devices",
+    "Converted the guide from a brochure on paper to a webpage prototype",
+    "Took the challenge of improving the content's guide, putting myself in the position of the pople who needed to quickly remember the guide on violent situations",
+    "Reviewed the original content following Rob Waller's evaluation criteria",
+    "Sinthesized and reorganized the content, making it easier to understand and less redundant",
+    "Showed the content with a bigger font to make it easier to read and using an F-shaped pattern",
+    "Redesigned and created pictograms that guarantee visual coherence and faithfully represent the information"
   ],
   "images": [
     {
-      "indexDialogue": "0",
+      "indexDialogue": "1",
+      "url": "../../../assets/images/guide-765-00.png",
+      "caption": "Original brochure of *765 Guide"
+    },
+    {
+      "indexDialogue": "4",
       "url": "../../../assets/images/guide-765-0-eng.png",
       "caption": "Rob Waller's evaluation criteria"
     },
     {
-      "indexDialogue": "1",
+      "indexDialogue": "5",
       "url": "../../../assets/images/guide-765-01.png",
       "caption": "Transformed from long paragraphs to concise sentences with essential information"
     },
     {
-      "indexDialogue": "0",
+      "indexDialogue": "6",
       "url": "../../../assets/images/guide-765-1.png",
       "caption": "Before, the brochure on paper"
     },
     {
-      "indexDialogue": "0",
+      "indexDialogue": "6",
       "url": "../../../assets/images/guide-765-2.png",
       "caption": "After, the webpage prototype"
     },
     {
-      "indexDialogue": "1",
+      "indexDialogue": "7",
       "url": "../../../assets/images/guide-765-3.png",
       "caption": "Process of making the pictograms"
     }

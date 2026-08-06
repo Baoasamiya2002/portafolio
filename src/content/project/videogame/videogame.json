@@ -1,29 +1,40 @@
 {
   "name": "Latencia. Toma el control...  o la mejor decisión",
-  "brief": "Worked with an interdisciplinary team on the development of a videogame to prevent teen dating violence",
-  "soft-skill": "With this project I learned to coordinate teammates with different field of expertise",
+  "brief": "-",
+  "soft-skill": "-",
+  "time": "9 months",
   "dialogues": [
-    "We made co-design activities with potential users on different development phases",
-    "All the levels were developed according the design and planning"
+    "A few years ago, The Universidad Autonoma Metropolitana Unidad Cuajimalpa had a difficult case of dating violence between its students",
+    "Even with the supplies they had to prevent the problem, they were looking for a innovative tool to connect with the young audience",
+    "Worked, along with a interdisciplinary team, on the development of a videogame to prevent dating violence",
+    "I had the role of project leader and set a agile methodology to work",
+    "Took part in co-design activities with future users on different stages of development",
+    "Made the wireframing and game documentation",
+    "Developed the game for desktop, mobile and web"
   ],
   "images": [
     {
-      "indexDialogue": "0",
+      "indexDialogue": "1",
+      "url": "../../../assets/images/videogame-0.png",
+      "caption": "Start screen of the videogame"
+    },
+    {
+      "indexDialogue": "4",
       "url": "../../../assets/images/videogame-1.png",
       "caption": "Collage ideation"
     },
     {
-      "indexDialogue": "0",
+      "indexDialogue": "4",
       "url": "../../../assets/images/videogame-2.png",
       "caption": "Card-sorting"
     },
     {
-      "indexDialogue": "1",
+      "indexDialogue": "5",
       "url": "../../../assets/images/videogame-3.png",
       "caption": "Wireframing"
     },
     {
-      "indexDialogue": "1",
+      "indexDialogue": "6",
       "url": "../../../assets/images/videogame-4.png",
       "caption": "Game level"
     }

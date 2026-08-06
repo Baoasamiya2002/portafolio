@@ -1,20 +1,30 @@
 {
   "name": "Rediseño de caja de cobro",
-  "brief": "Pude trabajar con una farmacia y rediseñar el módulo de cobro para facilitar su uso",
-  "soft-skill": "Aquí aprendí a priorizar la experiencia de usuario y contemplar distintas formas de interacción",
+  "brief": "-",
+  "soft-skill": "-",
+  "time": "1 mes",
   "dialogues": [
-    "Rediseñé el orden de los pasos de cobro de forma secuencial (izquierda a derecha) y en columnas, haciéndolo más intuitivo"
+    "En uno de los sistemas en los que trabajé, existía la funcionalidad para cobrar productos en una caja de cobro",
+    "Uno de los clientes del sistema reportaban que sus empleados de caja tardaban en cobrar usando mouse y teclado",
+    "Rediseñé la interfaz de cobro para mejorar usabilidad e integrar navegación sólo por teclado",
+    "Mejoré el manejo de errores y cambios durante el cobro, manejando cada método de pago con un elemento independiente y fácil de modificar",
+    "Aprendí a priorizar la experiencia de usuario y contemplar distintas formas de interacción"
   ],
   "images": [
     {
-      "indexDialogue": "0",
+      "indexDialogue": "2",
       "url": "../../../../assets/images/checkout-1.png",
       "caption": "Antes del rediseño"
     },
     {
-      "indexDialogue": "0",
+      "indexDialogue": "2",
       "url": "../../../../assets/images/checkout-2.png",
       "caption": "Después del rediseño"
+    },
+    {
+      "indexDialogue": "3",
+      "url": "../../../../assets/images/checkout-3.png",
+      "caption": "Botones del método de pago registrado, fáciles de eliminar sin reiniciar proceso de cobro"
     }
   ]
 }

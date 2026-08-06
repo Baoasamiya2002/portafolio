@@ -1,20 +1,41 @@
 {
   "name": "Mapa sonoro interactivo de reserva SRX",
-  "brief": "Participé en un proyecto junto a los brigadistas de la reserva de Santa Rosa Xochiac (SRX)",
-  "soft-skill": "Aprendí a trabajar con un equipo interdisciplinario y a tomar consensos",
+  "brief": "-",
+  "soft-skill": "-",
+  "time": "2 meses",
   "dialogues": [
-    "Se accede a la información de distintas especies y sus sonidos a través de ventanas emergentes"
+    "Los brigadistas de la reserva de Santa Rosa Xochiac (SRX) buscaban atraer turismo y apoyo para proteger a la reserva de SRX",
+    "La reserva tiene gran extensión territorial y uno de sus atractivos es el avistamiento de distintas especies y paisajes naturales",
+    "Propuse, junto a un equipo, un mapa sonoro interactivo como apoyo para el recorrido de la reserva",
+    "El mapa también sirve como guía para conocer más sobre la flora y fauna de la reserva",
+    "Diseñé el prototipo de alta fidelidad, accediendo desde una pantalla principal a información de las distintas especies y ubicación de avistamientos",
+    "Facilité la coordinación entre equipos multidisciplinarios, promoviendo acuerdos"
   ],
   "images": [
     {
-      "indexDialogue": "0",
+      "indexDialogue": "1",
+      "url": "../../../../assets/images/map-srx-0.png",
+      "caption": "Imagen de Google Maps del punto de reunión de los brigadistas"
+    },
+    {
+      "indexDialogue": "2",
       "url": "../../../../assets/images/map-srx-1.png",
       "caption": "Mapa del prototipo, mostrando avistamientos de la flora y fauna"
     },
     {
-      "indexDialogue": "0",
+      "indexDialogue": "2",
       "url": "../../../../assets/images/map-srx-2.png",
       "caption": "Ventana emergente de un ave"
+    },
+    {
+      "indexDialogue": "3",
+      "url": "../../../../assets/images/map-srx-01.png",
+      "caption": "Primeros bocetos siguiendo técnica de Crazy Eights"
+    },
+    {
+      "indexDialogue": "4",
+      "url": "../../../../assets/images/map-srx-.png",
+      "caption": "Interacciones entre las distintas capas del prototipo"
     }
   ],
   "link": "https://www.figma.com/proto/QJOI3MXhCkh68hHulD0dm0/Mapa-interactivo-SRX?node-id=56-2&p=f&t=xU9mvoyvJYxkvGWy-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=56%3A2"

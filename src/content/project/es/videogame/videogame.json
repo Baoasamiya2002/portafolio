@@ -1,29 +1,40 @@
 {
   "name": "Latencia. Toma el control...  o la mejor decisión",
-  "brief": "Coolaboré junto a un equipo interdisciplinario el desarrollo de un videojuego para prevenir la violencia en el noviazgo",
-  "soft-skill": "Con este proyecto aprendí a coordinar a los integrantes de un equipo con distintas especialidades",
+  "brief": "-",
+  "soft-skill": "-",
+  "time": "9 meses",
   "dialogues": [
-    "Se realizaron actividades de co-diseño con potenciales usuarios en distintas etapas del desarrollo",
-    "Se desarrollaron todos los niveles según el diseño y planeación hecha"
+    "Hace algunos años, la Universidad Autonoma Metropolitana Unidad Cuajimalpa había tenido un caso grave de violencia en el noviazgo entre sus estudiantes",
+    "Aunque tenían materiales para prevenir el problema, se buscaba una herramienta novedosa que conectara con los jóvenes",
+    "Colaboré, junto a un equipo interdisciplinario, en el desarrollo de un videojuego para prevenir la violencia en el noviazgo",
+    "Tomé el rol de líder del proyecto y propuse trabajar siguiendo una metodología ágil",
+    "Participé en actividades de co-diseño con potenciales usuarios en distintas etapas del desarrollo",
+    "Realicé el wireframing y documentación del videojuego",
+    "Desarrollé el videojuego para escritorio, celulares y web"
   ],
   "images": [
     {
-      "indexDialogue": "0",
+      "indexDialogue": "1",
+      "url": "../../../../assets/images/videogame-0.png",
+      "caption": "Pantalla de inicio del videojuego"
+    },
+    {
+      "indexDialogue": "4",
       "url": "../../../../assets/images/videogame-1.png",
       "caption": "Collage de ideación"
     },
     {
-      "indexDialogue": "0",
+      "indexDialogue": "4",
       "url": "../../../../assets/images/videogame-2.png",
       "caption": "Card-sorting"
     },
     {
-      "indexDialogue": "1",
+      "indexDialogue": "5",
       "url": "../../../../assets/images/videogame-3.png",
       "caption": "Wireframing"
     },
     {
-      "indexDialogue": "1",
+      "indexDialogue": "6",
       "url": "../../../../assets/images/videogame-4.png",
       "caption": "Nivel del juego"
     }

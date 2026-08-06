@@ -1,31 +1,42 @@
 {
-  "name": "Accessibility evaluation",
-  "brief": "During my internship I evaluated my university's learning platforms",
-  "soft-skill": "With this project I learned to design with varied user needs in mind",
+  "name": "Administrative portal for client invoices",
+  "brief": "-",
+  "soft-skill": "-",
+  "time": "1 month",
   "dialogues": [
-    "Used automatic and manual tools to check accessibility",
-    "And with the results I redacted a report and gave recommentations"
+    "On my company, we had a sales system that was used by several clients",
+    "Repeteadly, we needed to check information of the clients from the database, complicating its easy operation",
+    "Developed a portal for internal use that allowed to easily manage client information and check their usage of the system",
+    "This system made easier the work of the company and the decision making",
+    "Developed REST APIs with services that used Java Spring Boot sequences, improving the maintainability of the system",
+    "Integrated error checking to the forms, verifying the integrity of the data to be registered",
+    "Used tables and graphs with multiple filters to facilitate different requests"
   ],
   "images": [
     {
-      "indexDialogue": "0",
-      "url": "../../../assets/images/eva-accessibility-1.png",
-      "caption": "Add-on for automatic evaluation"
-    },
-    {
-      "indexDialogue": "0",
-      "url": "../../../assets/images/eva-accessibility-2.png",
-      "caption": "Manual evaluation sheet"
-    },
-    {
       "indexDialogue": "1",
-      "url": "../../../assets/images/eva-accessibility-3.png",
-      "caption": "Report with recommendations"
+      "url": "../../../assets/images/timbre-0.png",
+      "caption": "Example of a request for information about a client and its operations"
     },
     {
-      "indexDialogue": "1",
-      "url": "../../../assets/images/eva-accessibility-4.png",
-      "caption": ""
+      "indexDialogue": "2",
+      "url": "../../../assets/images/timbre-1.png",
+      "caption": "Simple interface with the functionalities in the top menu"
+    },
+    {
+      "indexDialogue": "4",
+      "url": "../../../assets/images/timbre-2.png",
+      "caption": "Form with error checking"
+    },
+    {
+      "indexDialogue": "4",
+      "url": "../../../assets/images/timbre-3.png",
+      "caption": "Requests through a table with filters, without the need of SQL"
+    },
+    {
+      "indexDialogue": "6",
+      "url": "../../../assets/images/timbre-4.png",
+      "caption": "Generation of graphs with filters that query the database"
     }
   ]
 }

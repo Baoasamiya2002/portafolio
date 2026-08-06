@@ -1,20 +1,41 @@
 {
   "name": "Interactive sound map of SRX's ecological reserve",
-  "brief": "Worked on this project along eco-brigades of Santa Rosa Xochiac (SRX) ecological reserve",
-  "soft-skill": "Learned to work with an interdisciplinary team and to reach a concensus",
+  "brief": "-",
+  "soft-skill": "-",
+  "time": "2 months",
   "dialogues": [
-    "The information of the different species and their sounds can be accessed through modal windows"
+    "The eco-brigades of Santa Rosa Xochiac (SRX) reserve were looking to attract tourism and support to protect the SRX reserve",
+    "The reserve has a large territorial extension and one of its attractions is the sighting of different species and natural landscapes",
+    "Proposed, along with a team, an interactive sound map as support for the tour of the reserve",
+    "The map also serves as a guide to learn more about the flora and fauna of the reserve",
+    "Designed the high-fidelity prototype, accessing from a main screen to information about the different species and location of sightings",
+    "Facilitated coordination between multidisciplinary teams, promoting agreements"
   ],
   "images": [
     {
-      "indexDialogue": "0",
+      "indexDialogue": "1",
+      "url": "../../../assets/images/map-srx-0.png",
+      "caption": "Google Maps image of the meeting point of the eco-brigades"
+    },
+    {
+      "indexDialogue": "2",
       "url": "../../../assets/images/map-srx-1.png",
       "caption": "Map of the prototype, showing sighting of flora and fauna"
     },
     {
-      "indexDialogue": "0",
+      "indexDialogue": "2",
       "url": "../../../assets/images/map-srx-2.png",
-      "caption": "Modal windows of a bird"
+      "caption": "Modal popup window of a bird"
+    },
+    {
+      "indexDialogue": "3",
+      "url": "../../../assets/images/map-srx-01.png",
+      "caption": "First draft sketches following Crazy Eights technique"
+    },
+    {
+      "indexDialogue": "4",
+      "url": "../../../assets/images/map-srx-.png",
+      "caption": "Interactions between the different layers of the prototype"
     }
   ],
   "link": "https://www.figma.com/proto/QJOI3MXhCkh68hHulD0dm0/Mapa-interactivo-SRX?node-id=56-2&p=f&t=xU9mvoyvJYxkvGWy-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=56%3A2"
