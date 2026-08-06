@@ -10,8 +10,6 @@ const projects = defineCollection({
   schema: ({ image }) =>
     z.object({
       name: z.string(),
-      brief: z.string(),
-      "soft-skill": z.string(),
       time: z.string().optional(),
       dialogues: z.array(z.string()),
       images: z.array(
