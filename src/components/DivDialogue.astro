@@ -6,7 +6,10 @@ import dialogueImg from "../assets/images/dialogue.png";
 const { rightSide } = Astro.props;
 ---
 
-<div class="inline-flex items-stretch sm:h-20 h-32 gap-0">
+<div class:list={[
+      "inline-flex items-stretch sm:h-20 h-32 gap-0",
+      rightSide && "justify-end",
+    ]}>
   <Image
     src={dialogueImg}
     alt="Avatar de Puxka"
@@ -17,7 +20,7 @@ const { rightSide } = Astro.props;
   />
   <p
     class:list={[
-      "bg-figure px-4 w-full content-center text-white",
+      "bg-figure px-4 content-center text-white",
       !rightSide && "-translate-x-px",
     ]}
   >
