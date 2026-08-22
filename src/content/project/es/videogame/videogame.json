@@ -32,9 +32,19 @@
       "caption": "Wireframing"
     },
     {
+      "indexDialogue": "5",
+      "url": "../../../../assets/images/videogame-5.png",
+      "caption": "Wireframing"
+    },
+    {
       "indexDialogue": "6",
       "url": "../../../../assets/images/videogame-4.png",
       "caption": "Nivel del juego"
+    },
+    {
+      "indexDialogue": "6",
+      "url": "../../../../assets/images/videogame-6.png",
+      "caption": "Pantalla de progreso"
     }
   ],
   "link": "https://noviolencia.itch.io/latencia"
