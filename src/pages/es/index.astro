@@ -1,19 +1,30 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import ProjectSection from "../../components/ProjectSection.astro";
+import Project from "../../components/Project.astro";
 import { getImage } from "astro:assets";
 import welcomeImg from "../../assets/images/welcome_dialogue.svg";
 import { Heading } from "accessible-astro-components";
 import { Icon } from "astro-icon/components";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { getCollection } from "astro:content";
 
 const bgImage = await getImage({ src: welcomeImg });
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const projects = (await getCollection("projects")).filter((project) => {
+  if (lang === "es") {
+    return project.id.startsWith("es");
+  } else {
+    return !project.id.startsWith("es");
+  }
+});
 ---
 
 <MainLayout>
-  <div class="w-screen h-screen flex flex-col items-center justify-center sticky top-0 -z-1">
+  <div
+    class="w-screen h-screen flex flex-col items-center justify-center sticky top-0 -z-1"
+  >
     <div
       style={`background-image: url(${bgImage.src});`}
       class="lg:w-4xl h-115 m-3 md:bg-cover md:pl-86 px-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] justify-center flex flex-col gap-4 text-white"
@@ -34,37 +45,31 @@ const t = useTranslations(lang);
         (English/Español)
       </p>
       <p style="display: ruby;">
-        Mi LinkedIn <Icon name="linkedin" size="1.5rem" /> está en la parte inferior de la página,
-        no dudes en contactarme
+        Mi LinkedIn <Icon name="linkedin" size="1.5rem" /> está en la parte inferior
+        de la página, no dudes en contactarme
       </p>
       <p>¡Gracias por tu visita!</p>
     </div>
-    <div class="px-3">Página hecha por mí. Diseño: Figma + PowerPoint. Desarrollo: Astro + TailwindCSS. Despliegue: Vercel</div>
+    <div class="px-3">
+      Página hecha por mí. Diseño: Figma + PowerPoint. Desarrollo: Astro +
+      TailwindCSS. Despliegue: Vercel
+    </div>
   </div>
   <main>
-    <section
-      id="web-proto"
-      class="min-h-[calc(100vh+5rem)] bg-bg"
-    >
+    <section id="index" class="min-h-[calc(100vh+5rem)] bg-bg">
       <div class="bg-figure w-full h-1 sticky top-0"></div>
-      <ProjectSection title={t("nav.prototype")} path={"es/web-proto/"}/>
+      <ProjectSection projects={projects} />
     </section>
-    <section
-      id="eva-and-redes-works"
-      class="min-h-[calc(100vh+5rem)] bg-bg"
-    >
-      <div class="bg-figure w-full h-1 sticky top-0"></div>
-      <ProjectSection
-        title={t("nav.evaluation")}
-        path={"es/eva-and-redes-works/"}
-      />
-    </section>
-    <section
-      id="videogame"
-      class="min-h-[calc(100vh+5rem)] bg-bg"
-    >
-      <div class="bg-figure w-full h-1 sticky top-0"></div>
-      <ProjectSection title={t("nav.videogame")} path={"es/videogame/"} />
-    </section>
+    {
+      projects.map((project) => (
+        <section
+          id={project.id.split("/").pop()}
+          class="min-h-[calc(100vh+5rem)] bg-bg"
+        >
+          <div class="bg-figure w-full h-1 sticky top-0" />
+          <Project project={project} />
+        </section>
+      ))
+    }
   </main>
 </MainLayout>
