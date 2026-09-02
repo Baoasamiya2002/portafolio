@@ -6,6 +6,22 @@
   --color-bg: #fcf9ee;
   --color-text: #000000;
   --default-font-family: "Lexend", sans-serif;
+
+  --animate-fade: fade 15s ease-in-out infinite, move-y 20s ease-in-out infinite;
+  
+  @keyframes fade {
+    0%   { opacity: 0; }
+    6.67%   { opacity: 1; }
+    20%  { opacity: 1; }
+    26.67%  { opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+  @keyframes move-y {
+    0%   { transform: translateY(0%); }
+    50%  { transform: translateY(-10%); }
+    100% { transform: translateY(0%); }
+  }
 }
 
 html.darkmode {

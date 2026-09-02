@@ -4,10 +4,16 @@ import ProjectSection from "../components/ProjectSection.astro";
 import Project from "../components/Project.astro";
 import { getImage } from "astro:assets";
 import welcomeImg from "../assets/images/welcome_dialogue.svg";
+import timbreImg from "../assets/images/timbre-banner.jpg";
+import videogameImg from "../assets/images/videogame-banner.jpg";
+import checkoutImg from "../assets/images/checkout-banner.jpg";
+import guideImg from "../assets/images/guide-765-banner.jpg";
+import mapImg from "../assets/images/map-srx-banner.jpg";
 import { Heading } from "accessible-astro-components";
 import { Icon } from "astro-icon/components";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 
 const bgImage = await getImage({ src: welcomeImg });
 const lang = getLangFromUrl(Astro.url);
@@ -23,8 +29,34 @@ const projects = (await getCollection("projects")).filter((project) => {
 
 <MainLayout>
   <div
-    class="w-screen h-screen flex flex-col items-center justify-center sticky top-0 -z-1"
+    class="w-screen h-screen flex flex-col items-center justify-center sticky top-0 -z-1 bg-bg"
   >
+    <Image
+      src={mapImg}
+      alt="Banner of the map project"
+      class="min-h-4/3 min-w-4/3 fixed -z-10 right-0 top-0 object-cover animate-fade [animation-delay:12s] [animation-fill-mode:backwards]"
+    />
+    <Image
+      src={guideImg}
+      alt="Banner of the guide project"
+      class="min-h-4/3 min-w-4/3 fixed -z-10 right-0 top-0 object-cover animate-fade [animation-delay:9s] [animation-fill-mode:backwards]"
+    />
+    <Image
+      src={checkoutImg}
+      alt="Banner of the checkout redesign project"
+      class="min-h-4/3 min-w-4/3 fixed -z-10 left-0 top-0 object-cover animate-fade [animation-delay:6s] [animation-fill-mode:backwards]"
+    />
+    <Image
+      src={timbreImg}
+      alt="Banner of the administrative project"
+      class="min-h-4/3 min-w-4/3 fixed -z-10 right-0 top-0 object-cover animate-fade [animation-delay:3s] [animation-fill-mode:backwards]"
+    />
+    <Image
+      src={videogameImg}
+      alt="Banner of the videogame project"
+      class="min-h-4/3 min-w-4/3 fixed -z-10 left-0 top-0 object-cover animate-fade [animation-fill-mode:backwards]"
+    />
+    <div class="w-full h-full fixed left-0 bg-bg -z-10 opacity-75"></div>
     <div
       style={`background-image: url(${bgImage.src});`}
       class="lg:w-4xl h-115 m-3 md:bg-cover md:pl-86 px-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] justify-center flex flex-col gap-4 text-white"
