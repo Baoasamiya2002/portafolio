@@ -85,11 +85,16 @@ const projects = (await getCollection("projects")).filter((project) => {
     <div class="px-3">
       Page made by me. Design: Figma + PowerPoint. Build: Astro + TailwindCSS.
       Deploy: Vercel
+    </div>    
+    <div class="fixed bottom-24">
+      <Icon name="chevron-down" class="animate-bounce" />
+      <Icon name="chevron-down" class="animate-bounce" />
+      <Icon name="chevron-down" class="animate-bounce" />
     </div>
   </div>
   <main>
     <section id="index" class="min-h-[calc(100vh+5rem)] bg-bg">
-      <div class="bg-figure w-full h-1 sticky top-0 z-10"></div>
+      <div class="bg-figure w-full h-1 sticky top-0 z-1"></div>
       <ProjectSection projects={projects} />
     </section>
     {
@@ -98,7 +103,7 @@ const projects = (await getCollection("projects")).filter((project) => {
           id={project.id.split("/").pop()}
           class="min-h-[calc(100vh+5rem)] bg-bg"
         >
-          <div class="bg-figure w-full h-1 sticky top-0 z-10" />
+          <div class="bg-figure w-full h-1 sticky top-0 z-1" />
           <Project project={project} />
         </section>
       ))
