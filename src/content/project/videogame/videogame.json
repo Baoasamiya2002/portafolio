@@ -47,5 +47,6 @@
       "caption": "Progress screen"
     }
   ],
-  "link": "https://noviolencia.itch.io/latencia"
+  "link": "https://noviolencia.itch.io/latencia",
+  "banner": "../../../assets/images/videogame-banner.jpg"
 }

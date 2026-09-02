@@ -20,6 +20,7 @@ const projects = defineCollection({
         }),
       ),
       link: z.string().optional(),
+      banner: image(),
     }),
 });
 

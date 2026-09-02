@@ -24,5 +24,6 @@
       "url": "../../../../assets/images/checkout-3.png",
       "caption": "Botones del método de pago registrado, fáciles de eliminar sin reiniciar proceso de cobro"
     }
-  ]
+  ],
+  "banner": "../../../../assets/images/checkout-banner.jpg"
 }

@@ -24,5 +24,6 @@
       "url": "../../../assets/images/checkout-3.png",
       "caption": "Recorded payment methods buttons, easier to delete without restarting the checkout process"
     }
-  ]
+  ],
+  "banner":  "../../../assets/images/checkout-banner.jpg"
 }

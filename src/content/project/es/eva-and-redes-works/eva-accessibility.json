@@ -36,5 +36,6 @@
       "url": "../../../../assets/images/timbre-4.png",
       "caption": "Generación de gráficas con filtros que consultan en base de datos"
     }
-  ]
+  ],
+  "banner":  "../../../../assets/images/timbre-banner.jpg"
 }

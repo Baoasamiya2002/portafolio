@@ -10,7 +10,6 @@ import {
   Button,
   Badge,
 } from "accessible-astro-components";
-import { getCollection } from "astro:content";
 
 const { projects } = Astro.props;
 
@@ -63,7 +62,7 @@ const filterButtons: FilterButton[] = [
         Array.isArray(projects) && projects.map((project) => (
           <Card
             class="w-full mb-3 border-figure!"
-            img={project.data.images[0].url.src}
+            img={project.data.banner.src}
             title={project.data.name}
             id={project.id}
             url={"#" + project.id.split("/").pop()}

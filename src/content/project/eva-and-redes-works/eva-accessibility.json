@@ -36,5 +36,6 @@
       "url": "../../../assets/images/timbre-4.png",
       "caption": "Generation of graphs with filters that query the database"
     }
-  ]
+  ],
+  "banner":  "../../../assets/images/timbre-banner.jpg"
 }
