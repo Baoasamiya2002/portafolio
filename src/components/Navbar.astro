@@ -6,21 +6,22 @@ import {
 } from "../i18n/utils";
 import { Icon } from "astro-icon/components";
 import { DarkMode, Link, Button } from "accessible-astro-components";
+import { getCollection } from "astro:content";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
-interface NavItem {
-  name: string;
-  href: string;
-}
-const navItems: NavItem[] = [
-  { name: t("nav.welcome"), href: translatePath("#welcome") },
-  { name: t("nav.prototype"), href: translatePath("#web-proto") },
-  { name: t("nav.evaluation"), href: translatePath("#eva-and-redes-works") },
-  { name: t("nav.videogame"), href: translatePath("#videogame") },
-];
+const changeThemeLight = t("btn.changeTheme.light");
+const changeThemeDark = t("btn.changeTheme.dark");
+
+const projects = (await getCollection("projects")).filter((project) => {
+  if (lang === "es") {
+    return project.id.startsWith("es");
+  } else {
+    return !project.id.startsWith("es");
+  }
+});
 ---
 
 <div>
@@ -37,6 +38,7 @@ const navItems: NavItem[] = [
         class="bg-bg hover:bg-black darkmode:hover:bg-white hexagon_menu transition duration-200"
       >
         <DarkMode
+          id="change-theme-icon-btn"
           initialMode="auto"
           class="border-0! sm:px-1! sm:pl-auto! pl-3! py-1! sm:pbs-3! pbs-2! shadow-none! hover:text-white darkmode:hover:text-black"
         >
@@ -57,25 +59,85 @@ const navItems: NavItem[] = [
   </div>
   <div id="menu-modal" class="bg-white/50 fixed inset-0 z-10 hidden">
     <div id="menu" class="sm:w-md w-full bg-figure pentagon p-2 absolute">
-      <div class="bg-bg pentagon left-0 h-100 flex justify-center pt-10">
-        <nav class="inline-flex">
-          <ul class="flex flex-col gap-6">
-            {
-              navItems.map((item: NavItem) => (
-                <li>
+      <div class="bg-bg pentagon left-0 h-fit flex justify-center py-10">
+        <nav class="inline-flex w-full px-4">
+          <ul class="flex flex-col gap-6 w-full">
+            <li>
+              <Link
+                class="hover:bg-figure hover:text-white! pentagon_item text-2xl flex items-center sm:p-2 p-2 sm:w-[24.3rem] w-full"
+                href="#welcome"
+              >
+                {t("nav.home")}
+              </Link>
+            </li>
+            <li>
+              <div class="pentagon_item w-full hover:bg-figure">
+                <Button
+                  id="index-btn"
+                  class="bg-transparent! hover:text-white! border-0! text-2xl! sm:w-[24.3rem]! w-full! justify-start! font-normal! sm:p-2 p-2"
+                  size="sm"
+                  >{t("nav.index")}<Icon
+                    id="index-closed"
+                    name="chevron-down"
+                    size="1rem"
+                    class="absolute right-3"
+                  /><Icon
+                    id="index-opened"
+                    name="chevron-up"
+                    size="1rem"
+                    class="absolute right-3 hidden"
+                  /></Button
+                >
+              </div>
+              <ul id="index-content" class="pl-4 hidden">
+                <li class="">
                   <Link
-                    class="hover:bg-figure hover:text-white! pentagon_item text-2xl flex items-center sm:p-2 p-2 px-4 sm:w-[24.3rem] w-full"
-                    href={item.href}
+                    class="hover:bg-figure hover:text-white! pentagon_item text-2xl flex items-center sm:p-2 p-2 sm:w-[24.3rem] w-full"
+                    href="#index"
                   >
-                    {item.name}
+                    {t("nav.index.goTo")}
                   </Link>
+                  {
+                    projects.map((project) => (
+                      <Link
+                        class="hover:bg-figure hover:text-white! pentagon_item text-2xl flex items-center sm:p-2 p-2 sm:w-[24.3rem] w-full"
+                        href={"#" + project.id.split("/").pop()}
+                      >
+                        {project.data.name}
+                      </Link>
+                    ))
+                  }
                 </li>
-              ))
-            }
+              </ul>
+            </li>
+            <li>
+              <div class="pentagon_item w-full hover:bg-figure">
+                <Button
+                  id="change-theme-btn"
+                  class="bg-transparent! hover:text-white! border-0! text-2xl! sm:w-[24.3rem]! w-full! justify-start! font-normal! sm:p-2 p-2"
+                  size="sm"
+                  data-light={changeThemeLight}
+                  data-dark={changeThemeDark}
+                />
+              </div>
+            </li>
+            <li>
+              <div class="pentagon_item w-full hover:bg-figure">
+                <Link
+                  id="lang_es_btn"
+                  class="bg-transparent! border-0! text-2xl! sm:w-[24.3rem]! w-full! justify-start! font-normal! hover:text-white! sm:p-2 p-2"
+                  href={translatePath("/", t("btn.nextLang"))}
+                  isButton
+                  size="sm">{t("btn.nextLangTooltip")}</Link
+                >
+              </div>
+            </li>
             <li class="flex justify-end pr-9 sm:hidden">
-              <Link id="close_btn" isButton
-                class="text-lg border-0! p-0!"
-                >{t("btn.closeMenu")}</Link>
+              <Link
+                id="close_btn"
+                isButton
+                class="text-lg border-0! p-0! bg-bg!">{t("btn.closeMenu")}</Link
+              >
             </li>
           </ul>
         </nav>
@@ -88,18 +150,59 @@ const navItems: NavItem[] = [
   const menu_btn = document.getElementById("menu-btn");
   const menu_modal = document.getElementById("menu-modal");
   const menu = document.getElementById("menu");
-  const close_btn = document.getElementById("close_btn");
 
-  menu?.addEventListener("mouseleave", () => {
-    menu_modal?.classList.add("hidden");
-  });
+  const close_btn = document.getElementById("close_btn");
+  const change_theme_btn = document.getElementById("change-theme-btn");
+
+  const index_btn = document.getElementById("index-btn");
+  const index_content = document.getElementById("index-content");
+  const index_icon_closed = document.getElementById("index-closed");
+  const index_icon_opened = document.getElementById("index-opened");
+
+  const links = document.querySelectorAll("a");
 
   function openMenu() {
     menu_modal?.classList.remove("hidden");
   }
 
+  function closeMenu() {
+    menu_modal?.classList.add("hidden");
+  }
+
+  function setChangeThemeButtonText() {
+    if (change_theme_btn) {
+      change_theme_btn.textContent = window.darkMode.isEnabled()
+        ? (change_theme_btn.dataset.light ?? "")
+        : (change_theme_btn.dataset.dark ?? "");
+    }
+  }
+
+  setChangeThemeButtonText();
+
+  menu?.addEventListener("mouseleave", () => {
+    closeMenu();
+  });
+
   menu_btn?.addEventListener("click", openMenu);
   close_btn?.addEventListener("click", () => {
-    menu_modal?.classList.add("hidden");
+    closeMenu();
+  });
+
+  index_btn?.addEventListener("click", () => {
+    index_content?.classList.toggle("hidden");
+    index_icon_closed?.classList.toggle("hidden");
+    index_icon_opened?.classList.toggle("hidden");
+  });
+
+  change_theme_btn?.addEventListener("click", () => {
+    window.darkMode.toggle();
+    closeMenu();
+    setChangeThemeButtonText();
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
   });
 </script>

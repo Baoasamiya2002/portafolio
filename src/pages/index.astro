@@ -29,6 +29,7 @@ const projects = (await getCollection("projects")).filter((project) => {
 
 <MainLayout>
   <div
+    id="welcome"
     class="w-screen h-screen flex flex-col items-center justify-center sticky top-0 -z-1 bg-bg"
   >
     <Image
@@ -86,7 +87,7 @@ const projects = (await getCollection("projects")).filter((project) => {
       Page made by me. Design: Figma + PowerPoint. Build: Astro + TailwindCSS.
       Deploy: Vercel
     </div>    
-    <div class="fixed bottom-24">
+    <div class="fixed bottom-24 -z-1">
       <Icon name="chevron-down" class="animate-bounce" />
       <Icon name="chevron-down" class="animate-bounce" />
       <Icon name="chevron-down" class="animate-bounce" />

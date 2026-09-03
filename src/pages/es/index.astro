@@ -11,13 +11,12 @@ import guideImg from "../../assets/images/guide-765-banner.jpg";
 import mapImg from "../../assets/images/map-srx-banner.jpg";
 import { Heading } from "accessible-astro-components";
 import { Icon } from "astro-icon/components";
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { getLangFromUrl } from "../../i18n/utils";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
 const bgImage = await getImage({ src: welcomeImg });
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 const projects = (await getCollection("projects")).filter((project) => {
   if (lang === "es") {
     return project.id.startsWith("es");
@@ -29,6 +28,7 @@ const projects = (await getCollection("projects")).filter((project) => {
 
 <MainLayout>
   <div
+    id="welcome"
     class="w-screen h-screen flex flex-col items-center justify-center sticky top-0 -z-1 bg-bg"
   >
     <Image
@@ -86,7 +86,7 @@ const projects = (await getCollection("projects")).filter((project) => {
       Página hecha por mí. Diseño: Figma + PowerPoint. Desarrollo: Astro +
       TailwindCSS. Despliegue: Vercel
     </div>
-    <div class="fixed bottom-24">
+    <div class="fixed bottom-24 -z-1">
       <Icon name="chevron-down" class="animate-bounce" />
       <Icon name="chevron-down" class="animate-bounce" />
       <Icon name="chevron-down" class="animate-bounce" />
