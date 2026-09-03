@@ -56,49 +56,59 @@ const projects = (await getCollection("projects")).filter((project) => {
       alt="Banner of the videogame project"
       class="min-h-4/3 min-w-4/3 fixed -z-10 left-0 top-0 object-cover animate-fade [animation-fill-mode:backwards]"
     />
-    <div class="w-full h-full fixed left-0 bg-bg -z-10 opacity-75"></div>
-    <div
-      style={`background-image: url(${bgImage.src});`}
-      class="lg:w-4xl h-115 m-3 md:bg-cover md:pl-86 px-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] justify-center flex flex-col gap-4 text-white"
-    >
-      <Heading level="h1" size="h3" class="font-bold">¡Hola!</Heading>
-      <p>¡Bienvenido a mi portafolio!</p>
-      <p style="display: ruby;">
-        Para ver mis proyectos, baja en la página o haz clic en el menú <Icon
-          name="menu"
-          size="1.5rem"
-        /> de la esquina superior de la página
-      </p>
-      <p style="display: ruby;">
-        También puedes alternar entre un tema obscuro <Icon
-          name="moon-stars"
-          size="1.5rem"
-        /> o claro <Icon name="sun" size="1.5rem" /> y cambiar el idioma de la página
-        (English/Español)
-      </p>
-      <p style="display: ruby;">
-        Mi LinkedIn <Icon name="linkedin" size="1.5rem" /> está en la parte inferior
-        de la página, no dudes en contactarme
-      </p>
-      <p>¡Gracias por tu visita!</p>
-    </div>
-    <div class="px-3">
-      Página hecha por mí. Diseño: Figma + PowerPoint. Desarrollo: Astro +
-      TailwindCSS. Despliegue: Vercel
-    </div>
-    <div class="fixed bottom-24 -z-1">
-      <Icon name="chevron-down" class="animate-bounce" />
-      <Icon name="chevron-down" class="animate-bounce" />
-      <Icon name="chevron-down" class="animate-bounce" />
+    <div class="w-full h-full fixed left-0 bg-bg -z-10 opacity-75" />
+    <div 
+      id="welcome-message"
+      class="justify-items-center">
+      <div
+        style={`background-image: url(${bgImage.src});`}
+        class="lg:w-4xl h-115 m-3 md:bg-cover md:pl-86 px-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] justify-center flex flex-col gap-4 text-white"
+      >
+        <Heading level="h1" size="h3" class="font-bold">¡Hola!</Heading>
+        <p>¡Bienvenido a mi portafolio!</p>
+        <p style="display: ruby;">
+          Para ver mis proyectos, baja en la página o haz clic en el menú <Icon
+            name="menu"
+            size="1.5rem"
+          /> de la esquina superior de la página
+        </p>
+        <p style="display: ruby;">
+          También puedes alternar entre un tema obscuro <Icon
+            name="moon-stars"
+            size="1.5rem"
+          /> o claro <Icon name="sun" size="1.5rem" /> y cambiar el idioma de la página
+          (English/Español)
+        </p>
+        <p style="display: ruby;">
+          Mi LinkedIn <Icon name="linkedin" size="1.5rem" /> está en la parte inferior
+          de la página, no dudes en contactarme
+        </p>
+        <p>¡Gracias por tu visita!</p>
+      </div>
+      <div class="px-3">
+        Página hecha por mí. Diseño: Figma + PowerPoint. Desarrollo: Astro +
+        TailwindCSS. Despliegue: Vercel
+      </div>
+      <div class="fixed bottom-24 -z-1">
+        <Icon name="chevron-down" class="animate-bounce" />
+        <Icon name="chevron-down" class="animate-bounce" />
+        <Icon name="chevron-down" class="animate-bounce" />
+      </div>
     </div>
   </div>
   <main>
     <section id="index" class="min-h-[calc(100vh+5rem)] bg-bg">
-      <div class="bg-figure w-full h-1 sticky top-0 z-1"></div>
+      <div class="bg-figure w-full h-1 sticky top-0 z-1" />
       <ProjectSection projects={projects} />
     </section>
     {
       projects.map((project) => (
+        <aside>
+          <div class="bg-figure w-full h-1 sticky top-0 z-1" />
+          <div class="w-full h-50 flex justify-center items-center">
+            <div class="bg-figure pentagon p-8 text-white h-min">-</div>
+          </div>
+        </aside>
         <section
           id={project.id.split("/").pop()}
           class="min-h-[calc(100vh+5rem)] bg-bg"
@@ -110,3 +120,18 @@ const projects = (await getCollection("projects")).filter((project) => {
     }
   </main>
 </MainLayout>
+<script>
+  const welcome_message = document.getElementById("welcome-message");
+
+  if (welcome_message) {
+    const threshold = welcome_message.offsetTop + welcome_message.offsetHeight;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= threshold) {
+        welcome_message.classList.add("hidden");
+      } else {
+        welcome_message.classList.remove("hidden");
+      }
+    });
+  }
+</script>
