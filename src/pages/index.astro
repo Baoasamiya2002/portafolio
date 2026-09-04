@@ -107,7 +107,7 @@ const projects = (await getCollection("projects")).filter((project) => {
         <aside>
           <div class="bg-figure w-full h-1 sticky top-0 z-1" />
           <div class="w-full h-50 flex justify-center items-center">
-            <div class="bg-figure pentagon p-8 text-white h-min">-</div>
+            <div class="bg-figure pentagon_item sm:pentagon p-8 text-white h-min">{project.data.introduction}</div>
           </div>
         </aside>
         <section

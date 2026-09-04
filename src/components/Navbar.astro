@@ -67,14 +67,14 @@ const projects = (await getCollection("projects")).filter((project) => {
                 class="hover:bg-figure hover:text-white! pentagon_item text-2xl flex items-center sm:p-2 p-2 sm:w-[24.3rem] w-full"
                 href="#welcome"
               >
-                {t("nav.home")}
+                {t("nav.home.goTo")}
               </Link>
             </li>
             <li>
               <div class="pentagon_item w-full hover:bg-figure">
                 <Button
                   id="index-btn"
-                  class="bg-transparent! hover:text-white! border-0! text-2xl! sm:w-[24.3rem]! w-full! justify-start! font-normal! sm:p-2 p-2"
+                  class="bg-transparent! hover:text-white! border-0! text-2xl! sm:w-[24.3rem]! w-full! justify-start! font-normal! sm:p-2! p-2!"
                   size="sm"
                   >{t("nav.index")}<Icon
                     id="index-closed"
@@ -100,7 +100,7 @@ const projects = (await getCollection("projects")).filter((project) => {
                   {
                     projects.map((project) => (
                       <Link
-                        class="hover:bg-figure hover:text-white! pentagon_item text-2xl flex items-center sm:p-2 p-2 sm:w-[24.3rem] w-full"
+                        class="hover:bg-figure hover:text-white! pentagon_item text-2xl flex items-center sm:p-2! p-2! sm:w-[24.3rem] w-full"
                         href={"#" + project.id.split("/").pop()}
                       >
                         {project.data.name}
@@ -114,7 +114,7 @@ const projects = (await getCollection("projects")).filter((project) => {
               <div class="pentagon_item w-full hover:bg-figure">
                 <Button
                   id="change-theme-btn"
-                  class="bg-transparent! hover:text-white! border-0! text-2xl! sm:w-[24.3rem]! w-full! justify-start! font-normal! sm:p-2 p-2"
+                  class="bg-transparent! hover:text-white! border-0! text-2xl! sm:w-[24.3rem]! w-full! justify-start! font-normal! sm:p-2! p-2!"
                   size="sm"
                   data-light={changeThemeLight}
                   data-dark={changeThemeDark}
@@ -125,7 +125,7 @@ const projects = (await getCollection("projects")).filter((project) => {
               <div class="pentagon_item w-full hover:bg-figure">
                 <Link
                   id="lang_es_btn"
-                  class="bg-transparent! border-0! text-2xl! sm:w-[24.3rem]! w-full! justify-start! font-normal! hover:text-white! sm:p-2 p-2"
+                  class="bg-transparent! border-0! text-2xl! sm:w-[24.3rem]! w-full! justify-start! font-normal! hover:text-white! sm:p-2! p-2!"
                   href={translatePath("/", t("btn.nextLang"))}
                   isButton
                   size="sm">{t("btn.nextLangTooltip")}</Link

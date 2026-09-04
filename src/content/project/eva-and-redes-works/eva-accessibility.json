@@ -1,5 +1,6 @@
 {
   "name": "Administrative portal for client invoices",
+  "introduction": "Later on, I created a system to help other developers on my team, which at first was intimidating, but it was a great motivator to make its work easier",
   "time": "1 month",
   "dialogues": [
     "On my company, we had a sales system that was used by several clients",
