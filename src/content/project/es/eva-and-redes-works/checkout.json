@@ -6,7 +6,8 @@
     "En uno de los sistemas en los que trabajé, existía la funcionalidad para cobrar productos en una caja de cobro",
     "Uno de los clientes del sistema reportaban que sus empleados de caja tardaban en cobrar usando mouse y teclado",
     "Rediseñé la interfaz de cobro para mejorar usabilidad e integrar navegación sólo por teclado",
-    "Mejoré el manejo de errores y cambios durante el cobro, manejando cada método de pago con un elemento independiente y fácil de modificar",
+    "Reorganicé el proceso y el flujo de interacción, dividiendolo en 3 columnas y cada una con el mismo patrón de lectura vertical",
+    "Separé los métodos de pago, mejorando el manejo de errores y cambios sin reiniciar el proceso de cobro",
     "Aprendí a priorizar la experiencia de usuario y contemplar distintas formas de interacción"
   ],
   "images": [
@@ -21,9 +22,9 @@
       "caption": "Después del rediseño"
     },
     {
-      "indexDialogue": "3",
+      "indexDialogue": "4",
       "url": "../../../../assets/images/checkout-3.png",
-      "caption": "Botones del método de pago registrado, fáciles de eliminar sin reiniciar proceso de cobro"
+      "caption": "Separé los métodos de pago registrados a botones, fáciles de eliminar o modificar"
     }
   ],
   "banner": "../../../../assets/images/checkout-banner.jpg"

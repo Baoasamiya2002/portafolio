@@ -6,7 +6,8 @@
     "On one of the systems I was working on, there was a checkout functionality for products",
     "One client's system reported that their employees were slow checking out when using the mouse and keyboard",
     "Redesigned the checkout interface to improve usability and integrate navigation with only keyboard",
-    "Improved error and change handling during checkout, making each payment method independent and easier to modify",
+    "Reorganized the process and interaction flow, dividing it into 3 columns and each one with the same vertical reading pattern",
+    "Made payment methods independent, improving error and change handling without restarting checkout process",
     "Learned to prioritize user experience and to consider different ways of interaction"
   ],
   "images": [
@@ -21,9 +22,9 @@
       "caption": "After redesign"
     },
     {
-      "indexDialogue": "3",
+      "indexDialogue": "4",
       "url": "../../../assets/images/checkout-3.png",
-      "caption": "Recorded payment methods buttons, easier to delete without restarting the checkout process"
+      "caption": "Decoupled recorded payment methods into buttons, easier to delete or modify"
     }
   ],
   "banner":  "../../../assets/images/checkout-banner.jpg"
