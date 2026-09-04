@@ -97,6 +97,7 @@ const projects = (await getCollection("projects")).filter((project) => {
                   >
                     {t("nav.index.goTo")}
                   </Link>
+                  <p class="p-2">{t("nav.index.goToProject")}</p>
                   {
                     projects.map((project) => (
                       <Link
