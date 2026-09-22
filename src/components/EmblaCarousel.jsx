@@ -120,7 +120,7 @@ const EmblaCarousel = (props) => {
                 <a href={"#" + project.id.split("/").pop()}>
                   <article
                     id={project.id}
-                    className="h-130 bg-figure pentagon md:flex hover:*:bg-figure! hover:text-white *:transition *:duration-300 *:ease-in-out"
+                    className="h-130 bg-figure pentagon md:flex hover:*:bg-figure! text-black hover:text-white *:transition *:duration-300 *:ease-in-out"
                   >
                     <div>
                       <img
