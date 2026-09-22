@@ -46,6 +46,11 @@ article:hover {
   clip-path: polygon(100% 0, 100% 92%, 92% 99%, 0 99%, 0 0);
 }
 
+.pentagon_button {
+  -webkit-clip-path: polygon(100% 0, 100% 82%, 82% 99%, 0 99%, 0 0);
+  clip-path: polygon(100% 0, 100% 82%, 82% 99%, 0 99%, 0 0);
+}
+
 .pentagon_item {
   -webkit-clip-path: polygon(99% 2%, 99% 75%, 96% 99%, 0 99%, 0 0);
   clip-path: polygon(99% 2%, 99% 75%, 96% 99%, 0 99%, 0 0);

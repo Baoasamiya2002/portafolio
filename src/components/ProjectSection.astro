@@ -4,12 +4,8 @@ import {
   useTranslations,
   useTranslatedPath,
 } from "../i18n/utils";
-import {
-  Card,
-  Heading,
-  Button,
-  Badge,
-} from "accessible-astro-components";
+import { Heading } from "accessible-astro-components";
+import EmblaCarousel from "./EmblaCarousel.jsx";
 
 const { projects } = Astro.props;
 
@@ -30,53 +26,20 @@ const filterButtons: FilterButton[] = [
 ---
 
 <project-section>
-  <div class="grid pt-15 pb-10 py-8 sm:pl-14 pl-3 pr-3 gap-y-6">
+  <div class="grid pt-15 pb-10 sm:pl-14 pl-3 gap-y-6">
     <div class="grid w-full gap-y-3">
       <Heading level="h1">{t("nav.proyects")}</Heading>
       <p class="text-lg">{t("nav.typeProject")}:</p>
-      <ul
-        class="flex overflow-auto whitespace-nowrap"
-        style="scrollbar-width: thin; scrollbar-color: #888 transparent;"
-      >
-        {
-          filterButtons.map((button: FilterButton) => (
-            <li class="pentagon_item">
-              <Button
-                class:list={[
-                  "border-figure! border-0! hover:border-b-4! hover:border-l-4! py-0! text-2xl! sm:p-2! p-2! px-4! sm:w-[24.3rem]! w-full! justify-start!",
-                  button.name == t("nav.noFilter")
-                    ? "bg-figure! text-white!"
-                    : "bg-transparent!",
-                ]}
-                tag={button.tag}
-              >
-                {button.name}
-              </Button>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <div class="lg:columns-3 block justify-items-center">
-      {
-        Array.isArray(projects) && projects.map((project) => (
-          <Card
-            class="w-full mb-3 border-figure!"
-            img={project.data.banner.src}
-            title={project.data.name}
-            id={project.id}
-            url={"#" + project.id.split("/").pop()}
-          >
-            <span slot="meta">
-              <Badge>.</Badge>
-            </span>
-            <p>{t("nav.seeMore")}</p>
-          </Card>
-        ))
-      }
+      <EmblaCarousel
+        slides={projects}
+        filters={filterButtons}
+        seeMoreLabel={t("nav.seeMore")}
+        client:only="react"
+      />
     </div>
   </div>
 </project-section>
+
 <script>
   class ProjectSection extends HTMLElement {
     connectedCallback() {
