@@ -39,7 +39,7 @@ const EmblaCarousel = (props) => {
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="flex whitespace-nowrap flex-nowrap w-min items-center cursor-pointer border-figure border-b-4 text-2xl! py-2 px-4 font-bold!"
+          className="flex whitespace-nowrap flex-nowrap w-min items-center cursor-pointer border-figure border-b-4 text-2xl! py-2 px-4"
         >
           <span className="mr-2">{selectedOption}</span>
           <svg
@@ -83,7 +83,7 @@ const EmblaCarousel = (props) => {
                   <button
                     type="button"
                     onClick={() => setFilter(btnContent, index)}
-                    className={`cursor-pointer sm:text-2xl! text-xl! py-2 px-4 font-bold! w-full flex flex-nowrap justify-start hover:bg-figure hover:text-white
+                    className={`cursor-pointer sm:text-2xl! text-xl! py-2 px-4 w-full flex flex-nowrap justify-start hover:bg-figure hover:text-white
                   ${activeFilter === index ? "bg-figure text-white" : "bg-transparent"}`}
                   >
                     {btnContent.name}
@@ -101,7 +101,7 @@ const EmblaCarousel = (props) => {
               <button
                 type="button"
                 onClick={() => setFilter(btnContent, index)}
-                className={`cursor-pointer border-b-5 text-2xl! py-2 px-4 font-bold! hover:bg-figure hover:text-white
+                className={`cursor-pointer border-b-5 text-2xl! py-2 px-4 hover:bg-figure hover:text-white
                   ${activeFilter === index ? "border-figure" : "border-transparent"}`}
               >
                 {btnContent.name}

@@ -56,7 +56,7 @@ const projects = (await getCollection("projects")).filter((project) => {
       alt="Banner of the videogame project"
       class="min-h-4/3 min-w-4/3 fixed -z-10 left-0 top-0 object-cover animate-fade [animation-fill-mode:backwards]"
     />
-    <div class="w-full h-full fixed left-0 bg-bg -z-10 opacity-75" />
+    <div class="w-screen h-screen fixed left-0 bg-bg -z-10 opacity-75" />
     <div 
       id="welcome-message"
       class="justify-items-center">
@@ -86,10 +86,9 @@ const projects = (await getCollection("projects")).filter((project) => {
         <p>¡Gracias por tu visita!</p>
       </div>
       <div class="px-3">
-        Página hecha por mí. Diseño: Figma + PowerPoint. Desarrollo: Astro +
-        TailwindCSS. Despliegue: Vercel
+        Página hecha por mí. Diseño: Figma + PowerPoint. Desarrollo: Astro + React + TailwindCSS. Despliegue: Vercel
       </div>
-      <div class="fixed bottom-24 -z-1">
+      <div class="fixed sm:bottom-24 bottom-10 -z-1">
         <Icon name="chevron-down" class="animate-bounce" />
         <Icon name="chevron-down" class="animate-bounce" />
         <Icon name="chevron-down" class="animate-bounce" />
