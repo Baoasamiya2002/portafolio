@@ -40,7 +40,7 @@ const projects = (await getCollection("projects")).filter((project) => {
         <DarkMode
           id="change-theme-icon-btn"
           initialMode="auto"
-          class="border-0! sm:px-1! sm:pl-auto! pl-3.5! py-1! sm:pbs-3! pbs-2! shadow-none! hover:text-white darkmode:hover:text-black"
+          class="border-0! sm:px-1! sm:pl-auto! pl-3.5! py-1! sm:pbs-3! pbs-2! shadow-none! hover:text-white darkmode:hover:text-black hover:*:-translate-y-0.75 *:transition-transform *:duration-200 *:ease-out"
         >
           <Icon name="moon-stars" slot="dark" />
           <Icon name="sun" slot="light" />
@@ -64,7 +64,7 @@ const projects = (await getCollection("projects")).filter((project) => {
           <ul class="flex flex-col gap-6 w-full">
             <li>
               <Link
-                class="hover:bg-figure hover:text-white! pentagon_item text-2xl flex items-center sm:p-2 p-2 sm:w-[24.3rem] w-full"
+                class="hover:bg-figure hover:text-white! hover:underline hover:-translate-y-0.75 transition-transform duration-200 ease-out pentagon_item text-2xl flex items-center sm:p-2 p-2 sm:w-[24.3rem] w-full"
                 href="#welcome"
               >
                 {t("nav.home.goTo")}
@@ -92,7 +92,7 @@ const projects = (await getCollection("projects")).filter((project) => {
               <ul id="index-content" class="pl-4 hidden">
                 <li class="">
                   <Link
-                    class="hover:bg-figure hover:text-white! pentagon_item text-2xl flex items-center sm:p-2 p-2 sm:w-[24.3rem] w-full"
+                    class="hover:bg-figure hover:text-white! hover:underline hover:-translate-y-0.75 transition-transform duration-200 ease-out pentagon_item text-2xl flex items-center sm:p-2 p-2 sm:w-[24.3rem] w-full"
                     href="#index"
                   >
                     {t("nav.index.goTo")}
@@ -101,7 +101,7 @@ const projects = (await getCollection("projects")).filter((project) => {
                   {
                     projects.map((project) => (
                       <Link
-                        class="hover:bg-figure hover:text-white! pentagon_item text-2xl flex items-center sm:p-2! p-2! sm:w-[24.3rem] w-full"
+                        class="hover:bg-figure hover:text-white! hover:underline hover:-translate-y-0.75 transition-transform duration-200 ease-out pentagon_item text-2xl flex items-center sm:p-2! p-2! sm:w-[24.3rem] w-full"
                         href={"#" + project.id.split("/").pop()}
                       >
                         {project.data.name}
@@ -126,7 +126,7 @@ const projects = (await getCollection("projects")).filter((project) => {
               <div class="pentagon_item w-full hover:bg-figure">
                 <Link
                   id="lang_es_btn"
-                  class="bg-transparent! border-0! text-2xl! sm:w-[24.3rem]! w-full! justify-start! font-normal! hover:text-white! sm:p-2! p-2!"
+                  class="bg-transparent! border-0! text-2xl! sm:w-[24.3rem]! w-full! justify-start! font-normal! hover:text-white! hover:underline hover:-translate-y-0.75 transition-transform duration-200 ease-out sm:p-2! p-2!"
                   href={translatePath("/", t("btn.nextLang"))}
                   isButton
                   size="sm">{t("btn.nextLangTooltip")}</Link

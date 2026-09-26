@@ -45,7 +45,7 @@ export const PrevButton = (props) => {
         bg-transparent touch-manipulation w-[3.6rem] h-[3.6rem]
         pentagon_button hover:bg-figure hover:text-white
         active:bg-figure active:text-white
-        transition duration-300 ease-in-out
+        hover:-translate-y-0.75 transition-transform duration-200 ease-out
         ${disabled ? "hidden" : "inline-flex"}`}
     >
       <svg className="w-[35%] h-[35%]" viewBox="0 0 532 532">
@@ -70,7 +70,7 @@ export const NextButton = (props) => {
         bg-transparent touch-manipulation w-[3.6rem] h-[3.6rem]
         pentagon_button hover:bg-figure hover:text-white
         active:bg-figure active:text-white
-        transition duration-300 ease-in-out 
+        hover:-translate-y-0.75 transition-transform duration-200 ease-out
         ${disabled ? "hidden" : "inline-flex"}`}
     >
       <svg className="w-[35%] h-[35%]" viewBox="0 0 532 532">

@@ -5,7 +5,7 @@ export const ui = {
   en: {
     name: "English",
     "webpage.title": "Portfolio of Puxka Acosta Domínguez",
-    "webpage.title.short": "Portafolio of Puxka",
+    "webpage.title.short": "Portfolio of Puxka",
     "btn.nextLang": "es",
     "btn.nextLangTooltip": "Cambiar a Español",
     "btn.changeTheme.dark": "Change to dark theme",
