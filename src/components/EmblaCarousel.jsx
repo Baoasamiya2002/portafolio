@@ -5,10 +5,23 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
-import downIcon from "../icons/chevron-down.svg";
+import downIcon from "../icons/chevron-down.svg?url";
+import timeIcon from "../icons/time.svg?url";
+import teamIcon from "../icons/team.svg?url";
+import briefcaseIcon from "../icons/briefcase.svg?url";
+import starIcon from "../icons/star.svg?url";
+import personIcon from "../icons/person.svg?url";
+
+const icons = {
+  star: starIcon,
+  team: teamIcon,
+  briefcase: briefcaseIcon,
+  time: timeIcon,
+  person: personIcon
+};
 
 const EmblaCarousel = (props) => {
-  const { slides, filters, seeMoreLabel } = props;
+  const { slides, filters, seeMoreLabel, iconAlt } = props;
   const options = { dragFree: true, align: "start", loop: true };
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
@@ -19,7 +32,21 @@ const EmblaCarousel = (props) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
-  const [projects, setProjects] = useState(slides);
+  const projectsTagsFiltered = slides.map((slide) => ({
+    ...slide,
+    data: {
+      ...slide.data,
+      tags: slide.data.tags
+        .filter((tag) => tag.icon !== "time")
+        .map((tag) => ({
+          ...tag,
+          content: tag.icon === "team" ? tag.content.slice(0, 1) : tag.content,
+        }))
+        .reverse(),
+    },
+  }));
+
+  const [projects, setProjects] = useState(projectsTagsFiltered);
   const [activeFilter, setActiveFilter] = useState(0);
   const [open, setOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(filters[0].name);
@@ -27,7 +54,7 @@ const EmblaCarousel = (props) => {
   const setFilter = (filterSelected, filterIndex) => {
     setActiveFilter(filterIndex);
     setProjects(
-      slides.filter((project) => project.id.startsWith(filterSelected.tag)),
+      projectsTagsFiltered.filter((project) => project.id.startsWith(filterSelected.tag)),
     );
     setOpen(false);
     setSelectedOption(filterSelected.name);
@@ -121,7 +148,7 @@ const EmblaCarousel = (props) => {
                 <a href={"#" + project.id.split("/").pop()}>
                   <article
                     id={project.id}
-                    className="h-130 bg-figure pentagon md:flex hover:*:bg-figure! text-black hover:text-white hover:-translate-y-0.75 transition-transform duration-200 ease-out"
+                    className="group h-130 bg-figure pentagon md:flex text-black hover:text-white hover:-translate-y-0.75 transition-transform duration-200 ease-out"
                   >
                     <div>
                       <img
@@ -130,23 +157,16 @@ const EmblaCarousel = (props) => {
                         className="h-full object-cover"
                       />
                     </div>
-                    <div className="p-4 py-7 *:mb-4 bg-white pentagon h-full">
+                    <div className="p-4 py-7 *:mb-4 bg-white group-hover:bg-figure pentagon h-full">
                       <div className="flex gap-0.5 flex-wrap">
-                        <div className="border-2 border-gray-500 rounded-lg px-1.5 w-max">
-                          <p>Sales</p>
-                        </div>
-                        <div className="border-2 border-gray-500 rounded-lg px-1.5 w-max">
-                          <p>Individual</p>
-                        </div>
-                        <div className="border-2 border-gray-500 rounded-lg px-1.5 w-max">
-                          <p>Full-stack developer</p>
-                        </div>
-                        <div className="border-2 border-gray-500 rounded-lg px-1.5 w-max">
-                          <p>Usability</p>
-                        </div>
-                        <div className="border-2 border-gray-500 rounded-lg px-1.5 w-max">
-                          <p>Accessibility</p>
-                        </div>
+                        {project.data.tags.map((tag) =>
+                          tag.content.map((text) => (
+                            <div className="border-2 border-gray-500 rounded-lg px-1.5 w-max flex gap-1">
+                              <img src={icons[tag.icon]} alt={iconAlt + tag.type} className="w-3.5 group-hover:invert"/>
+                              <p>{text}</p>
+                            </div>
+                          )),
+                        )}
                       </div>
                       <h3 className="text-2xl font-medium">
                         {project.data.name}

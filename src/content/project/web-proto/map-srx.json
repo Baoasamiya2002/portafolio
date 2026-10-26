@@ -1,40 +1,156 @@
 {
-  "name": "Interactive sound map of SRX's ecological reserve",
-  "introduction": "To conclude, this project let me experiment with the design, thinking about the different uses a webpage can have and help the final user",
-  "time": "2 months",
-  "dialogues": [
-    "The eco-brigades of Santa Rosa Xochiac (SRX) reserve were looking to attract tourism and support to protect the SRX reserve",
-    "The reserve has a large territorial extension and one of its attractions is the sighting of different species and natural landscapes",
-    "Proposed, along with a team, an interactive sound map as support for the tour of the reserve",
-    "The map also serves as a guide to learn more about the flora and fauna of the reserve",
-    "Designed the high-fidelity prototype, accessing from a main screen to information about the different species and location of sightings",
-    "Facilitated coordination between multidisciplinary teams, promoting agreements"
+  "name": "SRX Reserve Interactive Map",
+  "tags": [
+    {
+      "type": "Time",
+      "icon": "time",
+      "content": ["2 months"]
+    },
+    {
+      "type": "Participants",
+      "icon": "team",
+      "content": ["Teamwork", "10 people"]
+    },
+    {
+      "type": "Role",
+      "icon": "briefcase",
+      "content": ["UI Designer"]
+    },
+    {
+      "type": "Keywords",
+      "icon": "star",
+      "content": ["Environmental education", "Community engagement"]
+    }
   ],
-  "images": [
+  "sections": [
     {
-      "indexDialogue": "1",
-      "url": "../../../assets/images/map-srx-0.png",
-      "caption": "Google Maps image of the meeting point of the eco-brigades"
+      "title": "Getting to know the reserve",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "During a visit to the Santa Rosa Xochiac (SRX) reserve, the brigade members took us along a route where we could hear birds and see a great variety of flowers"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/map-srx-0.png",
+              "caption": "Google Maps image of the brigade members' meeting point"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "They pointed out that, because the population places little value on the reserve, it has been affected by resource exploitation, fires, and pollution",
+            "They also mentioned that, in addition to what we could see and hear, there are more living beings that live there but can't always be seen"
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "2",
-      "url": "../../../assets/images/map-srx-1.png",
-      "caption": "Map of the prototype, showing sighting of flora and fauna"
+      "title": "Proposals for showcasing the ecosystem",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Considering the great diversity of the reserve that remains unknown, we looked for a way to share it in order to encourage its conservation",
+            "As a team, we discussed creating an educational game, a 3D virtual tour, or an informational website",
+            "We chose the informational website for its easy accessibility to the general public and its development feasibility"
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "2",
-      "url": "../../../assets/images/map-srx-2.png",
-      "caption": "Modal popup window of a bird"
+      "title": "Systematizing the information",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Based on what we learned in the field, a map was taken as the central point, to give focus to this geographic space",
+            "Proposed integrating hiking routes, information about sightings, and notable spots into this map"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/map-srx-01.png",
+              "caption": "First sketches following the Crazy Eights technique"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "More information about the map and its living beings was obtained through virtual interviews with the brigade members and a literature review"
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "3",
-      "url": "../../../assets/images/map-srx-01.png",
-      "caption": "First draft sketches following Crazy Eights technique"
-    },
-    {
-      "indexDialogue": "4",
-      "url": "../../../assets/images/map-srx-.png",
-      "caption": "Interactions between the different layers of the prototype"
+      "title": "From sketch to interactivity",
+      "content": [
+        {
+          "type": "text",
+          "body": ["Designed the website using prototypes from low to high fidelity"]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/map-srx-10.png",
+              "caption": "Low-fidelity prototype"
+            },
+            {
+              "url": "../../../assets/images/map-srx-1.png",
+              "caption": "High-fidelity prototype, showing bird sightings"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Structured a clear and functional interface, dividing the sightings by type from the left menu"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/map-srx-.png",
+              "caption": "Side navigation menu for filtering living beings on the map and viewing more information by clicking them"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Organized the information into categories for each living being, allowing exploration from a central menu"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/map-srx-2.png",
+              "caption": "Pop-up window with categories for a bird"
+            },
+            {
+              "url": "../../../assets/images/map-srx-3.png",
+              "caption": "Pop-up window with the lynx's physical description"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "We validated the prototype with academics and researchers who have worked with the brigade members and know the community"
+          ]
+        }
+      ]
     }
   ],
   "link": "https://www.figma.com/proto/QJOI3MXhCkh68hHulD0dm0/Mapa-interactivo-SRX?node-id=56-2&p=f&t=xU9mvoyvJYxkvGWy-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=56%3A2",

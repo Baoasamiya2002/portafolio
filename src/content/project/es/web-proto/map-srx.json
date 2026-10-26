@@ -1,40 +1,156 @@
 {
-  "name": "Mapa sonoro interactivo de reserva SRX",
-  "introduction": "Para cerrar, con este proyecto me permití experimentar con el diseño, pensando en los distintos usos que se le puede dar a una página web y ayudar al usuario final",
-  "time": "2 meses",
-  "dialogues": [
-    "Los brigadistas de la reserva de Santa Rosa Xochiac (SRX) buscaban atraer turismo y apoyo para proteger a la reserva de SRX",
-    "La reserva tiene gran extensión territorial y uno de sus atractivos es el avistamiento de distintas especies y paisajes naturales",
-    "Propuse, junto a un equipo, un mapa sonoro interactivo como apoyo para el recorrido de la reserva",
-    "El mapa también sirve como guía para conocer más sobre la flora y fauna de la reserva",
-    "Diseñé el prototipo de alta fidelidad, accediendo desde una pantalla principal a información de las distintas especies y ubicación de avistamientos",
-    "Facilité la coordinación entre equipos multidisciplinarios, promoviendo acuerdos"
+  "name": "Mapa interactivo de reserva SRX",
+  "tags": [
+    {
+      "type": "Tiempo",
+      "icon": "time",
+      "content": ["2 meses"]
+    },
+    {
+      "type": "Participantes",
+      "icon": "team",
+      "content": ["Trabajo en equipo", "10 personas"]
+    },
+    {
+      "type": "Rol",
+      "icon": "briefcase",
+      "content": ["Diseñador de UI"]
+    },
+    {
+      "type": "Palabras clave",
+      "icon": "star",
+      "content": ["Educación ambiental", "Vinculación comunitaria"]
+    }
   ],
-  "images": [
+  "sections": [
     {
-      "indexDialogue": "1",
-      "url": "../../../../assets/images/map-srx-0.png",
-      "caption": "Imagen de Google Maps del punto de reunión de los brigadistas"
+      "title": "Conociendo la reserva",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "En una visita a la reserva de Santa Rosa Xochiac (SRX), los brigadistas nos llevaron en una ruta donde pudimos escuchar pájaros y ver gran variedad de flores"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/map-srx-0.png",
+              "caption": "Imagen de Google Maps del punto de reunión de los brigadistas"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Nos señalaron que, por el poco valor que la población da a la reserva, esta se ha visto afectada por explotación de recursos, incendios y contaminación",
+            "También comentaron que, además de lo que pudimos observar y escuchar, hay más seres vivos que viven ahí pero no siempre se pueden ver"
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "2",
-      "url": "../../../../assets/images/map-srx-1.png",
-      "caption": "Mapa del prototipo, mostrando avistamientos de la flora y fauna"
+      "title": "Propuestas para mostrar el ecosistema",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Tomando en cuenta la gran diversidad que no se conoce de la reserva, se buscó una forma de difundirla para incentivar su conservación",
+            "En equipo se discutió crear un juego educativo, un recorrido virtual 3D o una página informativa",
+            "Elegimos la página informativa por su fácil accesibilidad a todo el público y viabilidad de desarrollo"
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "2",
-      "url": "../../../../assets/images/map-srx-2.png",
-      "caption": "Ventana emergente de un ave"
+      "title": "Organizando la información",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Con lo que conocimos en campo, se tomó como punto central un mapa, para darle foco a este espacio geográfico",
+            "Propuse en este mapa integrar las rutas de senderismo, información sobre avistamientos, así como parajes destacados"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/map-srx-01.png",
+              "caption": "Primeros bocetos siguiendo técnica de Crazy Eights"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Se obtuvo más información sobre el mapa y sus seres vivos a través de entrevistas virtuales con los brigadistas y revisión bibliográfica"
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "3",
-      "url": "../../../../assets/images/map-srx-01.png",
-      "caption": "Primeros bocetos siguiendo técnica de Crazy Eights"
-    },
-    {
-      "indexDialogue": "4",
-      "url": "../../../../assets/images/map-srx-.png",
-      "caption": "Interacciones entre las distintas capas del prototipo"
+      "title": "Del boceto a la interactividad",
+      "content": [
+        {
+          "type": "text",
+          "body": ["Diseñé la página con prototipos de baja a alta fidelidad"]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/map-srx-10.png",
+              "caption": "Prototipo de baja fidelidad"
+            },
+            {
+              "url": "../../../../assets/images/map-srx-1.png",
+              "caption": "Prototipo de alta fidelidad, mostrando avistamientos de aves"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Estructuré una interfaz clara y funcional, dividiendo los avistamientos por tipo desde el menú izquierdo"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/map-srx-.png",
+              "caption": "Menú izquierdo desplegable para filtrar los seres vivos del mapa y explorar su información al seleccionarlos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Organicé la información en categorías según cada ser vivo, permitiendo la exploración desde un menú central"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/map-srx-2.png",
+              "caption": "Ventana emergente con categorías de un ave"
+            },
+            {
+              "url": "../../../../assets/images/map-srx-3.png",
+              "caption": "Ventana emergente con descripción física del lince"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Validamos el prototipo con académicas e investigadoras que han realizado actividades de vinculación con los brigadistas"
+          ]
+        }
+      ]
     }
   ],
   "link": "https://www.figma.com/proto/QJOI3MXhCkh68hHulD0dm0/Mapa-interactivo-SRX?node-id=56-2&p=f&t=xU9mvoyvJYxkvGWy-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=56%3A2",

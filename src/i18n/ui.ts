@@ -26,6 +26,8 @@ export const ui = {
     "section.collapseAll": "Collapse all",
     "project.prototype.linkLabel": "View prototype",
     "project.videogame.linkLabel": "Check videogame",
+    "project.onThisProject": "On this project:",
+    "project.tag.icon": "Icon of "
   },
   es: {
     name: "Español",
@@ -51,5 +53,7 @@ export const ui = {
     "section.collapseAll": "Colapsar todo",
     "project.prototype.linkLabel": "Ver prototipo",
     "project.videogame.linkLabel": "Checa el videojuego",
+    "project.onThisProject": "En este proyecto:",
+    "project.tag.icon": "Ícono de "
   },
 } as const;

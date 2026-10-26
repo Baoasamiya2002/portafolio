@@ -1,0 +1,128 @@
+{
+  "name": "Portal administrativo sobre facturación de clientes",
+  "tags": [
+    {
+      "type": "Tiempo",
+      "icon": "time",
+      "content": ["1 mes"]
+    },
+    {
+      "type": "Participantes",
+      "icon": "person",
+      "content": ["Trabajo individual"]
+    },
+    {
+      "type": "Rol",
+      "icon": "briefcase",
+      "content": ["Desarrollo full-stack"]
+    },
+    {
+      "type": "Palabras clave",
+      "icon": "star",
+      "content": ["Visualización de datos", "Sistema administrativo", "Manejo de formulario"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "Operaciones extras después de la venta del software",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "La empresa vendía un sistema de facturación, el cuál generaba un Comprobante Fiscal Digital por Internet (CFDI) para cada transacción realizada por el cliente",
+            "Cada cierto tiempo se realizaban consultas sobre su uso general u operaciones sobre la información del cliente del sistema en base de datos",
+            "Las principales consultas eran sobre los CFDI generados y cuántos fueron generados al mes"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Trabajo extra para los desarrolladores",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Cuando se necesitaba realizar una de estas operaciones, tenían que ser realizadas por desarrolladores del equipo",
+            "Aunque no eran complejas, requerían utilizar SQL y conocer la estructura de la base de datos, lo que implicaba tiempo de aprendizaje y mayor carga de trabajo",
+            "Para resolverlo, creé un portal de uso interno donde se consulta y administra la información de los clientes sin necesidad de SQL"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/timbre-1.png",
+              "caption": "Interfaz sencilla con las funcionalidades en el menú superior y logo en el centro"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "De esta forma, cualquier integrante del equipo podía realizar estas operaciones de forma rápida y sencilla"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Facilitando operaciones internas",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Otorgué diferentes niveles de acceso por usuario, permitiendo que algunos puedan consultar información y otros operaciones de administración",
+            "Creé un formulario con validación de errores que permite registrar, modificar y eliminar clientes"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/timbre-2.png",
+              "caption": "Formulario con comprobación de errores"
+            },
+            {
+              "url": "../../../../assets/images/timbre-3.png",
+              "caption": "Consultas a través de una tabla con filtros, sin necesidad de SQL"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Desarrollé REST APIs que alimentan tablas y gráficas con múltiples filtros, para resolver distintas consultas sin escribir código SQL"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/timbre-4.png",
+              "caption": "Generación de gráficas con filtros que consultan en base de datos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Elegí tablas cuando se necesita analizar la información basada en criterios, mientras que gráficas para las consultas cuantitativas"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Impacto y arquitectura del sistema",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Con este sistema se eliminó la necesidad de que los desarrolladores realizaran estas operaciones, facilitando su trabajo y mejorando la eficiencia del equipo",
+            "El sistema es mantenible y escalable ya que cada funcionalidad es modular y el uso de sequences de Java Spring Boot evita registros duplicados cuando varias personas lo usan al mismo tiempo"
+          ]
+        }
+      ]
+    }
+  ],
+  "banner": "../../../../assets/images/timbre-banner.jpg"
+}

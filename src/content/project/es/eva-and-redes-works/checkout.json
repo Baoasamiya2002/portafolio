@@ -1,30 +1,142 @@
 {
   "name": "Rediseño de caja de cobro",
-  "introduction": "Para empezar con mis proyectos, el siguiente fue mi primera oportunidad profesional de tomar decisiones de diseño y accesibilidad en un sistema",
-  "time": "1 mes",
-  "dialogues": [
-    "En uno de los sistemas en los que trabajé, existía la funcionalidad para cobrar productos en una caja de cobro",
-    "Uno de los clientes del sistema reportaban que sus empleados de caja tardaban en cobrar usando mouse y teclado",
-    "Rediseñé la interfaz de cobro para mejorar usabilidad e integrar navegación sólo por teclado",
-    "Reorganicé el proceso y el flujo de interacción, dividiendolo en 3 columnas y cada una con el mismo patrón de lectura vertical",
-    "Separé los métodos de pago, mejorando el manejo de errores y cambios sin reiniciar el proceso de cobro",
-    "Aprendí a priorizar la experiencia de usuario y contemplar distintas formas de interacción"
+  "tags": [
+    {
+      "type": "Tiempo",
+      "icon": "time",
+      "content": ["1 mes"]
+    },
+    {
+      "type": "Participantes",
+      "icon": "person",
+      "content": ["Trabajo individual"]
+    },
+    {
+      "type": "Rol",
+      "icon": "briefcase",
+      "content": ["Desarrollo full-stack"]
+    },
+    {
+      "type": "Palabras clave",
+      "icon": "star",
+      "content": ["Usabilidad", "Punto de venta", "Diseño de interfaz"]
+    }
   ],
-  "images": [
+  "sections": [
     {
-      "indexDialogue": "2",
-      "url": "../../../../assets/images/checkout-1.png",
-      "caption": "Antes del rediseño"
+      "title": "Proceso de cobro funcional, pero torpe",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Trabajé en un sistema de punto de venta que incluía una funcionalidad para cobrar productos en una caja de cobro",
+            "Uno de los clientes del sistema comentó que sus cajeros tardaban en cobrar porque alternaban entre el mouse y el teclado"
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "2",
-      "url": "../../../../assets/images/checkout-2.png",
-      "caption": "Después del rediseño"
+      "title": "Analisis de la interfaz original",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Tras realizar un análisis, encontré que la navegación por teclado no funcionaba y que la interfaz tenía grandes espacios vacíos entre elementos"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/checkout-01.png",
+              "caption": "Espacios en blanco entre los titulares y las cantidades del cobro, dificultando lectura"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Además, se dividía en dos columnas con distintos flujos de lectura: la primera se leía en vertical y la segunda en varias líneas horizontales, pudiendo optimizarse"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/checkout-02.png",
+              "caption": "Distintos flujos de lectura en las columnas"
+            }
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "4",
-      "url": "../../../../assets/images/checkout-3.png",
-      "caption": "Separé los métodos de pago registrados a botones, fáciles de eliminar o modificar"
+      "title": "Mejorando navegabilidad",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Mejoré la usabilidad al integrar navegación solo por teclado, permitiendo elegir el método de pago, llenar campos y finalizar el cobro sin cambiar a mouse",
+            "Se utilizan 4 teclas para navegar entre los campos y 1 teclas para ingresar el pago y otra para finalizar el cobro, facilitando la operación y reduciendo errores"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/checkout-2.png",
+              "caption": "Flujo de cobro con teclado en nueva interfaz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Creando una interfaz más efectiva",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Reorganicé la información en tres columnas con el mismo flujo de lectura vertical, volviendo más claros los pasos del proceso de cobro"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/checkout-4.png",
+              "caption": "Flujo de lectura en las columnas reordenadas"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Optimicé los distintos métodos de pago realizados convirtiendolos en elementos independientes, así se pueden eliminar por separado sin reiniciar el proceso de cobro"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/checkout-3.png",
+              "caption": "Separé los métodos de pago registrados a botones, fáciles de eliminar o modificar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Resultados reportados por el cliente",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Otro miembro de la empresa realizó un video para enseñar la nueva forma de interacción",
+            "El cliente reportó que mejoraron los tiempos de cobro, aunque al principio esta nueva forma requirió un proceso de aprendizaje,"
+          ]
+        }
+      ]
     }
   ],
   "banner": "../../../../assets/images/checkout-banner.jpg"

@@ -1,47 +1,223 @@
 {
-  "name": "Redesign of *765 Guide",
-  "introduction": "Thanks to this next project, creating a site is more than the presentation, it is also about giving the best communication possible to the user",
-  "time": "1 month",
-  "dialogues": [
-    "The *765 Guide was created by the Women's Secretariat of Mexico City to help an observant or the victim in a case of violence against women",
-    "They were looking to make it easier to understand and to use on electronic devices",
-    "Converted the guide from a brochure on paper to a webpage prototype",
-    "Took the challenge of improving the content's guide, putting myself in the position of the pople who needed to quickly remember the guide on violent situations",
-    "Reviewed the original content following Rob Waller's evaluation criteria",
-    "Sinthesized and reorganized the content, making it easier to understand and less redundant",
-    "Showed the content with a bigger font to make it easier to read and using an F-shaped pattern",
-    "Redesigned and created pictograms that guarantee visual coherence and faithfully represent the information"
+  "name": "*765 Guide Page",
+  "tags": [
+    {
+      "type": "Time",
+      "icon": "time",
+      "content": ["1 month"]
+    },
+    {
+      "type": "Participants",
+      "icon": "person",
+      "content": ["Individual work"]
+    },
+    {
+      "type": "Role",
+      "icon": "briefcase",
+      "content": ["UX/UI Designer"]
+    },
+    {
+      "type": "Keywords",
+      "icon": "star",
+      "content": ["Government services", "Civic design", "Instructional design"
+      ]
+    }
   ],
-  "images": [
+  "sections": [
     {
-      "indexDialogue": "1",
-      "url": "../../../assets/images/guide-765-00.png",
-      "caption": "Original brochure of *765 Guide"
+      "title": "Understanding the guide against violence",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "The *765 Guide is a brochure created by the Women's Secretariat of Mexico City to provide guidance in cases of violence against women"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/guide-765-00.png",
+              "caption": "The brochure on paper"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Its target audience is witnesses and victims of violence, so its content must be clear and easy to understand"
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "4",
-      "url": "../../../assets/images/guide-765-0-eng.png",
-      "caption": "Rob Waller's evaluation criteria"
+      "title": "Opportunities for improvement found",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "While reading it, I found out that it contains links to web pages, phone numbers, and addresses, which could be better used in a digital format"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/guide-765-1.png",
+              "caption": "Printed elements in the trifold brochure that could be interactive"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Seeing this, I proposed converting the *765 Guide into a web page",
+            "Deepened my analysis with Rob Waller's evaluation criteria, which provides strategies for optimizing and transforming documents"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/guide-765-0-eng.png",
+              "caption": "Rob Waller's evaluation criteria"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Found out that the guide makes great use of pictograms and steps, but some are confusing or redundant"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/guide-765-7.png",
+              "caption": "Use of different types of pictograms, some unrelated to the text"
+            }
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "5",
-      "url": "../../../assets/images/guide-765-01.png",
-      "caption": "Transformed from long paragraphs to concise sentences with essential information"
+      "title": "Optimizing the instructions",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Redesigned the information for faster scanning (larger font and F-shaped reading pattern) and better structural clarity (concise headlines and sections)"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/guide-765-4.png",
+              "caption": "Headlines and sections before"
+            },
+            {
+              "url": "../../../assets/images/guide-765-5.png",
+              "caption": "Headlines and sections after, being direct and clear for each case"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Improved the instructions by turning them into direct sentences that start with a verb, so they are understood more quickly",
+            "Optimized navigation and accessibility by turning elements that pointed to external resources or actions outside the guide, such as phone calls, into links"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/guide-765-6.png",
+              "caption": "Buttons leading to the official pages and other page elements"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Increased clarity about the differences between the institutions that can be approached, so that users can choose the one best suited to their case"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/guide-765-01.png",
+              "caption": "Added an explanation of the different recommended institutions"
+            }
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "6",
-      "url": "../../../assets/images/guide-765-1.png",
-      "caption": "Before, the brochure on paper"
+      "title": "Better pictograms, greater clarity",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Strengthened visual consistency by redesigning pictograms based on the alphabet of the page's typeface"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/guide-765-2.png",
+              "caption": "Grid based on the typeface"
+            },
+            {
+              "url": "../../../assets/images/guide-765-8.png",
+              "caption": "Pictogram built using the grid"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Optimized visual communication by designing new pictograms that improved the match between the graphic elements and the information presented"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/guide-765-3-eng.png",
+              "caption": "Pictogram creation process"
+            }
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "6",
-      "url": "../../../assets/images/guide-765-2.png",
-      "caption": "After, the webpage prototype"
+      "title": "Effectiveness of the high-fidelity prototype",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Obtained favorable responses about the understanding of the guide and its pictograms by testing it with men and women aged 20 to 60",
+            "The guide still needs to be tested with people who have been in situations of violence and with experts on the subject"
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "7",
-      "url": "../../../assets/images/guide-765-3-eng.png",
-      "caption": "Process of making the pictograms"
+      "title": "Lessons learned",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Information design must prioritize its most important function, in this case its use in emergencies",
+            "Graphic resources must be consistent and coherent with the information they represent"
+          ]
+        }
+      ]
     }
   ],
   "link": "https://www.figma.com/proto/L7q0lDA4Nu3xrWhOFj49LM/Wireframe?node-id=1-3&t=r1jV6mBr4FYQtygb-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3",

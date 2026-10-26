@@ -10,14 +10,33 @@ const projects = defineCollection({
   schema: ({ image }) =>
     z.object({
       name: z.string(),
-      introduction: z.string(),
-      time: z.string().optional(),
-      dialogues: z.array(z.string()),
-      images: z.array(
+      tags: z.array(
         z.object({
-          indexDialogue: z.string(),
-          url: image(),
-          caption: z.string(),
+          type: z.string(),
+          icon: z.string(),
+          content: z.array(z.string()),
+        }),
+      ),
+      sections: z.array(
+        z.object({
+          title: z.string(),
+          content: z.array(
+            z.discriminatedUnion("type", [
+              z.object({
+                type: z.literal("text"),
+                body: z.array(z.string()),
+              }),
+              z.object({
+                type: z.literal("image"),
+                body: z.array(
+                  z.object({
+                    url: image(),
+                    caption: z.string(),
+                  }),
+                ),
+              }),
+            ]),
+          ),
         }),
       ),
       link: z.string().optional(),

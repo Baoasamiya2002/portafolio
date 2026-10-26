@@ -1,51 +1,167 @@
 {
-  "name": "Latencia. Toma el control...  o la mejor decisión",
-  "introduction": "Con el siguiente proyecto pude trabajar con el lado lúdico del software y con un propósito social, ampliando mi visión de cómo usar la tecnología para ayudar",
-  "time": "9 meses",
-  "dialogues": [
-    "Hace algunos años, la Universidad Autonoma Metropolitana Unidad Cuajimalpa había tenido un caso grave de violencia en el noviazgo entre sus estudiantes",
-    "Aunque tenían materiales para prevenir el problema, se buscaba una herramienta novedosa que conectara con los jóvenes",
-    "Colaboré, junto a un equipo interdisciplinario, en el desarrollo de un videojuego para prevenir la violencia en el noviazgo",
-    "Tomé el rol de líder del proyecto y propuse trabajar siguiendo una metodología ágil",
-    "Participé en actividades de co-diseño con potenciales usuarios en distintas etapas del desarrollo",
-    "Realicé el wireframing y documentación del videojuego",
-    "Desarrollé el videojuego para escritorio, celulares y web"
+  "name": "Latencia",
+  "tags": [
+    {
+      "type": "Tiempo",
+      "icon": "time",
+      "content": ["9 meses"]
+    },
+    {
+      "type": "Participantes",
+      "icon": "team",
+      "content": ["Trabajo en equipo", "3 personas"]
+    },
+    {
+      "type": "Rol",
+      "icon": "briefcase",
+      "content": ["Lider", "Desarrollo full-stack"]
+    },
+    {
+      "type": "Palabras clave",
+      "icon": "star",
+      "content": ["Videojuego persuasivo", "Impacto social"]
+    }
   ],
-  "images": [
+  "sections": [
     {
-      "indexDialogue": "1",
-      "url": "../../../../assets/images/videogame-0.png",
-      "caption": "Pantalla de inicio del videojuego"
+      "title": "Violencia en el noviazgo en jóvenes de licenciatura",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "En 2023, la Universidad Autonoma Metropolitana Unidad Cuajimalpa enfrentó un caso grave de violencia en el noviazgo entre sus estudiantes",
+            "Después de esto, la universidad creó una unidad especializada para atender a los estudiantes y materiales de prevención",
+            "Aun así, hacía falta una herramienta que conectara con los jóvenes y les ayudara a reconocer estas situaciones por sí mismos"
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "4",
-      "url": "../../../../assets/images/videogame-1.png",
-      "caption": "Collage de ideación"
+      "title": "Buscando una herramienta que conectara con los jóvenes",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Identificamos que un videojuego podía resultarles atractivo después de conversar con estudiantes y revisar la literatura, encontrando que son accesibles y posibilitan el aprendizaje de actitudes"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/videogame-0.png",
+              "caption": "Captura de pantalla de videojuegos de la organización Jennifer Ann's Group, mostrando el uso de videojuegos contra la violencia"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Colaboré con un equipo interdisciplinario de Diseño y Comunicación en la creación de 'Latencia', una novela visual para ayudar a identificar la violencia en el noviazgo",
+            "Para una correcta representación del problema, se realizaron entrevistas a estudiantes sobre sus experiencias y se revisó el contenido con personas expertas en el tema"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/videogame-01.png",
+              "caption": "Entrevistando a un estudiante en la universidad"
+            }
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "4",
-      "url": "../../../../assets/images/videogame-2.png",
-      "caption": "Card-sorting"
+      "title": "Diseñando y desarrollando un videojuego",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Lideré el proyecto e implementé una metodología ágil para realizar avances constantes y encontrar problemas desde etapas tempranas del desarrollo",
+            "Facilité sesiones de co-diseño con jóvenes en distintas etapas del desarrollo para recopilar retroalimentación e incorporar nuevas ideas al videojuego"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/videogame-1.png",
+              "caption": "Collage de ideación"
+            },
+            {
+              "url": "../../../../assets/images/videogame-2.png",
+              "caption": "Card-sorting"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Diseñé e implementé los wireframes, así como la documentación del videojuego para guiar su diseño e implementación"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/videogame-3.png",
+              "caption": "Wireframing de nivel del juego"
+            },
+            {
+              "url": "../../../../assets/images/videogame-5.png",
+              "caption": "Wireframing de pantalla de progreso"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Implementé el videojuego para múltiples plataformas y modalidades de acceso, garantizando su funcionamiento en dispositivos móviles, computadoras y entornos web"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/videogame-4.png",
+              "caption": "Nivel del juego"
+            },
+            {
+              "url": "../../../../assets/images/videogame-6.png",
+              "caption": "Pantalla de progreso"
+            }
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "5",
-      "url": "../../../../assets/images/videogame-3.png",
-      "caption": "Wireframing"
-    },
-    {
-      "indexDialogue": "5",
-      "url": "../../../../assets/images/videogame-5.png",
-      "caption": "Wireframing"
-    },
-    {
-      "indexDialogue": "6",
-      "url": "../../../../assets/images/videogame-4.png",
-      "caption": "Nivel del juego"
-    },
-    {
-      "indexDialogue": "6",
-      "url": "../../../../assets/images/videogame-6.png",
-      "caption": "Pantalla de progreso"
+      "title": "Resultados de su evaluación con los usuarios",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Colaboré en la evaluación del videojuego con 44 jóvenes y 3 personas expertas mediante entrevistas, cuestionarios y el análisis de grabaciones de su interacción con el juego",
+            "Más del 70% de las personas que evaluaron el videojuego lo aprobaron, destacando positivamente su jugabilidad e historia"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/videogame-7.png",
+              "caption": "Gráficas con resultados de pruebas de usabilidad"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Los resultados de uno de los cuestionarios evidenciaron una mayor capacidad para identificar situaciones de violencia en las relaciones después de jugar",
+            "Indentificamos oportunidades de mejora, como representar más situaciones de violencia y ofrecer más opciones de respuesta en las decisiones del juego"
+          ]
+        }
+      ]
     }
   ],
   "link": "https://noviolencia.itch.io/latencia",

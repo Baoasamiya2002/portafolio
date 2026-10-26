@@ -1,47 +1,223 @@
 {
   "name": "Página de Guía *765",
-  "introduction": "Gracias al siguiente proyecto, el crear un sitio web es más que sólo la presentación, si no también es comunicar lo mejor posible al usuario",
-  "time": "1 mes",
-  "dialogues": [
-    "La Guía *765 fue creada por la Secretaría de las Mujeres de la Ciudad de México para ayudar a un observante o a la propia víctima en una situación de violencia a la mujer",
-    "Buscaban hacerla más efectiva en su entendimiento y facilitar su uso en dispositivos electrónicos",
-    "Propuse convertir la Guía *765 de tríptico a una página web",
-    "Acepté el reto de mejorar el contenido de la guía, poniéndome en el lugar de quienes necesitan recordar rápidamente la guía en situaciones de violencia",
-    "Analicé la información original siguiendo criterios de evaluación según Rob Waller",
-    "Sinteticé y reorganicé la información para que fuera menos redundante y facilitar comprensión",
-    "Mostré información con una fuente más grande para facilitar su visualización y prefiriendo un patrón de lectura en F",
-    "Rediseñé y elaboré pictogramas que garantizan coherencia visual y transmiten fielmente la información"
+  "tags": [
+    {
+      "type": "Tiempo",
+      "icon": "time",
+      "content": ["1 mes"]
+    },
+    {
+      "type": "Participantes",
+      "icon": "person",
+      "content": ["Trabajo individual"]
+    },
+    {
+      "type": "Rol",
+      "icon": "briefcase",
+      "content": ["Diseñador de UX/UI"]
+    },
+    {
+      "type": "Palabras clave",
+      "icon": "star",
+      "content": ["Servicios de gobierno", "Diseño cívico", "Diseño instruccional"
+      ]
+    }
   ],
-  "images": [
+  "sections": [
     {
-      "indexDialogue": "1",
-      "url": "../../../../assets/images/guide-765-00.png",
-      "caption": "Tríptico original de la guía *765"
+      "title": "Entendiendo la guía contra la violencia",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "La Guía *765 es un tríptico creado por la Secretaría de las Mujeres de la Ciudad de México para orientar en casos de violencia contra la mujer"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/guide-765-00.png",
+              "caption": "El tríptico en papel"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Su público objetivo son testigos y víctimas de violencia, por lo que su contenido debe ser claro y fácil de entender"
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "4",
-      "url": "../../../../assets/images/guide-765-0.png",
-      "caption": "Criterios de evaluación según Rob Waller"
+      "title": "Posibilidades de mejora encontradas",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Al leerla encontré que contiene links a páginas web, números de teléfono y direcciones, los cuales pueden ser mejor utilizados en un formato digital"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/guide-765-1.png",
+              "caption": "Elementos impresos en el triptico que pueden ser interactivos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Viendo esto, propuse convertir la Guía *765 a una página web",
+            "Profundicé mi análisis usando criterios de evaluación según Rob Waller, el cual da estrategias de optimización y transformación de documentos"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/guide-765-0.png",
+              "caption": "Criterios de evaluación según Rob Waller"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Encontré que la guía hace gran uso de pictogramas y pasos, pero algunos resultan confusos o redundantes"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/guide-765-7.png",
+              "caption": "Uso de distintos tipos de pictogramas, algunos sin relación al texto"
+            }
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "5",
-      "url": "../../../../assets/images/guide-765-01.png",
-      "caption": "Pasó de titulares y parrafos largos a información escencial y sin redundancia"
+      "title": "Optimizando las instrucciones",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Rediseñé la información para un escaneo más rápido (fuente más grande y patrón de lectura en F) y mejor claridad estructural (titulares y secciones concisas)"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/guide-765-4.png",
+              "caption": "Titulares y secciones antes"
+            },
+            {
+              "url": "../../../../assets/images/guide-765-5.png",
+              "caption": "Titulares y secciones después, siendo directo y claro de cada caso"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Mejoré las instrucciones convirtiendolas en oraciones directas, empezando con un verbo para que se entiendan más rápido",
+            "Optimicé la navegación y la accesibilidad al transformar en enlaces los elementos que dirigían a recursos externos o acciones fuera de la guía, como llamadas telefónicas"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/guide-765-6.png",
+              "caption": "Botones para llevar a las páginas oficiales y otros elementos del directorio"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Aumenté la claridad sobre la diferencia de las instituciones a las que se puede acudir, para que el usuario pueda elegir la más adecuada a su caso"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/guide-765-01.png",
+              "caption": "Agregué explicación sobre las distintas instituciones recomendadas"
+            }
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "6",
-      "url": "../../../../assets/images/guide-765-1.png",
-      "caption": "Antes, el tríptico en papel"
+      "title": "Mejores pictogramas, mayor claridad",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Fortalecí la coherencia visual rediseñando pictogramas a partir del abecedario de la tipografía de la página"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/guide-765-2.png",
+              "caption": "Retícula basada en la tipografía"
+            },
+            {
+              "url": "../../../../assets/images/guide-765-8.png",
+              "caption": "Pictograma usando retícula"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Optimicé la comunicación visual al diseñar nuevos pictogramas que mejoraron la correspondencia entre los elementos gráficos y la información presentada"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/guide-765-3.png",
+              "caption": "Proceso de creación de los pictogramas"
+            }
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "6",
-      "url": "../../../../assets/images/guide-765-2.png",
-      "caption": "Después, el prototipo de la página web"
+      "title": "Efectividad del prototipo de alta fidelidad",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Obtuve respuestas fovorables sobre el entendimiento de la guia y sus pictogramas probandola con hombres y mujeres en un rango de 20 a 60 años",
+            "Falta probar la guía con personas que se han encontrado en situaciones de violencia y expertas en el tema"
+          ]
+        }
+      ]
     },
     {
-      "indexDialogue": "7",
-      "url": "../../../../assets/images/guide-765-3.png",
-      "caption": "Proceso de creación de los pictogramas"
+      "title": "Aprendizajes obtenidos",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "El diseño de la información debe priorizar su función más importante, en este caso su uso en emergencias",
+            "Los recursos gráficos deben ser consistentes y coherentes con la información que representan"
+          ]
+        }
+      ]
     }
   ],
   "link": "https://www.figma.com/proto/L7q0lDA4Nu3xrWhOFj49LM/Wireframe?node-id=1-3&t=r1jV6mBr4FYQtygb-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3",

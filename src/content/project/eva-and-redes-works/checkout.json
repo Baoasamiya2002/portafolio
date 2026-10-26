@@ -1,31 +1,143 @@
 {
-  "name": "Redesign of checkout",
-  "introduction": "To start with my projects, the next one was my first professional opportunity to take design and accessibility decisions on a system",
-  "time": "1 month",
-  "dialogues": [
-    "On one of the systems I was working on, there was a checkout functionality for products",
-    "One client's system reported that their employees were slow checking out when using the mouse and keyboard",
-    "Redesigned the checkout interface to improve usability and integrate navigation with only keyboard",
-    "Reorganized the process and interaction flow, dividing it into 3 columns and each one with the same vertical reading pattern",
-    "Made payment methods independent, improving error and change handling without restarting checkout process",
-    "Learned to prioritize user experience and to consider different ways of interaction"
-  ],
-  "images": [
+  "name": "Checkout Redesign",
+  "tags": [
     {
-      "indexDialogue": "2",
-      "url": "../../../assets/images/checkout-1.png",
-      "caption": "Before redesign"
+      "type": "Time",
+      "icon": "time",
+      "content": ["1 month"]
     },
     {
-      "indexDialogue": "2",
-      "url": "../../../assets/images/checkout-2.png",
-      "caption": "After redesign"
+      "type": "Participants",
+      "icon": "person",
+      "content": ["Individual work"]
     },
     {
-      "indexDialogue": "4",
-      "url": "../../../assets/images/checkout-3.png",
-      "caption": "Decoupled recorded payment methods into buttons, easier to delete or modify"
+      "type": "Role",
+      "icon": "briefcase",
+      "content": ["Full-stack development"]
+    },
+    {
+      "type": "Keywords",
+      "icon": "star",
+      "content": ["Usability", "Point of sale", "Interface design"]
     }
   ],
-  "banner":  "../../../assets/images/checkout-banner.jpg"
+  "sections": [
+    {
+      "title": "A functional but clumsy checkout process",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "I worked on a point-of-sale system that included a feature for charging for products at a checkout",
+            "One of the system's clients mentioned that their cashiers were slow to check out customers because they switched back and forth between the mouse and the keyboard"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Analysis of the original interface",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "After conducting an analysis, I found that keyboard navigation didn't work and that the interface had large empty spaces between elements"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/checkout-01.png",
+              "caption": "Blank spaces between the headings and the checkout amounts, making reading difficult"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "In addition, it was divided into two columns with different reading flows: the first was read vertically and the second in several horizontal lines, which could be optimized"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/checkout-02.png",
+              "caption": "Different reading flows in the columns"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Improving navigability",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Improved usability by integrating keyboard-only navigation, allowing users to choose the payment method, fill in fields, and complete the checkout without switching to the mouse",
+            "Four keys are used to navigate between fields, one key to enter the payment, and another to complete the checkout, making operation easier and reducing errors"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/checkout-2.png",
+              "caption": "Keyboard checkout flow in the new interface"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Creating a more effective interface",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Reorganized the information on three columns with the same vertical reading flow, making more clear the steps of the checkout process"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/checkout-4.png",
+              "caption": "Reading flow in the reordered columns"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Optimized the different payment methods used by turning them into independent elements, so they can be removed separately without restarting the checkout process"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/checkout-3.png",
+              "caption": "I separated the registered payment methods into buttons, easy to remove or modify"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Results reported by the client",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Another member of the company made a video to teach the new way of interacting",
+            "The client reported that checkout times improved, although at first this new way of working required a learning process,"
+          ]
+        }
+      ]
+    }
+  ],
+  "banner": "../../../assets/images/checkout-banner.jpg"
 }

@@ -1,0 +1,128 @@
+{
+  "name": "Administrative Portal for Customer Invoicing Oversight",
+  "tags": [
+    {
+      "type": "Time",
+      "icon": "time",
+      "content": ["1 month"]
+    },
+    {
+      "type": "Participants",
+      "icon": "person",
+      "content": ["Individual work"]
+    },
+    {
+      "type": "Role",
+      "icon": "briefcase",
+      "content": ["Full-stack development"]
+    },
+    {
+      "type": "Keywords",
+      "icon": "star",
+      "content": ["Data visualization", "Administrative system", "Form handling"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "Extra operations after the software sale",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "The company sold an invoicing system, which generated a Comprobante Fiscal Digital por Internet (CFDI, Mexico's digital tax receipt) for every transaction made by the client",
+            "From time to time, queries were made about general usage or operations were performed on the client's information in the system's database",
+            "The main queries were about the CFDIs generated and how many were generated per month"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Extra work for developers",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "When one of these operations was needed, it had to be performed by developers on the team",
+            "Although they were not complex, they required using SQL and knowing the database structure, which meant learning time and a heavier workload",
+            "To solve this, I created an internal-use portal where client information can be queried and managed without needing SQL"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/timbre-1.png",
+              "caption": "Simple interface with the features in the top menu and the logo in the center"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "This way, any team member could perform these operations quickly and easily"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Making internal operations easier",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "Assigned different access levels per user, allowing some to query information and others to perform administrative operations",
+            "Created a form with error validation that allows registering, modifying, and deleting clients"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/timbre-2.png",
+              "caption": "Form with error checking"
+            },
+            {
+              "url": "../../../assets/images/timbre-3.png",
+              "caption": "Queries through a table with filters, without needing SQL"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Developed REST APIs that feed tables and charts with multiple filters, to answer different queries without writing SQL code"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../assets/images/timbre-4.png",
+              "caption": "Chart generation with filters that query the database"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
+            "Chose tables when information needs to be analyzed based on criteria, and charts for quantitative queries"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "System impact and architecture",
+      "content": [
+        {
+          "type": "text",
+          "body": [
+            "This system prevented the need for developers to perform these operations, making their work easier and improving the team's efficiency",
+            "The system is maintainable and scalable because each feature is modular, and the use of Java Spring Boot sequences prevents duplicate records when several people use it at the same time"
+          ]
+        }
+      ]
+    }
+  ],
+  "banner": "../../../assets/images/timbre-banner.jpg"
+}
