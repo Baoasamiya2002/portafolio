@@ -31,6 +31,13 @@ projects.splice(0, projects.length,
   projects[0], // dashboard
   projects[3], // map
 );
+const quotes = [
+  "La creatividad no es casualidad. Analizo distintas alternativas y elijo la solución que mejor responde al problema y contexto",
+  "Reconozco que no lo sé todo, así que sé pedir ayuda a tiempo para mantener el avance del proyecto",
+  "Me esfuerzo por entregar soluciones mantenibles, claras y alineadas con buenas prácticas",
+  "Las herramientas cambian constantemente y yo con ellas. Si existe una mejor para el proyecto, la aprendo",
+  "Mantengo la calma en momentos de presión y tomo pausas necesarias para tener una mejor perspectiva"
+]
 ---
 
 <MainLayout>
@@ -108,11 +115,11 @@ projects.splice(0, projects.length,
       <ProjectSection projects={projects} />
     </section>
     {
-      projects.map((project) => (
+      projects.map((project, index) => (
         <aside>
           <div class="bg-figure w-full h-1 sticky top-0 z-1" />
           <div class="w-full h-50 flex justify-center items-center">
-            <div class="bg-figure pentagon p-8 text-white h-min">txt</div>
+            <div class="bg-figure pentagon p-8 text-white h-min">{quotes[index]}</div>
           </div>
         </aside>
         <section

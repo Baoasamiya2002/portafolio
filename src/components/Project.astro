@@ -21,108 +21,122 @@ const sectionsId = project.data.sections.map((section: any) => {
   );
 });
 ---
-
-<div class="flex pb-8 justify-center" data-content="project">
-  <div class="lg:w-2/4 sm:w-9/12 w-11/12 pt-15">
-    <div>
-      <Heading level="h1">{project.data.name}</Heading>
-      <div class="flex flex-col gap-6">
-        <div class="grid gap-1.5">
-          {
-            project.data.link && (
-              <Badge class="w-fit">
-                <Link href={project.data.link} isExternal>
-                  {project.data.name.includes("Latencia")
-                    ? t("project.videogame.linkLabel")
-                    : t("project.prototype.linkLabel")}
-                </Link>
-              </Badge>
-            )
-          }
-          {
-            project.data.tags.map((tag: any) => (
-              <div class="inline-flex ">
-                <Heading level="h3" size="h6" class="pb-5">
-                  {tag.type + ":"}
-                </Heading>
-                {tag.content.map((text: string) => (
-                  <Badge class="h-fit">
-                    <Icon name={tag.icon} />
-                    {text}
-                  </Badge>
-                ))}
-              </div>
-            ))
-          }
-        </div>
-        <nav class="w-full h-fit lg:hidden block">
-          <Heading level="h2" size="h4" class="pb-5">{t("project.onThisProject")}</Heading>
-          <ol class="border-l border-l-gray-500">
-            {
-              project.data.sections.map((section: any, index: number) => (
-                <li>
-                  <Link
-                    href={"#" + sectionsId[index]}
-                    class="hover:bg-figure hover:text-white! hover:underline hover:-translate-y-0.75 transition-transform duration-200 ease-out pentagon_item flex items-center p-2 pr-3 w-fit"
-                  >
-                    {section.title}
-                  </Link>
-                </li>
-              ))
-            }
-          </ol>
-        </nav>
+<div>
+  <div class="h-screen w-full flex items-center justify-left">
+    <div class="bg-bg w-full h-full absolute opacity-75"></div>
+    <div class="h-full w-full bg-figure"></div>
+    <img
+      src={project.data.banner.src}
+      alt={project.data.name}
+      class="h-full object-cover"
+    />
+    <div class="absolute p-4 sm:pl-25 gap-10 grid">
+      <div>
+        <Heading level="h1" class="pb-1">{project.data.name}</Heading>
         {
-          project.data.sections.map((section: any, index: number) => (
-            <section id={sectionsId[index]} class="grid gap-10">
-              <Heading level="h3">{section.title}</Heading>
-              {section.content.map((element: any) =>
-                element.type === "text" ? (
-                  element.body.map((text: string, index: number) => (
-                    <DivDialogue rightSide={index % 2 === 0}>
-                      {text}
-                    </DivDialogue>
-                  ))
-                ) : (
-                  <div class="w-full md:inline-flex items-end text-white bg-[linear-gradient(to_bottom,transparent_22%,#7030a0_22%)]">
-                    {element.body.map((image: { url: any; caption: any }) => (
-                      <figure>
-                        <Image src={image.url} alt="" class="h-auto w-full" />
-                        <figcaption class="p-1 pl-2">
-                          {image.caption}
-                        </figcaption>
-                      </figure>
-                    ))}
-                  </div>
-                ),
-              )}
-            </section>
-            <div class="h-12"></div>
+          project.data.link && (
+            <Link href={project.data.link} isExternal isButton variant="outlined">
+              {project.data.name.includes("Latencia")
+                ? t("project.videogame.linkLabel")
+                : t("project.prototype.linkLabel")}
+            </Link>
+          )
+        }
+      </div>
+      <div class="grid gap-1.5">
+        {
+          project.data.tags.map((tag: any) => (
+            <div class="inline-flex gap-2 h-fit">
+              <Heading level="h3" size="h6" class="pb-5">
+                {tag.type + ":"}
+              </Heading>
+              {tag.content.map((text: string) => (
+                <Badge class="h-full">
+                  <Icon name={tag.icon} />
+                  {text}
+                </Badge>
+              ))}
+            </div>
           ))
         }
       </div>
     </div>
   </div>
-  <nav
-    id="side-nav"
-    class="pt-21 w-1/4 h-full sticky top-0 lg:block hidden pl-16"
-  >
-    <Heading level="h2" size="h4" class="pb-5">On this project</Heading>
-    <ol>
-      {
-        project.data.sections.map((section: any, index: number) => (
-          <li>
-            <Link
-              href={"#" + sectionsId[index]}
-              class="border-b-5 border-l border-transparent border-l-gray-500 hover:bg-figure hover:text-white! hover:underline hover:-translate-y-0.75 transition-transform duration-200 ease-out pentagon_item flex items-center p-2 w-full"
-            >
-              {section.title}
-            </Link>
-          </li>
-        ))
-      }
-    </ol>
-  </nav>
+  <div class="flex pb-8 justify-center" data-content="project">
+    <div class="lg:w-2/4 sm:w-9/12 w-11/12 pt-15">
+      <div>
+        <div class="flex flex-col gap-6">
+          <div class="grid gap-1.5">
+          </div>
+          <nav class="w-full h-fit lg:hidden block">
+            <Heading level="h2" size="h4" class="pb-5">{t("project.onThisProject")}</Heading>
+            <ol class="border-l border-l-gray-500">
+              {
+                project.data.sections.map((section: any, index: number) => (
+                  <li>
+                    <Link
+                      href={"#" + sectionsId[index]}
+                      class="hover:bg-figure hover:text-white! hover:underline hover:-translate-y-0.75 transition-transform duration-200 ease-out pentagon_item flex items-center p-2 pr-3 w-fit"
+                    >
+                      {section.title}
+                    </Link>
+                  </li>
+                ))
+              }
+            </ol>
+          </nav>
+          {
+            project.data.sections.map((section: any, index: number) => (
+              <section id={sectionsId[index]} class="grid gap-10">
+                <Heading level="h3">{section.title}</Heading>
+                {section.content.map((element: any) =>
+                  element.type === "text" ? (
+                    element.body.map((text: string, index: number) => (
+                      <DivDialogue rightSide={index % 2 === 0}>
+                        {text}
+                      </DivDialogue>
+                    ))
+                  ) : (
+                    <div class="w-full md:inline-flex items-end text-white bg-[linear-gradient(to_bottom,transparent_22%,#7030a0_22%)]">
+                      {element.body.map((image: { url: any; caption: any }) => (
+                        <figure>
+                          <Image src={image.url} alt="" class="h-auto w-full" />
+                          <figcaption class="p-1 pl-2">
+                            {image.caption}
+                          </figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  ),
+                )}
+              </section>
+              <div class="h-12"></div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    <nav
+      id="side-nav"
+      class="pt-21 w-1/4 h-full sticky top-0 lg:block hidden pl-16"
+    >
+      <Heading level="h2" size="h4" class="pb-5">{t("project.onThisProject")}</Heading>
+      <ol>
+        {
+          project.data.sections.map((section: any, index: number) => (
+            <li>
+              <Link
+                href={"#" + sectionsId[index]}
+                class="border-b-5 border-l border-transparent border-l-gray-500 hover:bg-figure hover:text-white! hover:underline hover:-translate-y-0.75 transition-transform duration-200 ease-out pentagon_item flex items-center p-2 w-full"
+              >
+                {section.title}
+              </Link>
+            </li>
+          ))
+        }
+      </ol>
+    </nav>
+  </div>
 </div>
 
 <script>
