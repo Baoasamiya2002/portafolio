@@ -22,8 +22,8 @@ const sectionsId = project.data.sections.map((section: any) => {
 });
 ---
 <div>
-  <div class="h-screen w-full flex items-center justify-left">
-    <div class="bg-bg w-full h-full absolute opacity-75"></div>
+  <div class="relative h-screen w-full flex items-center justify-left">
+    <div class="bg-bg w-full h-full absolute inset-0 opacity-75"></div>
     <div class="h-full w-full bg-figure"></div>
     <img
       src={project.data.banner.src}
@@ -35,7 +35,7 @@ const sectionsId = project.data.sections.map((section: any) => {
         <Heading level="h1" class="pb-1">{project.data.name}</Heading>
         {
           project.data.link && (
-            <Link href={project.data.link} isExternal isButton variant="outlined">
+            <Link href={project.data.link} isExternal isButton>
               {project.data.name.includes("Latencia")
                 ? t("project.videogame.linkLabel")
                 : t("project.prototype.linkLabel")}
@@ -43,19 +43,21 @@ const sectionsId = project.data.sections.map((section: any) => {
           )
         }
       </div>
-      <div class="grid gap-1.5">
+      <div class="grid gap-5">
         {
           project.data.tags.map((tag: any) => (
             <div class="inline-flex flex-wrap gap-2 h-fit">
-              <Heading level="h3" size="h6" class="pb-5">
+              <Heading level="h3" size="h6">
                 {tag.type + ":"}
               </Heading>
-              {tag.content.map((text: string) => (
-                <Badge class="h-full">
-                  <Icon name={tag.icon} />
-                  {text}
-                </Badge>
-              ))}
+              <div class="inline-flex flex-wrap gap-1 h-fit">
+                {tag.content.map((text: string) => (
+                  <Badge class="h-fit">
+                    <Icon name={tag.icon} />
+                    {text}
+                  </Badge>
+                ))}
+              </div>
             </div>
           ))
         }
