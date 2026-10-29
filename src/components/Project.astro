@@ -28,9 +28,9 @@ const sectionsId = project.data.sections.map((section: any) => {
     <img
       src={project.data.banner.src}
       alt={project.data.name}
-      class="h-full object-cover"
+      class="h-full w-full object-cover"
     />
-    <div class="absolute p-4 sm:pl-25 gap-10 grid">
+    <div class="absolute w-full p-4 sm:pl-25 gap-10 grid">
       <div>
         <Heading level="h1" class="pb-1">{project.data.name}</Heading>
         {
@@ -46,7 +46,7 @@ const sectionsId = project.data.sections.map((section: any) => {
       <div class="grid gap-1.5">
         {
           project.data.tags.map((tag: any) => (
-            <div class="inline-flex gap-2 h-fit">
+            <div class="inline-flex flex-wrap gap-2 h-fit">
               <Heading level="h3" size="h6" class="pb-5">
                 {tag.type + ":"}
               </Heading>

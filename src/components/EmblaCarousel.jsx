@@ -157,7 +157,7 @@ const EmblaCarousel = (props) => {
                         className="h-full object-cover"
                       />
                     </div>
-                    <div className="p-4 py-7 *:mb-4 bg-white group-hover:bg-figure pentagon h-full">
+                    <div className="md:p-4 p-3 md:py-7 py-2 md:*:mb-4 *:mb-1.5 bg-white group-hover:bg-figure pentagon h-full md:content-end content-start">
                       <div className="flex gap-0.5 flex-wrap">
                         {project.data.tags.map((tag) =>
                           tag.content.map((text) => (

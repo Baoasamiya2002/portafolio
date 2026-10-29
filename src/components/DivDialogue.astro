@@ -6,14 +6,20 @@ import dialogueImg from "../assets/images/dialogue.png";
 const { rightSide } = Astro.props;
 ---
 
-<div class="inline-flex items-stretch gap-0">
+<div
+  class:list={[
+    "inline-flex items-stretch gap-0 sm:bg-none",
+    rightSide ? "bg-[linear-gradient(135deg,var(--color-figure)_96%,transparent_50%)]"
+    : "bg-[linear-gradient(225deg,var(--color-figure)_96%,transparent_50%)]",
+  ]}
+>
   <Image
     src={dialogueImg}
     alt="Avatar de Puxka"
     width="95"
     height="120"
     class:list={[
-      "h-full w-auto object-contain",
+      "object-contain",
       rightSide && "-translate-x-px order-1 scale-x-[-1]",
     ]}
   />

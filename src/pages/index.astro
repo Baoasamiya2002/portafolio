@@ -2,29 +2,27 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import ProjectSection from "../components/ProjectSection.astro";
 import Project from "../components/Project.astro";
-import { getImage } from "astro:assets";
-import welcomeImg from "../assets/images/welcome_dialogue.svg";
 import timbreImg from "../assets/images/timbre-banner.jpg";
 import videogameImg from "../assets/images/videogame-banner.jpg";
 import checkoutImg from "../assets/images/checkout-banner.jpg";
 import guideImg from "../assets/images/guide-765-banner.jpg";
 import mapImg from "../assets/images/map-srx-banner.jpg";
-import { Heading } from "accessible-astro-components";
+import dialogueImg from "../assets/images/dialogue.png";
+import { Heading, Link  } from "accessible-astro-components";
 import { Icon } from "astro-icon/components";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
-const bgImage = await getImage({ src: welcomeImg });
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
 const projects = (await getCollection("projects"))
   .filter((project) =>
     lang === "es"
       ? project.id.startsWith("es")
       : !project.id.startsWith("es")
   );
-
 projects.splice(0, projects.length,
   projects[2], // videogame
   projects[1], // checkout
@@ -32,87 +30,227 @@ projects.splice(0, projects.length,
   projects[0], // dashboard
   projects[3], // map
 );
+
 const quotes = [
   "Creativity isn't a casualty. I examine different alternatives and choose the best solution for the problem and context",
   "I'm aware I don't know everything, so I ask on time for help to keep the progress of the project",
   "I do my best to deliver solutions that are maintainable, clear and follow good practices",
   "Tools regularly change and I do with them. If exists a better one for the project, I learn it",
   "I keep calm on stressful times and take needed pauses to mantain a better perspective"
-]
+];
+
+const changeThemeLight = t("btn.changeTheme.short") + t("btn.changeTheme.light.name").toLowerCase();
+const changeThemeDark = t("btn.changeTheme.short") + t("btn.changeTheme.dark.name").toLowerCase();
+const themeLight = t("btn.changeTheme.light.name");
+const themeDark = t("btn.changeTheme.dark.name");
 ---
 
 <MainLayout>
   <div
     id="welcome"
-    class="w-screen h-screen flex flex-col items-center justify-center sticky top-0 -z-1 bg-bg"
+    class="w-screen min-h-screen flex flex-col items-center justify-center"
   >
     <Image
       src={mapImg}
-      alt="Banner of the map project"
+      alt=""
       class="min-h-4/3 min-w-4/3 fixed -z-10 right-0 top-0 object-cover animate-fade [animation-delay:12s] [animation-fill-mode:backwards]"
     />
     <Image
       src={guideImg}
-      alt="Banner of the guide project"
+      alt=""
       class="min-h-4/3 min-w-4/3 fixed -z-10 right-0 top-0 object-cover animate-fade [animation-delay:9s] [animation-fill-mode:backwards]"
     />
     <Image
       src={checkoutImg}
-      alt="Banner of the checkout redesign project"
+      alt=""
       class="min-h-4/3 min-w-4/3 fixed -z-10 left-0 top-0 object-cover animate-fade [animation-delay:6s] [animation-fill-mode:backwards]"
     />
     <Image
       src={timbreImg}
-      alt="Banner of the administrative project"
+      alt=""
       class="min-h-4/3 min-w-4/3 fixed -z-10 right-0 top-0 object-cover animate-fade [animation-delay:3s] [animation-fill-mode:backwards]"
     />
     <Image
       src={videogameImg}
-      alt="Banner of the videogame project"
+      alt=""
       class="min-h-4/3 min-w-4/3 fixed -z-10 left-0 top-0 object-cover animate-fade [animation-fill-mode:backwards]"
     />
-    <div class="w-screen h-screen fixed left-0 bg-bg -z-10 opacity-75" />
-    <div 
-      id="welcome-message"
-      class="justify-items-center">
-      <div
-        style={`background-image: url(${bgImage.src});`}
-        class="lg:w-4xl h-115 m-3 md:bg-cover md:pl-86 px-3 md:bg-transparent bg-figure bg-size-[390px] bg-no-repeat md:bg-left bg-position-[right_-230px_top_-20px] justify-center flex flex-col gap-4 text-white"
-      >
-        <Heading level="h1" size="h3" class="font-bold">Hello!</Heading>
-        <p>Welcome to my portfolio!</p>
-        <p style="display: ruby;">
-          To view my projects, scroll down or click on the menu <Icon
-            name="menu"
-            size="1.5rem"
-          /> in the top corner of the page
-        </p>
-        <p style="display: ruby;">
-          You can also toggle between a dark theme <Icon
-            name="moon-stars"
-            size="1.5rem"
-          /> or light theme <Icon name="sun" size="1.5rem" /> and change the language
-          of the page (English/Español)
-        </p>
-        <p style="display: ruby;">
-          My LinkedIn <Icon name="linkedin" size="1.5rem" /> is at the bottom of the
-          page, feel free to contact me
-        </p>
-        <p>Thank you for visiting!</p>
+    <div class="fixed top-0 left-0 w-screen h-screen bg-bg -z-10 opacity-75" />
+    <div class="w-screen h-fit sm:grid hidden gap-10 p-15 justify-center">
+      <div class="flex gap-10 text-white h-fit w-fit">
+        <div class="content-center items-center justify-center flex w-8/12 bg-[linear-gradient(135deg,var(--color-figure)_98%,transparent_50%)]">
+          <div class="w-fit px-8">
+            <Heading level="h1" class="font-bold mb-2">Hello!</Heading>
+            <div class="grid gap-2">
+              <p>I'm Puxka</p>
+              <p><strong>Focus:</strong> software development and user interface design</p>
+              <p><strong>Experience:</strong> health, sales, and others</p>
+              <p>From management systems to videogames</p>
+            </div>
+          </div>
+          <div>
+            <Image
+              src={dialogueImg}
+              width="200"
+              height="200"
+              alt=""
+              class="-translate-x-px order-1 scale-x-[-1]"
+            />
+          </div>
+        </div>
+        <div class="grid gap-3 p-8 w-4/12 bg-[linear-gradient(135deg,var(--color-figure)_98%,transparent_50%)]">
+          <p>Discipline and work on time are some of my strengths</p>
+          <Link
+            href="https://linkedin.com/in/puxka-acodom"
+            class="items-center justify-center hover:-translate-y-0.75 transition-transform duration-200 ease-out"
+            isExternal
+            >
+            <Icon name="linkedin" size="8rem" />
+          </Link>
+          <Heading level="h2" class="text-4xl! font-normal!">Contact to know more</Heading>
+        </div>
       </div>
-      <div class="px-3">
-        Page made by me. Design: Figma + PowerPoint. Build: Astro + React + TailwindCSS.
-        Deploy: Vercel
-      </div>    
-      <div class="fixed sm:bottom-24 bottom-10 -z-1">
-        <Icon name="chevron-down" class="animate-bounce" />
-        <Icon name="chevron-down" class="animate-bounce" />
-        <Icon name="chevron-down" class="animate-bounce" />
+      <div class="flex gap-10 h-fit w-full">
+        <div class="w-6/12 flex justify-center items-center gap-4">
+          <div class="h-fit">
+            <Icon name="chevron-down" class="animate-bounce" />
+            <Icon name="chevron-down" class="animate-bounce" />
+            <Icon name="chevron-down" class="animate-bounce" />
+          </div>
+          <Heading class="h-fit" level="h2" size="h4">Scroll to know my projects</Heading>
+        </div>
+        <div class="text-white flex-wrap w-3/12 grid gap-2 p-8 bg-[linear-gradient(135deg,var(--color-figure)_98%,transparent_50%)]">
+          <Heading level="h2" class="text-lg! flex">Theme (<Icon name="sun" size="1.5rem" class="relative top-1" />/<Icon name="moon-stars" size="1.5rem" class="relative top-1" />)</Heading>
+          <p
+            data-light={themeLight}
+            data-dark={themeDark} 
+            class="text-4xl flex gap-1 theme-name">
+              -
+          </p>
+          <div>
+            <p
+              data-light={changeThemeLight}
+              data-dark={changeThemeDark}
+              class="flex whitespace-nowrap change-theme-inst" >
+                Cambia a -
+            </p>
+            <p class="flex whitespace-nowrap"> in menu
+              <Icon name="menu"
+                size="1.5rem"
+              />
+            </p>
+          </div>
+        </div>
+        <div class="text-white flex-wrap w-3/12 grid gap-2 p-8 bg-[linear-gradient(135deg,var(--color-figure)_98%,transparent_50%)]">
+          <Heading level="h2" class="text-lg!">Language (ES/EN)</Heading>
+          <p class="text-4xl">English</p>
+          <div>
+            <p class="whitespace-nowrap">
+              Cambia a Español
+            </p>
+            <p class="flex whitespace-nowrap"> en menú
+              <Icon name="menu"
+                size="1.5rem"
+              />
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="sm:hidden grid w-screen min-h-fit justify-center pt-12">
+      <div class="grid gap-1 text-white h-fit w-fit px-3">
+        <div class="content-center items-center justify-center grid w-full bg-[linear-gradient(135deg,var(--color-figure)_98%,transparent_50%)]">
+          <div class="w-fit pt-2 px-2 pb-2">
+            <Heading level="h1" size="h2" class="font-bold mb-2">Hello!</Heading>
+            <div class="grid gap-1">
+              <p>I'm Puxka</p>
+              <p><strong>Focus:</strong> software development and user interface design</p>
+            </div>
+          </div>
+          <div class="h-fit flex px-2 pb-2">
+            <div class="w-fit grid">          
+              <p><strong>Experience:</strong> health, sales, and others</p>
+              <p>From management systems to videogames</p>
+            </div>
+            <Image
+              src={dialogueImg}
+              width="80"
+              height="110"
+              alt=""
+              class="-translate-x-px order-1 scale-x-[-1] w-fit"
+            />
+          </div>
+        </div>
+        <div class="flex gap-1 h-fit w-full">
+          <div class="grid p-2 w-1/2 bg-[linear-gradient(135deg,var(--color-figure)_98%,transparent_50%)]">
+            <p>Discipline and work on time are some of my strengths</p>
+            <Link
+              href="https://linkedin.com/in/puxka-acodom"
+              class="items-center justify-center hover:-translate-y-0.75 transition-transform duration-200 ease-out"
+              isExternal
+              >
+              <Icon name="linkedin" size="6rem" />
+            </Link>
+            <Heading level="h2" class="text-base!">Contact to know more</Heading>
+          </div>
+          <div class="grid w-1/2 gap-1">
+            <div class="text-white flex-wrap grid gap-2 p-2 bg-[linear-gradient(135deg,var(--color-figure)_98%,transparent_50%)]">
+              <Heading level="h2" class="text-base! flex">Theme (<Icon name="sun" size="1rem" class="relative top-1.5" />/<Icon name="moon-stars" size="1rem" class="relative top-1.5" />)</Heading>
+              <p
+                data-light={themeLight}
+                data-dark={themeDark} 
+                class="text-2xl flex gap-1 theme-name">
+                  -
+              </p>
+              <div>
+                <p
+                  data-light={changeThemeLight}
+                  data-dark={changeThemeDark}
+                  class="flex whitespace-nowrap change-theme-inst" >
+                    Cambia a -
+                </p>
+                <p class="flex whitespace-nowrap"> in menu
+                  <Icon name="menu"
+                    size="1.5rem"
+                  />
+                </p>
+              </div>
+            </div>
+            <div class="text-white flex-wrap grid gap-2 p-2 bg-[linear-gradient(135deg,var(--color-figure)_98%,transparent_50%)]">
+              <Heading level="h2" class="text-base!">Idioma (ES/EN)</Heading>
+              <p class="text-2xl">Español</p>
+              <div>
+                <p class="whitespace-nowrap">
+                  Cambia a Español
+                </p>
+                <p class="flex whitespace-nowrap"> en menú
+                  <Icon name="menu"
+                    size="1.5rem"
+                  />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gap-1 h-fit w-full pt-2">
+          <div class="flex items-center justify-center gap-1">
+            <div class="h-fit w-fit">
+              <Icon name="chevron-down" class="animate-bounce" size="0.5rem" />
+              <Icon name="chevron-down" class="animate-bounce" size="0.5rem" />
+              <Icon name="chevron-down" class="animate-bounce" size="0.5rem" />
+            </div>
+            <Heading class="h-fit w-fit" level="h2" size="h6">Scroll to know my projects</Heading>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full content-center items-center justify-center sm:contents grid p-3 whitespace-break-spaces sm:text-base text-xs">
+        <p class="w-fit">Page made by me.</p>
+        <p>Design: Figma + PowerPoint. Build: Astro + React + TailwindCSS. Deploy: Vercel</p>
+    </div>   
   </div>
-  <main>
-    <section id="index" class="min-h-[calc(100vh)] bg-bg">
+  <main class="w-full h-full">
+    <section id="index" class="min-h-[calc(100vh)] bg-bg z-1">
       <div class="bg-figure w-full h-1 sticky top-0 z-1" />
       <ProjectSection projects={projects} />
     </section>
@@ -121,7 +259,7 @@ const quotes = [
         <aside>
           <div class="bg-figure w-full h-1 sticky top-0 z-1" />
           <div class="w-full h-50 flex justify-center items-center">
-            <div class="bg-figure pentagon_item sm:pentagon p-8 text-white h-min">{quotes[index]}</div>
+            <div class="bg-[linear-gradient(135deg,var(--color-figure)_98%,transparent_50%)] p-8 text-white h-min">{quotes[index]}</div>
           </div>
         </aside>
         <section
@@ -135,18 +273,3 @@ const quotes = [
     }
   </main>
 </MainLayout>
-<script>
-  const welcome_message = document.getElementById("welcome-message");
-
-  if (welcome_message) {
-    const threshold = welcome_message.offsetTop + welcome_message.offsetHeight;
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY >= threshold) {
-        welcome_message.classList.add("hidden");
-      } else {
-        welcome_message.classList.remove("hidden");
-      }
-    });
-  }
-</script>

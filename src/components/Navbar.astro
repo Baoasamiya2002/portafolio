@@ -12,8 +12,10 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
-const changeThemeLight = t("btn.changeTheme.light");
-const changeThemeDark = t("btn.changeTheme.dark");
+const changeThemeLight =
+  t("btn.changeTheme.long") + t("btn.changeTheme.light.name").toLowerCase();
+const changeThemeDark =
+  t("btn.changeTheme.long") + t("btn.changeTheme.dark.name").toLowerCase();
 
 const projects = (await getCollection("projects")).filter((project) => {
   if (lang === "es") {
@@ -151,9 +153,18 @@ const projects = (await getCollection("projects")).filter((project) => {
   const menu_btn = document.getElementById("menu-btn");
   const menu_modal = document.getElementById("menu-modal");
   const menu = document.getElementById("menu");
-
   const close_btn = document.getElementById("close_btn");
+
   const change_theme_btn = document.getElementById("change-theme-btn");
+  const change_theme_icon_btn = document.getElementById(
+    "change-theme-icon-btn",
+  );
+  const change_theme_inst_p = document.getElementsByClassName(
+    "change-theme-inst",
+  ) as HTMLCollectionOf<HTMLElement>;
+  const theme_name_p = document.getElementsByClassName(
+    "theme-name",
+  ) as HTMLCollectionOf<HTMLElement>;
 
   const index_btn = document.getElementById("index-btn");
   const index_content = document.getElementById("index-content");
@@ -170,11 +181,23 @@ const projects = (await getCollection("projects")).filter((project) => {
     menu_modal?.classList.add("hidden");
   }
 
-  function setChangeThemeButtonText() {
-    if (change_theme_btn) {
-      change_theme_btn.textContent = window.darkMode.isEnabled()
-        ? (change_theme_btn.dataset.light ?? "")
-        : (change_theme_btn.dataset.dark ?? "");
+  function setChangeThemeButtonText(darkModeValue?: boolean) {
+    if (change_theme_btn && change_theme_inst_p && theme_name_p) {
+      if (darkModeValue ?? window.darkMode.isEnabled()) {
+        change_theme_btn.textContent = change_theme_btn.dataset.light ?? "";
+        for (let i = 0; i < change_theme_inst_p.length; i++) {
+          change_theme_inst_p[i].textContent =
+            change_theme_inst_p[i].dataset.light ?? "";
+          theme_name_p[i].textContent = theme_name_p[i].dataset.dark ?? "";
+        }
+      } else {
+        change_theme_btn.textContent = change_theme_btn.dataset.dark ?? "";
+        for (let i = 0; i < change_theme_inst_p.length; i++) {
+          change_theme_inst_p[i].textContent =
+            change_theme_inst_p[i].dataset.dark ?? "";
+          theme_name_p[i].textContent = theme_name_p[i].dataset.light ?? "";
+        }
+      }
     }
   }
 
@@ -199,6 +222,10 @@ const projects = (await getCollection("projects")).filter((project) => {
     window.darkMode.toggle();
     closeMenu();
     setChangeThemeButtonText();
+  });
+
+  change_theme_icon_btn?.addEventListener("click", () => {
+    setChangeThemeButtonText(!window.darkMode.isEnabled());
   });
 
   links.forEach((link) => {
