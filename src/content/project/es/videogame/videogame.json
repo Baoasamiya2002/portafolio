@@ -31,7 +31,7 @@
           "body": [
             "En 2023, la Universidad Autonoma Metropolitana Unidad Cuajimalpa enfrentó un caso grave de violencia en el noviazgo entre sus estudiantes",
             "Después de esto, la universidad creó una unidad especializada para atender a los estudiantes y materiales de prevención",
-            "Aun así, hacía falta una herramienta que conectara con los jóvenes y les ayudara a reconocer estas situaciones por sí mismos"
+            "Aun así, faltaba una herramienta que conectara con los jóvenes y les ayudara a reconocer violencia"
           ]
         }
       ]
@@ -42,7 +42,8 @@
         {
           "type": "text",
           "body": [
-            "Identificamos que un videojuego podía resultarles atractivo después de conversar con estudiantes y revisar la literatura, encontrando que son accesibles y posibilitan el aprendizaje de actitudes"
+            "Identificamos que un videojuego podía resultarles atractivo después de conversar con estudiantes y revisar la literatura",
+            "Encontramos que los videojuegos les son accesibles y también posibilitan el aprendizaje de actitudes"
           ]
         },
         {
@@ -57,7 +58,7 @@
         {
           "type": "text",
           "body": [
-            "Colaboré con un equipo interdisciplinario de Diseño y Comunicación en la creación de 'Latencia', una novela visual para ayudar a identificar la violencia en el noviazgo",
+            "Colaboré con un equipo interdisciplinario en la creación de 'Latencia', una novela visual para ayudar a identificar la violencia en el noviazgo",
             "Para una correcta representación del problema, se realizaron entrevistas a estudiantes sobre sus experiencias y se revisó el contenido con personas expertas en el tema"
           ]
         },
@@ -117,7 +118,7 @@
         {
           "type": "text",
           "body": [
-            "Implementé el videojuego para múltiples plataformas y modalidades de acceso, garantizando su funcionamiento en dispositivos móviles, computadoras y entornos web"
+            "Garanticé la accesibilidad del videojuego, haciendo que funcionara en dispositivos móviles, computadoras y entornos web"
           ]
         },
         {
@@ -158,7 +159,7 @@
           "type": "text",
           "body": [
             "Los resultados de uno de los cuestionarios evidenciaron una mayor capacidad para identificar situaciones de violencia en las relaciones después de jugar",
-            "Indentificamos oportunidades de mejora, como representar más situaciones de violencia y ofrecer más opciones de respuesta en las decisiones del juego"
+            "Indentificamos oportunidades de mejora, como el representar más situaciones de violencia y ofrecer más opciones de respuesta en las decisiones del juego"
           ]
         }
       ]
