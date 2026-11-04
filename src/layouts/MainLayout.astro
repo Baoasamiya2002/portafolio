@@ -1,12 +1,14 @@
 ---
 import "../styles/global.css";
 import Analytics from '@vercel/analytics/astro'
+import { injectSpeedInsights } from '@vercel/speed-insights';
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+injectSpeedInsights();
 ---
 
 <html lang={lang}>
