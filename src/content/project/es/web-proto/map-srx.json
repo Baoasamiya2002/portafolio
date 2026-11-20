@@ -128,6 +128,21 @@
         {
           "type": "text",
           "body": [
+            "Optimicé la escalabilidad del prototipo mediante variantes que permitieron mantener interacciones consistentes"
+          ]
+        },
+        {
+          "type": "image",
+          "body": [
+            {
+              "url": "../../../../assets/images/map-srx-4.png",
+              "caption": "Variantes de los botones de la interfaz"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "body": [
             "Organicé la información en categorías según cada ser vivo, permitiendo la exploración desde un menú central"
           ]
         },
